@@ -1,0 +1,16 @@
+.loading {
+	text-align: center;
+	margin-top: 25%;
+}
+
+.fluidfixedcontent {
+	float: left;
+	padding:0 !important;
+	width: calc(100% - 400px);
+	margin-left: 400px;
+}
+
+/* Without overflow-auto the user groups admin list does not scroll */
+.content-wrapper {
+	overflow: auto;
+}

@@ -1,0 +1,25 @@
+.popup-window__heading {
+	color: #1a99aa;
+	font-size: 18px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.popup-window__row {
+	margin-bottom: 10px;
+}
+
+.popup-window {
+	background-color: #f3f3f3;
+}
+
+.pop-up-box--footer {
+	padding: 15px;
+	/*box-shadow: 0 10px 10px -10px rgba(0,0,0,0.4) inset;*/
+	border-radius: 0 0 8px 8px;
+	background: #fff;
+	border-top: 1px solid #bbb;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+}

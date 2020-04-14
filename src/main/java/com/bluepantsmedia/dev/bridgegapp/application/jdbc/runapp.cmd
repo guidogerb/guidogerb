@@ -1,0 +1,1 @@
+java -Xmx1000m -jar target/jdbc-1.0-SNAPSHOT-jar-with-dependencies.jar

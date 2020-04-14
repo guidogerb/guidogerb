@@ -1,0 +1,210 @@
+#!groovy
+
+pipeline {
+    agent any
+
+    environment {
+        emailNotifications = 'garygerber@bluepantsmedia.com'
+        // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
+        ci_ids = null
+        // Create an Artifactory Maven instance.
+        rtMaven = null
+        buildInfo = null
+
+        //artifactory
+        artifactoryUrl = 'https://ci.bluepantsmedia.com/artifactory'
+        artifactoryReleaseRepo = '6thfloor-libs-release-local'
+        artifactorySnapshotRepo = '6thfloor-libs-snapshot-local'
+        artifactoryArtifactName = '#{artifact-id}'
+        POM_ARTIFACT = null
+        POM_VERSION = null
+        POM_PACKAGING = null
+
+        //git
+        gitCommitShort = null
+        gitLifecycle = null
+        gitRepoUrl = 'git@git.bluepantsmedia.com:sixthfloor-east/#{project.git.group}/#{project.git}.git'
+
+        artifactUrl = null
+        applicationVersion = null
+        instructionsFile = "ci.json"
+    }
+
+	tools {
+        jdk 'Java 11'
+    }
+
+    stages {
+        stage('Clean') {
+            steps {
+                deleteDir()
+            }
+        }
+
+        stage('Clone sources') {
+            steps {
+                echo 'Starting pipeline'
+                script {
+                    gitCommitShort = env.gitlabMergeRequestLastCommit ? env.gitlabMergeRequestLastCommit.substring(0,7) : 'MANUAL'
+                    gitLifecycle = env.gitlabBranch ? env.gitlabBranch : 'dev'
+                    echo "gitCommitShort $gitCommitShort"
+                    echo "gitLifecycle $gitLifecycle"
+                }
+
+                //input message: 'Wait!'
+                // Get some code from a GitHub repository
+                git branch: gitLifecycle, credentialsId: 'efd52286-1e8c-4aa5-9493-9d4f762590b2', url: gitRepoUrl
+            }
+        }
+
+        stage('Artifactory config') {
+            steps {
+                script {
+                    ci_ids = Artifactory.newServer url: artifactoryUrl, credentialsId: 'ce74b44c-7035-48c9-802c-fa747710b3f9'
+                    // Create an Artifactory Maven instance.
+                    rtMaven = Artifactory.newMavenBuild()
+
+                    // Get the Maven tool.
+                    rtMaven.tool = 'Maven 3.3.9'
+                    // Set Artifactory repositories for dependencies resolution and artifacts deployment.
+                    rtMaven.deployer server: ci_ids releaseRepo: artifactoryReleaseRepo, snapshotRepo: artifactorySnapshotRepo
+                    //rtMaven.resolver server: server, releaseRepo: 'libs-release', snapshotRepo: 'libs-snapshot'
+                    //rtMaven.deployer.deployArtifacts = false
+                    //rtMaven.deployer.artifactDeploymentPatterns.addExclude("*.pom")
+
+                    buildInfo = Artifactory.newBuildInfo()
+                    buildInfo.env.capture = true
+                    buildInfo.env.collect()
+                }
+            }
+        }
+
+        stage('Run maven version plugin') {
+            steps {
+                withMaven(maven: 'Maven 3.3.9', mavenSettingsConfig: '77190ca3-7008-477b-851f-9193d2d6bc34',options: [artifactsPublisher(disabled: true), junitPublisher(disabled: true)]) {
+                    // Run the maven build
+                    sh "mvn pl.project13.maven:git-commit-id-plugin:revision -DskipTests -Dmaven.test.skip=true"
+                }
+            }
+        }
+
+        stage('Run ant artifactory change-release') {
+            steps {
+                withAnt(installation: 'Ant', jdk: 'Java 8') {
+                    sh "ant -file artifactory-build.xml change-release"
+                }
+                script {
+                    def props = readProperties file: 'target/classes/git.properties'
+                    applicationVersion = props['git.commit.id.describe']
+                    POM_ARTIFACT = readMavenPom().getArtifactId()
+                    POM_VERSION = readMavenPom().getVersion()
+                    POM_PACKAGING = readMavenPom().getPackaging()
+                    echo "applicationVersion $applicationVersion"
+                    echo "pom artifact $POM_ARTIFACT"
+                    echo "pom version $POM_VERSION"
+                    echo "pom version $POM_PACKAGING"
+                }
+            }
+        }
+
+//        stage ('Starting test jobs') {
+//            parallel {
+//                    stage('Unit Tests') {
+//                        steps {
+//                            script {
+//                                echo "GenericUnitTester job params: \n gitLifecycle=$gitLifecycle, gitRepoUrl=$gitRepoUrl, mailTo=$emailNotifications"
+//                            }
+//                            build job: '6th Floor Devs/GenericUnitTester', parameters: [string(name: 'gitLifecycle', value: gitLifecycle), string(name: 'gitRepoUrl', value: gitRepoUrl), string(name: 'mailTo', value: emailNotifications)]
+//                            copyArtifacts filter: '**/*', fingerprintArtifacts: true, projectName: '6th Floor Devs/GenericUnitTester', selector: lastSuccessful()
+//                        }
+//                    }
+//                //stage('Integration Tests') {
+//                //    steps {
+//                //        script {
+//                //            echo "GenericIntegrationTester job params: \n gitLifecycle=$gitLifecycle, gitRepoUrl=$gitRepoUrl, mailTo=$emailNotifications"
+//                //        }
+//                //        build job: 'GenericIntegrationTester', parameters: [string(name: 'gitLifecycle', value: gitLifecycle), string(name: 'gitRepoUrl', value: gitRepoUrl), string(name: 'mailTo', value: emailNotifications)]
+//                //        copyArtifacts filter: '**/*', fingerprintArtifacts: true, projectName: 'GenericIntegrationTester', selector: lastSuccessful()
+//                //    }
+//
+//            }
+//        }
+
+        stage('Maven Build') {
+            steps {
+                script {
+                    // Run the maven build
+                    rtMaven.run pom: 'pom.xml', goals: 'install -DskipTests -Dmaven.test.skip=true', buildInfo: buildInfo
+                }
+            }
+        }
+
+        stage('Publish build info') {
+            steps {
+                script {
+                    ci_ids.publishBuildInfo buildInfo
+
+                    echo "applicationVersion $applicationVersion"
+                    //echo sh(returnStdout: true, script: 'env')
+                    //println "${buildInfo.env.vars}"
+                    //echo buildInfo.env.vars
+                    //echo(buildInfo.env.getEnvironment().collect({environmentVariable ->  "${environmentVariable.key} = ${environmentVariable.value}"}).join("\n"))
+                    //echo(buildInfo.getDeployableArtifacts().collect({environmentVariable}.getArtifactPath()))
+                }
+            }
+        }
+
+        stage ('Starting AutoDeployStack job') {
+            steps {
+                script {
+                    artifactUrl = artifactoryUrl + '/' + artifactoryReleaseRepo + '/gov/utah/dts/' + artifactoryArtifactName + '/' + applicationVersion + '/' + artifactoryArtifactName + '-' + applicationVersion + '.' + POM_PACKAGING
+                    echo "AutoDeployStack job params: \n artifactUrl=$artifactUrl, ciJSON=$instructionsFile, lifeCycle=$gitLifecycle, mailTo=$emailNotifications"
+
+                }
+                build job: 'Docker/AutoDeployStack', parameters: [text(name: 'ciJSON', value: readFile(instructionsFile)), string(name: 'lifeCycle', value: gitLifecycle), string(name: 'mailTo', value: emailNotifications), string(name: 'artifactURL', value: artifactUrl)]
+            }
+        }
+
+//        stage('Sonar Analysis') {
+//            steps {
+//                script {
+//                    def scannerHome = tool 'SonarQube Scanner 2.8'
+//
+//                    withSonarQubeEnv() {
+//                        sh "${scannerHome}/bin/sonar-scanner"
+//                    }
+//                }
+//            }
+//        }
+//
+//        stage('Results') {
+//            steps {
+//                junit '**/target/surefire-reports/TEST-*.xml'
+//                //Archived in Artifactory
+//                //archive 'target/*.jar'
+//            }
+//        }
+    }
+    post {
+        always {
+            script {
+                def currentResult = currentBuild.result ?: 'SUCCESS'
+                if (currentResult == 'UNSTABLE') {
+                    echo 'This will run only if the run was marked as unstable'
+                }
+
+                def previousResult = currentBuild.previousBuild?.result ?: 'SUCCESS'
+                echo "Previous Result: $previousResult"
+                if (previousResult != currentResult) {
+                    echo 'This will run only if the state of the Pipeline has changed, if the Pipeline was previously failing but is now successful'
+
+                    mail to: emailNotifications,
+                            subject: "Build ${currentBuild.fullDisplayName}: " + currentResult,
+                            body: "${env.BUILD_URL}"
+                }
+
+                echo "Pipeline ended: $currentResult"
+            }
+        }
+    }
+}

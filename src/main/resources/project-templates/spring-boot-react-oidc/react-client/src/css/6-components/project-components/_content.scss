@@ -1,0 +1,44 @@
+/*
+############     _content.scss      ############
+*/
+.main-content-wrapper {
+	height: calc(100vh - 40px);;
+}
+
+.section-content {
+	position: relative;
+	overflow: auto;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+.section-content__left-panel {
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+}
+
+//content utility classes
+.content {
+	display: block;
+	max-width: 648px;
+	padding: 0 $global-spacing-unit-large;
+	margin: 0 auto;
+
+	&.full-width {
+		max-width: none;
+		margin: 0;
+	}
+}
+p.content {
+	margin: 0 auto $global-spacing-unit;
+}
+
+.json-results {
+	background: $gray05;
+	font: $fixedWidthFont;
+	border-radius: $formBorderRadius;
+	padding: $global-spacing-unit-small;
+	color: $primaryColor;
+}

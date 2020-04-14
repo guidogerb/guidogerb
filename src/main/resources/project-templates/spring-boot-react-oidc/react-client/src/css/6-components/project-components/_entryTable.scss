@@ -1,0 +1,118 @@
+.entry-table {
+	/*padding: 0;*/
+	position: relative;
+}
+.entry-table.scroll {
+	overflow: auto;
+	max-height: 400px;
+}
+.entry-table.small {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.entry-table.medium {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.entry-table table {
+	width: 100%;
+	border: none;
+}
+.entry-table th {
+	font-weight: 700;
+	font-size: 1em;
+	text-align: left;
+	padding: 10px;
+	border-bottom: 4px solid #ddd;
+	position: relative;
+}
+.entry-table th.center {
+	text-align: center;
+}
+.entry-table tr.noborder th {
+	border-bottom: none;
+	border-top: none;
+	padding: 0 10px;
+}
+.entry-table table.sort th {
+	cursor: pointer;
+}
+.entry-table th.deleteCol {
+	width: 80px;
+}
+.entry-table th.protectedCol {
+	width: 32px;
+}
+.entry-table table.sticky-thead th {
+	background: #F9F9F9;
+}
+.entry-table th.headerSortDown {
+	border-top: 4px solid #1A99AA;
+}
+.entry-table th.sorted,
+.entry-table th.headerSortUp {
+	border-bottom: 4px solid #1A99AA;
+}
+.entry-table tbody tr:hover td {
+	box-shadow: 0 0 10px rgba(0,0,0,0.3) !important;
+	position: relative !important;
+	z-index: 40 !important;
+}
+.entry-table td {
+	font-size: 1em;
+	padding: 8px 10px;
+	height: 32px;
+	vertical-align: top;
+}
+.entry-table td.nowrap {
+	white-space: nowrap;
+}
+.entry-table tbody tr:nth-child(even) td {
+	background: #fff;
+}
+.entry-table tbody tr:nth-child(odd) td {
+	background: #EEF5F7; /* blue */
+}
+.entry-table tbody tr.selected td, .entry-table tbody tr:active td {
+	background: #1A99AA;
+	//color: #fff;
+}
+
+.entry-table tr.selectable {
+	cursor: pointer;
+}
+
+/* inactive records should not be the same as active even when selected */
+.entry-table tr.selected.inactivated td {
+	background: #7ab3bb none repeat scroll 0 0;
+	color: #ccc;
+}
+
+.entry-table.smallTable table {
+	font-size: 10px;
+}
+
+.entry-table tr.sortable-placeholder td {
+	background: #DF6C4F;
+}
+.entry-table .sortable {
+	cursor: pointer;
+}
+.entry-table th .button.float-right {
+	position: absolute;
+	right: 10px;
+}
+
+.entry-table td.right {
+	text-align: right;
+}
+.entry-table td.center {
+	text-align: center;
+}
+
+.entry-table tr {
+	&:hover, &.mouse-over, &.selected {
+		color: #666;
+		cursor: pointer;
+	}
+}

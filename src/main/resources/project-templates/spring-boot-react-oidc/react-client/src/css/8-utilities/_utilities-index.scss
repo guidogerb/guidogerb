@@ -1,0 +1,218 @@
+/*
+############     _utilities.scss      ############
+utility classes, atomic css
+*/
+
+/* --------- Flex --------- */
+.flex {
+	display: flex;
+
+	&.justify-space-between {
+		justify-content: space-between;
+	}
+	&.justify-space-around {
+		justify-content: space-around;
+	}
+	&.justify-center {
+		justify-content: center;
+	}
+	&.justify-flex-start {
+		justify-content: flex-start;
+	}
+	&.justify-flex-end {
+		justify-content: flex-end;
+	}
+
+	&.align-items-start {
+		align-items: flex-start;
+	}
+	&.align-items-end {
+		align-items: flex-end;
+	}
+	&.align-items-center {
+		align-items: center;
+	}
+	&.align-items-stretch {
+		align-items: stretch;
+	}
+	&.align-items-baseline {
+		align-items: baseline;
+	}
+
+	&.flex-wrap {
+		flex-wrap: wrap;
+	}
+
+	&.direction-col {
+		flex-direction: column;
+	}
+
+	.fifty {
+		width: 50%;
+	}
+}
+
+.flex1 {
+	flex: 1 1 0;
+}
+
+.flex2 {
+	flex: 2 1 0;
+}
+
+/* --------- Text Classes --------- */
+.text-center, .center-text {
+	text-align: center;
+}
+
+.text-right, .right-text {
+	text-align: right;
+}
+
+.text-left, .left-text {
+	text-align: left;
+}
+
+.text-red, .red-text {
+	color: $red;
+}
+
+.text-bold, .bold-text {
+	font-weight: $boldFontWeight;
+}
+
+.text-italic, .italic-text {
+	font-style: italic;
+}
+
+/* ---- Foreground and Background Utility Colors ---- */
+.color-primary {
+	color: $primaryColor;
+}
+.color-secondary {
+	color: $secondaryColor;
+}
+.color-tertiary {
+	color: $tertiaryColor;
+}
+.color-quaternary {
+	color: $quaternaryColor;
+}
+.color-neutral {
+	color: $neutralColor;
+}
+.color-complimentary {
+	color: $complementaryColor;
+}
+.color-white {
+	color: white;
+}
+
+.bg-primary {
+	background-color: $primaryColor;
+}
+.bg-secondary {
+	background-color: $secondaryColor;
+}
+.bg-tertiary {
+	background-color: $tertiaryColor;
+}
+.bg-quaternary {
+	background-color: $quaternaryColor;
+}
+.bg-neutral {
+	background-color: $neutralColor;
+}
+.bg-complimentary {
+	background-color: $complementaryColor;
+}
+
+/* ----- Positioning ---- */
+.hcenter {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.vcenter {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.vcenter.right {
+	right: 0;
+}
+
+.vcenter.left {
+	left: 0;
+}
+
+.vcenter.hcenter {
+	transform: translate(-50%, -50%);
+}
+
+.hcenter-margin {
+	display: block;
+	margin: 0 auto;
+}
+
+/* ---- Spacing and Padding --- */
+.mt-spacing {
+	margin-top: $global-spacing-unit;
+}
+.mb-spacing {
+	margin-bottom: $global-spacing-unit;
+}
+.mr-spacing {
+	margin-right: $global-spacing-unit;
+}
+.ml-spacing {
+	margin-left: $global-spacing-unit;
+}
+
+/* ---- Display ---- */
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.hidden {
+	display: none;
+}
+
+.block {
+	display: block;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+/* ---- Float ---- */
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* ---- elevation appearance - drop shadows ---- */
+.elevation {
+	@include elevation;
+}
+
+@import "backgroundColors";
