@@ -20,7 +20,7 @@ const WEBSERVICE_URLS = {
  * @return {string}
  */
 function getWebserviceUrl(webserviceUrls, environment = undefined) {
-	// return 'https://ahaws.dev.utah.gov/deployments/';
+	// return 'https://guidogerb.bluepantsmedia.com/deployments/';
 	const hostname = window.location.hostname;
 	//set default webservice url
 	let retVal = environment && webserviceUrls[environment];
@@ -40,7 +40,7 @@ export default {
 	basename: '/',
 
 	userManagerConfig: {
-		// get this value from apadmin: https://apadmin.utah.gov/#/credentials
+		// get this value from apadmin: https://apadmin.bluepantsmedia.com/#/credentials
 		client_id: 'totes-schokker',
 		// tell where to go once user is logged in: must be an entry in apadmin
 		redirect_uri: `${window.location.origin}/login/callback`,

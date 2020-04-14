@@ -157,7 +157,7 @@ pipeline {
         stage ('Starting AutoDeployStack job') {
             steps {
                 script {
-                    artifactUrl = artifactoryUrl + '/' + artifactoryReleaseRepo + '/gov/utah/dts/' + artifactoryArtifactName + '/' + applicationVersion + '/' + artifactoryArtifactName + '-' + applicationVersion + '.' + POM_PACKAGING
+                    artifactUrl = artifactoryUrl + '/' + artifactoryReleaseRepo + '/com/bluepantsmedia/dev/bridgegapp/' + artifactoryArtifactName + '/' + applicationVersion + '/' + artifactoryArtifactName + '-' + applicationVersion + '.' + POM_PACKAGING
                     echo "AutoDeployStack job params: \n artifactUrl=$artifactUrl, ciJSON=$instructionsFile, lifeCycle=$gitLifecycle, mailTo=$emailNotifications"
 
                 }

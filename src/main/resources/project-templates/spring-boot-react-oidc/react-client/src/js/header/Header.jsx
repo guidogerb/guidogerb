@@ -24,7 +24,7 @@ class Header extends React.Component {
 			<React.Fragment>
 				<div className="header-wrapper-placeholder"></div>
 				<div className="header-wrapper site-full">
-					<a href="https://hris.utah.gov" className="header-wrapper__home">
+					<a href="https://bluepantsmedia.com" className="header-wrapper__home">
 						{icons.home('header-content__svg')}
 						{icons.logo('header-content__svg')}
 					</a>

@@ -13,7 +13,7 @@ class Logout extends React.Component {
 
 	render() {
 		return (
-			<a href="https://login.utah.gov/user/logoff" target="_self" className="logout-link">Sign&nbsp;out</a>
+			<a href="https://login.bluepantsmedia.com/user/logoff" target="_self" className="logout-link">Sign&nbsp;out</a>
 		);
 	}
 }

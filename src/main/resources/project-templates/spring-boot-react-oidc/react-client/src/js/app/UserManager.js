@@ -9,7 +9,7 @@ const userManagerConfig = {
 
 	response_type: 'id_token token',
 	scope: 'openid profile email directory',
-	// authority: 'https://login.dev.utah.gov:443/sso/oauth2',
+	// authority: 'https://login.bluepantsmedia.com:443/sso/oauth2',
 	authority: 'https://login.bluepantsmedia.com:443/sso/oauth2',
 	automaticSilentRenew: true,
 	filterProtocolClaims: false,
