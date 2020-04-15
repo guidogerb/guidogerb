@@ -67,7 +67,7 @@ pipeline {
                     // Get the Maven tool.
                     rtMaven.tool = 'Maven 3.3.9'
                     // Set Artifactory repositories for dependencies resolution and artifacts deployment.
-                    rtMaven.deployer server: ci_ids releaseRepo: artifactoryReleaseRepo, snapshotRepo: artifactorySnapshotRepo
+                    rtMaven.deployer server: ci_ids, releaseRepo: artifactoryReleaseRepo, snapshotRepo: artifactorySnapshotRepo
                     //rtMaven.resolver server: server, releaseRepo: 'libs-release', snapshotRepo: 'libs-snapshot'
                     //rtMaven.deployer.deployArtifacts = false
                     //rtMaven.deployer.artifactDeploymentPatterns.addExclude("*.pom")
