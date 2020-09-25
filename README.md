@@ -1,3 +1,4 @@
+
 # Bridge Generated Applications (bridge-gapp)
 This project is meant to replace the boilerplate application and configuration processes
 against the current technology stack.  It uses a descriptive "Object Definition Language" (ODL)
