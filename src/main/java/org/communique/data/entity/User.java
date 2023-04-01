@@ -27,9 +27,7 @@ public class User extends AbstractEntity {
     @ElementCollection(fetch = FetchType.EAGER)
     @Nonnull
     private Set<Role> roles;
-    @Lob
-    @Column(length = 1000000)
-    private byte @Nonnull [] profilePicture;
+
 
     public String getUsername() {
         return username;
@@ -55,11 +53,4 @@ public class User extends AbstractEntity {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
-    public byte @Nonnull [] getProfilePicture() {
-        return profilePicture;
-    }
-    public void setProfilePicture(byte @Nonnull [] profilePicture) {
-        this.profilePicture = profilePicture;
-    }
-
 }

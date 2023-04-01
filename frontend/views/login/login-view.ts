@@ -32,7 +32,7 @@ export class LoginView extends View {
         no-forgot-password
         .i18n=${{
           ...loginI18nDefault,
-          header: { title: 'Communique', description: 'Login using user/user or admin/admin' },
+          header: { title: 'Communique', description: 'Login' },
         }}
       >
       </vaadin-login-overlay>

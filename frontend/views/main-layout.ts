@@ -101,12 +101,6 @@ export class MainLayout extends Layout {
     item.style.gap = 'var(--lumo-space-s)';
     render(
       html`
-        <vaadin-avatar
-          theme="xsmall"
-          img="${until(imageDataUrl(user.profilePicture))}"
-          name="${user.name}"
-          tabindex="-1"
-        ></vaadin-avatar>
         <span>${user.name}</span>
         <vaadin-icon icon="lumo:dropdown"></vaadin-icon>
       `,
