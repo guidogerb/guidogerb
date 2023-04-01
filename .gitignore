@@ -20,4 +20,4 @@ drivers/
 error-screenshots/
 webpack.generated.js
 /secrets.properties
-/package-lock.json
+package-lock.json
