@@ -21,3 +21,8 @@ error-screenshots/
 webpack.generated.js
 /secrets.properties
 package-lock.json
+./node_modules
+./target
+./.idea
+./.vscode
+./.settings
