@@ -1,6 +1,0 @@
-insert into sample_person(version, id,first_name,last_name,email,phone,date_of_birth,occupation,role,important) values (1, 100,'Agnes','Toccafondi','agnes.toccafondi@viipo.ae','(616) 688-6883','1970-09-05','Comedian','External',false)
-insert into application_user (version, id, username,name,hashed_password) values (1, '1','gerbuser','Gary User','$2a$10$xdbKoM48VySZqVSU/cSlVeJn0Z04XCZ7KZBjUBC00eKo5uLswyOpe')
-insert into user_roles (user_id, roles) values ('1', 'USER')
-insert into application_user (version, id, username,name,hashed_password) values (1, '2','gerbadmin','Gary Admin','$2a$10$jpLNVNeA7Ar/ZQ2DKbKCm.MuT2ESe.Qop96jipKMq7RaUgCoQedV.')
-insert into user_roles (user_id, roles) values ('2', 'USER')
-insert into user_roles (user_id, roles) values ('2', 'ADMIN')

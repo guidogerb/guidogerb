@@ -11,7 +11,7 @@
 	<groupId>org.communique</groupId>
 	<artifactId>openai</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>openai</name>
+	<name>Communique</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>

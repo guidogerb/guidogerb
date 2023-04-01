@@ -1,5 +1,7 @@
 package org.communique.openai;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.jline.terminal.Terminal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -27,9 +29,15 @@ public class OpenAIService {
         return apiKey;
     }
 
-    public void getEngines() {
+    public void getEngines(Terminal terminal) {
         exClient.getEngines(getHeaders()).subscribe(Engines -> {
-            System.out.println(Engines);
+            ObjectMapper mapper = new ObjectMapper();
+            try {
+                terminal.writer().println(mapper.writeValueAsString(Engines));
+                terminal.flush();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         });
     }
 
