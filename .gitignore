@@ -26,3 +26,4 @@ package-lock.json
 ./.idea
 ./.vscode
 ./.settings
+/spring-shell.log
