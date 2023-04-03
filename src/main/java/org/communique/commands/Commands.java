@@ -19,7 +19,7 @@ public class Commands {
     @ShellMethod(value = "List OpenAI Engines.", key = "l")
     public void listEngines() {
         terminal.writer().println("\n\nEngines: ");
-        openAIService.getEngines(terminal);
+        openAIService.getEngines();
         terminal.flush();
     }
 

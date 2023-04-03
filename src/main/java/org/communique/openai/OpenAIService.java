@@ -29,12 +29,11 @@ public class OpenAIService {
         return apiKey;
     }
 
-    public void getEngines(Terminal terminal) {
+    public void getEngines() {
         exClient.getEngines(getHeaders()).subscribe(Engines -> {
             ObjectMapper mapper = new ObjectMapper();
             try {
-                terminal.writer().println(mapper.writeValueAsString(Engines));
-                terminal.flush();
+                System.out.println(mapper.writeValueAsString(Engines));
             } catch (Exception e) {
                 e.printStackTrace();
             }
