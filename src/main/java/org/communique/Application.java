@@ -1,6 +1,6 @@
 package org.communique;
 
-import org.communique.commands.CustomExceptionResolver;
+import org.communique.commands.*;
 import org.communique.openai.OpenAiAPI_ExchangeClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

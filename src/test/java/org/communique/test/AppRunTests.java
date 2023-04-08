@@ -1,4 +1,4 @@
-package org.communique;
+package org.communique.test;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

@@ -1,11 +1,15 @@
 package org.communique.openai;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.jline.terminal.Terminal;
+import org.communique.openai.model.*;
+import org.communique.openai.repository.OpenAiApiEnginesResponseRepository;
+import org.communique.openai.repository.OpenAiApiRequestRepository;
+import org.communique.openai.repository.OpenAiApiResponseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,10 +19,22 @@ public class OpenAIService {
     @Value("${open.ai.api.key}")
     private String apiKey;
 
+    @Value("${open.ai.api.organization.id}")
+    private String organizationId;
+
     @Autowired
     private OpenAiAPI_ExchangeClient exClient;
 
-    public Map<String,String> getHeaders() {
+    @Autowired
+    private OpenAiApiResponseRepository responseRepo;
+
+    @Autowired
+    private OpenAiApiRequestRepository requestRepo;
+
+    @Autowired
+    private OpenAiApiEnginesResponseRepository enginesRepo;
+
+    public Map<String, String> getHeaders() {
         return new HashMap<>() {{
             put("Authorization", "Bearer " + apiKey);
             put("Content-Type", "application/json");
@@ -30,14 +46,21 @@ public class OpenAIService {
     }
 
     public void getEngines() {
-        exClient.getEngines(getHeaders()).subscribe(Engines -> {
-            ObjectMapper mapper = new ObjectMapper();
+        exClient.getEngines(getHeaders()).subscribe(eng -> {
             try {
-                System.out.println(mapper.writeValueAsString(Engines));
+                enginesRepo.save(new OpenAiApiEnginesResponse(null, LocalDateTime.now(), eng)).subscribe();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
     }
 
+    public void processApiResponse(ApiRequestBody request) {
+        OpenAiApiRequest openAiApiRequest = new OpenAiApiRequest(request);
+        requestRepo.save(openAiApiRequest).subscribe();
+        exClient.getApiResponse(getHeaders(), request)
+                .subscribe(r -> {
+                    responseRepo.save(new OpenAiApiResponse(null, LocalDateTime.now(), r)).subscribe();
+                });
+    }
 }
