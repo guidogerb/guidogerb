@@ -60,7 +60,7 @@ public class OpenAIService {
         requestRepo.save(openAiApiRequest).subscribe();
         exClient.getApiResponse(getHeaders(), request)
                 .subscribe(r -> {
-                    responseRepo.save(new OpenAiApiResponse(null, LocalDateTime.now(), r)).subscribe();
+                    responseRepo.save(new OpenAiApiResponse((ApiResponse)r)).subscribe();
                 });
     }
 }
