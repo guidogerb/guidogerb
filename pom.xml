@@ -103,11 +103,13 @@
 			<artifactId>spring-ai-tika-document-reader</artifactId>
 		</dependency>
 
+		<!-- Noe-Spring dependencies -->
 		<dependency>
 			<groupId>io.github.cdimascio</groupId>
 			<artifactId>dotenv-java</artifactId>
 			<version>3.0.2</version>
 		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -161,7 +163,7 @@
 							<goal>npm</goal>
 						</goals>
 						<configuration>
-							<arguments>run buildm</arguments>
+							<arguments>run build</arguments>
 						</configuration>
 					</execution>
 				</executions>
