@@ -8,11 +8,11 @@
 		<version>3.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.guidogerb</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>org.ggp</groupId>
+	<artifactId>feaures</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-	<name>demo</name>
+	<packaging>jar</packaging>
+	<name>tools</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
