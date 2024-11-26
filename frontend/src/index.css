@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+
+  color: #1d1d1f;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes bottom spacing */
+}
+
+a {
+  font-weight: 400;
+  color: #06c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 1.07143;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+
+  @media (max-width: 1068px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 734px) {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 1.10722;
+  font-weight: 400;
+  letter-spacing: .004em;
+
+  @media (max-width: 1068px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 734px) {
+    font-size: 19px;
+  }
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: 0;
+
+  @media (max-width: 1068px) {
+    font-size: 32px;
+  }
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+}
+
+button {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  background: #0071e3;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.17648;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  min-width: 28px;
+  padding: 8px 16px;
+  border-radius: 980px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #0077ED;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 125, 250, 0.6);
+}
+
+/* Apple's responsive breakpoints */
+@media only screen and (min-width: 1441px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  :root {
+    --spacing-unit: 21px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  :root {
+    --spacing-unit: 16px;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f5f5f7;
+    background-color: #000000;
+  }
+
+  a {
+    color: #2997ff;
+  }
+
+  button {
+    background: #0071e3;
+  }
+
+  button:hover {
+    background: #0077ED;
+  }
+}
