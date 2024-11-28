@@ -15,10 +15,10 @@ public class CLIRunner implements CommandLineRunner {
 
     public CLIRunner() {
         // Register commands
-        commandMap.put("help", this::printAvailableCommands);
         commandMap.put("hello", this::sayHello);
+        commandMap.put("stop-cli", this::stopLoop);
         commandMap.put("exit", this::stopApp);
-        commandMap.put("stop", this::stopLoop);
+        commandMap.put("help", this::printAvailableCommands);
     }
 
     @Override
