@@ -8,8 +8,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 
-@Component
-public class CLIRunner implements CommandLineRunner {
+//@Component
+public class CLIRunner { // implements CommandLineRunner {
     private final Map<String, Runnable> commandMap = new HashMap<>();
     private boolean keepRunning = true;
 
@@ -21,7 +21,7 @@ public class CLIRunner implements CommandLineRunner {
         commandMap.put("help", this::printAvailableCommands);
     }
 
-    @Override
+/*    @Override
     public void run(String... args) {
 
         try (Scanner scanner = new Scanner(System.in)) {
@@ -47,7 +47,7 @@ public class CLIRunner implements CommandLineRunner {
                 }
             }
         }
-    }
+    }*/
 
     private void stopLoop() {
         keepRunning = false;

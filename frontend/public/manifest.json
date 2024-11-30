@@ -1,8 +1,8 @@
 // public/manifest.json
 {
-  "name": "Chatbot Pro",
-  "short_name": "ChatPro",
-  "description": "AI chatting like a professional",
+  "name": "GuidoGerb Publishing",
+  "short_name": "GuidoGerb",
+  "description": "All of your publishing needs",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

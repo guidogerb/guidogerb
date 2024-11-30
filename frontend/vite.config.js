@@ -13,9 +13,9 @@ export default defineConfig({
                 injectionPoint: null // Don't use injection point
             },
             manifest: {
-                name: 'Chatbot Pro',
-                short_name: 'ChatPro',
-                description: 'AI chatting like a professional',
+                name: 'GuidoGerb Publishing',
+                short_name: 'GuidoGerb',
+                description: 'All of your publishing needs',
                 theme_color: '#000000',
                 background_color: '#ffffff',
                 display: 'standalone',

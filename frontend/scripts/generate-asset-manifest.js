@@ -1,7 +1,7 @@
 // scripts/generate-asset-manifest.js
-const fs = require('fs');
-const path = require('path');
-const crypto = require('crypto');
+import fs from 'fs';
+import path from 'path';
+import crypto from 'crypto';
 
 function generateAssetManifest() {
     const buildPath = path.join(__dirname, '../dist'); // Changed from 'build' to 'dist' for Vite
@@ -18,7 +18,7 @@ function generateAssetManifest() {
         '/index.html',
         '/manifest.json',
         '/sw.js',
-        '/workbox-*.js', // Include Workbox files if using them
+        '/workbox-*.cjs', // Include Workbox files if using them
     ];
 
     // Generate build hash

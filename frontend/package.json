@@ -1,12 +1,12 @@
 {
   "name": "frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "buildm": "vite build && workbox generateSW workbox-config.js && node scripts/generate-asset-manifest.js",
+    "buildm": "vite build && workbox generateSW workbox-config.cjs && node scripts/generate-asset-manifest.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },

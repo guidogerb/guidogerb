@@ -1,7 +1,7 @@
 // public/sw.js
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/7.0.0/workbox-sw.js');
 
-const CACHE_PREFIX = 'chatbot-cache';
+const CACHE_PREFIX = 'guidogerb-cache';
 let CURRENT_CACHE;
 
 // Initialize workbox

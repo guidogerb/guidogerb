@@ -205,35 +205,17 @@ const App = () => {
 
         <main className={styles.main}>
           <section className={styles.hero}>
-            <h1>Chatbot Pro</h1>
-            <h2>AI chatting like a professional.</h2>
+            <h1>GuidoGerb Publishing</h1>
+            <h2>All of your publishing needs in one place.</h2>
             {showInstallPrompt && (
                 <div className={styles.installPrompt}>
-                  <span>Install Chatbot Pro for a better experience
+                  <span>Install for a better experience
                     <button onClick={handleInstallClick}>Install</button>
                     <button onClick={() => setShowInstallPrompt(false)}>✕</button>
                   </span>
                 </div>
             )}
           </section>
-
-          <div className={styles.grid}>
-            <div className={styles.card}>
-              <img src="path-to-image" alt="Image 1"/>
-              <div className="content">
-                <h3>Image 1</h3>
-                <p>Supercharged by M1</p>
-              </div>
-            </div>
-            <div className={styles.card}>
-              <img src="path-to-image" alt="Image 2"/>
-              <div className="content">
-                <h3>Image 2</h3>
-                <p>Supercharged by M2</p>
-              </div>
-            </div>
-            {/* Add more cards as needed */}
-          </div>
         </main>
 
       </div>

@@ -1,8 +1,8 @@
 HELP.md
-target/
+backend/target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+!**/backend/src/main/**/target/
+!**/backend/src/test/**/target/
 
 frontend/node_modules
 frontend/node
@@ -37,3 +37,4 @@ build/
 ### VS Code ###
 .vscode/
 /src/main/resources/application-dev.properties
+/frontend/package-lock.json
