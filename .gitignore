@@ -38,3 +38,4 @@ build/
 .vscode/
 /src/main/resources/application-dev.properties
 /frontend/package-lock.json
+/backend/src/main/resources/application-dev.properties
