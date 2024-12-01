@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.bpm</groupId>
+    <artifactId>PojoGenerator</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hibernate.version>5.4.30.Final</hibernate.version>
+        <postgres.version>42.2.3</postgres.version>
+        <sql.version>1.5</sql.version>
+        <db.url>jdbc:postgresql://localhost:5432/communique</db.url>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgres.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>javax.persistence</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <!-- Hibernate Tools Plugin -->
+            <plugin>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-tools-maven-plugin</artifactId>
+                <version>${hibernate.version}</version>
+                <dependencies>
+                    <!-- Add this dependency for the PostgreSQL JDBC driver -->
+                    <dependency>
+                        <groupId>org.postgresql</groupId>
+                        <artifactId>postgresql</artifactId>
+                        <version>${postgres.version}</version> <!-- check for the latest version -->
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <revengFile>src/main/resources/hibernate.reveng.xml</revengFile>
+                    <packageName>org.bpm.model</packageName>
+                    <outputDirectory>src/main/java</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>hbm2java</goal>
+                        </goals>
+                        <configuration>
+                            <ejb3>true</ejb3>
+                            <jdk5>true</jdk5>
+                            <!-- other configurations -->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- SQL Maven Plugin -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sql-maven-plugin</artifactId>
+                <version>1.5</version>
+                <dependencies>
+                    <!-- Add this dependency for the PostgreSQL JDBC driver -->
+                    <dependency>
+                        <groupId>org.postgresql</groupId>
+                        <artifactId>postgresql</artifactId>
+                        <version>${postgres.version}</version> <!-- check for the latest version -->
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <driver>org.postgresql.Driver</driver>
+                    <url>${db.url}</url>
+                    <username>${PG_DATABASE_USERNAME}</username>
+                    <password>${PG_DATABASE_PASSWORD}</password>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

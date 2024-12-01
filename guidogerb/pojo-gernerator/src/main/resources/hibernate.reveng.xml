@@ -1,0 +1,8 @@
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd">
+
+<hibernate-reverse-engineering>
+    <schema-selection match-schema="public"/>
+    <!--  map individual tables  with filters or leave out to do all tables-->
+<!--    <table-filter match-name="my_table"/>-->
+</hibernate-reverse-engineering>
