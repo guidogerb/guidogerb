@@ -4,3 +4,12 @@
 [submodule "third-party-repos/spring-boot"]
 	path = third-party-repos/spring-boot
 	url = git@github.com:guidogerb/spring-boot.git
+[submodule "third-party-repos/spring-framework"]
+	path = third-party-repos/spring-framework
+	url = git@github.com:guidogerb/spring-framework.git
+[submodule "third-party-repos/spring-data-relational"]
+	path = third-party-repos/spring-data-relational
+	url = git@github.com:guidogerb/spring-data-relational.git
+[submodule "third-party-repos/prompt-engineering-guide"]
+	path = third-party-repos/prompt-engineering-guide
+	url = git@github.com:guidogerb/Prompt-Engineering-Guide.git
