@@ -13,3 +13,6 @@
 [submodule "third-party-repos/prompt-engineering-guide"]
 	path = third-party-repos/prompt-engineering-guide
 	url = git@github.com:guidogerb/Prompt-Engineering-Guide.git
+[submodule "third-party-repos/ollama"]
+	path = third-party-repos/ollama
+	url = git@github.com:guidogerb/ollama.git

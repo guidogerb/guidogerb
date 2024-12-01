@@ -1,6 +1,15 @@
-# GuidoGerb
+# clone GuidoGerb
 
 git clone git@github.com:guidogerb/guidogerb.git
+
+# init_submodules.sh
+git submodule update --init --recursive
+
+git remote add upstream git@github.com:ollama/ollama.git
+git fetch upstream
+git merge --allow-unrelated-histories upstream/main
+git push origin main
+
 
 ## Description
 
