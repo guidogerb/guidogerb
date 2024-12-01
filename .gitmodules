@@ -1,0 +1,3 @@
+[submodule "third-party-repos/spring-ai"]
+	path = third-party-repos/spring-ai
+	url = git@github.com:guidogerb/spring-ai.git
