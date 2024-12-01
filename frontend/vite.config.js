@@ -13,8 +13,8 @@ export default defineConfig({
                 injectionPoint: null // Don't use injection point
             },
             manifest: {
-                name: 'GuidoGerb Publishing',
-                short_name: 'GuidoGerb',
+                name: 'GuidoGerb Publishing PWA',
+                short_name: 'GuidoGerbPWA',
                 description: 'All of your publishing needs',
                 theme_color: '#000000',
                 background_color: '#ffffff',
@@ -23,15 +23,18 @@ export default defineConfig({
                 start_url: '/',
                 orientation: 'portrait',
                 icons: [
-                    {
+/*                    {
                         src: '/icons/icon-72x72.png',
                         sizes: '72x72',
                         type: 'image/png',
                         purpose: 'any maskable'
-                    },
+                    },*/
                     // ... other icons
                 ]
-            }
+            },
+            workbox: {
+                globPatterns: ["**/*.{js,css,html,png,jpg,svg}"], // Adjust these patterns to match your assets
+            },
         })
     ], build: {
         outDir: 'build', emptyOutDir: true, rollupOptions: {
