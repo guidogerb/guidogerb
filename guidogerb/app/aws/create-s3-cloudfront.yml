@@ -1,0 +1,79 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Static website with S3, CloudFront, and Route 53'
+
+Parameters:
+  DomainName:
+    Type: String
+    Description: The domain name for the website
+
+Resources:
+  WebsiteBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref DomainName
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref WebsiteBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action: s3:GetObject
+            Resource: !Join ['', ['arn:aws:s3:::', !Ref WebsiteBucket, '/*']]
+
+  CloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        DefaultRootObject: index.html
+        Enabled: true
+        HttpVersion: http2
+        Aliases:
+          - !Ref DomainName
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - GET
+            - HEAD
+          Compress: true
+          TargetOriginId: S3Origin
+          ForwardedValues:
+            QueryString: false
+          ViewerProtocolPolicy: redirect-to-https
+        Origins:
+          - DomainName: !GetAtt WebsiteBucket.RegionalDomainName
+            Id: S3Origin
+            S3OriginConfig: {}
+        ViewerCertificate:
+          AcmCertificateArn: !Ref Certificate
+          SslSupportMethod: sni-only
+
+  Certificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Ref DomainName
+      ValidationMethod: DNS
+
+  DNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneName: !Join ['', [!Ref DomainName, '.']]
+      Name: !Ref DomainName
+      Type: A
+      AliasTarget:
+        DNSName: !GetAtt CloudFrontDistribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2
+
+Outputs:
+  WebsiteURL:
+    Value: !GetAtt WebsiteBucket.WebsiteURL
+    Description: URL for website hosted on S3
+  CloudFrontURL:
+    Value: !GetAtt CloudFrontDistribution.DomainName
+    Description: URL for CloudFront distribution
