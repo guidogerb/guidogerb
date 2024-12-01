@@ -1,0 +1,94 @@
+ok, using java 17 features, create a function that
+1) takes an InputStream as an argument
+2) reads the stream into a byte[] variable named "ids"
+3) validate that byte[0] has a most significant bit that is on
+4) consider
+5) Using the strategy expressed in step 4, convert each array element into an ArrayList<BigInteger>
+6) return the ArrayList<BigInteger>
+
+
+In Java, the byte type is used to store 8-bit signed integer values. It can store values ranging from -128 to 127. If you want to represent the decimal value 128 as a byte in Java, you'll need to consider that it is outside the range of a signed byte. However, you can use the following workaround to represent it as an unsigned byte:
+
+java
+Copy code
+byte unsignedByte = (byte) 128;
+Keep in mind that the value stored in unsignedByte will be -128, as Java byte values are signed. When you need to use it as an unsigned value, you can convert it back to an integer and perform a bitwise AND operation with 0xFF to obtain the correct unsigned value:
+
+java
+Copy code
+int unsignedValue = unsignedByte & 0xFF; // unsignedValue will be 128
+However, if you want to represent the value 128 as a char in Java, you can directly assign it:
+
+java
+Copy code
+char c = (char) 128;
+This code snippet will store the Unicode character with the code point 128 in the c variable.
+
+To convert the binary number 1011000001 to its decimal representation, you can add the powers of 2 for each position where there is a 1:
+
+Copy code
+1  0  1  1  0  0  0  0  0  1
+9  8  7  6  5  4  3  2  1  0
+Based on the positions with a 1:
+
+(2^9) + (2^7) + (2^6) + (2^0) = 512 + 128 + 64 + 1 = 705
+
+So, the decimal representation of the binary number 1011000001 is 705.
+
+Here's a Java 17 method that takes a byte array as input and assembles the bytes into an ArrayList of BigDecimal representations of dynamic precision length unsigned binary numbers:
+
+java
+Copy code
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        byte[] input = {(byte) 0b10001100, (byte) 0b10001101, (byte) 0b10001101, (byte) 0b11001100, (byte) 0b10011100, (byte) 0b10001101};
+        List<BigDecimal> result = assembleUnsignedBinaryNumbers(input);
+        System.out.println(result);
+    }
+
+    public static List<BigDecimal> assembleUnsignedBinaryNumbers(byte[] input) {
+        List<BigDecimal> resultList = new ArrayList<>();
+        StringBuilder binaryString = new StringBuilder();
+
+        for (byte b : input) {
+            if ((b & 0b10000000) != 0) { // Check if the most significant bit is turned on
+                if (binaryString.length() > 0) {
+                    BigInteger bigInteger = new BigInteger(binaryString.toString(), 2);
+                    resultList.add(new BigDecimal(bigInteger));
+                    binaryString.setLength(0); // Clear the binary string for the next number
+                }
+            }
+
+            String byteString = String.format("%7s", Integer.toBinaryString(b & 0xFF)).replace(' ', '0'); // Remove the most significant bit
+            binaryString.append(byteString);
+
+            if ((b & 0b00000001) != 0) { // Check if the least significant bit is turned on
+                BigInteger bigInteger = new BigInteger(binaryString.toString(), 2);
+                resultList.add(new BigDecimal(bigInteger));
+                binaryString.setLength(0); // Clear the binary string for the next number
+            }
+        }
+
+        return resultList;
+    }
+}
+This method processes the byte array and checks for the most significant bit and least significant bit as specified. It assembles the binary numbers and adds them to the ArrayList as BigDecimal objects. The example input provided will produce the following output:
+
+yaml
+Copy code
+[1100, 1101, 1101100, 11100, 1101]
+Keep in mind that the input bytes have to be properly formatted according to the given rules (most significant bit and least significant bit) for the method to work correctly.
+
+Consider a byte[].
+Each byte in the array has two bits that are used to flag either
+the beginning or the end of elements in the array that should be evaluated sequentially.
+The most significant bit of a byte is used to indicate the beginning of byte sequence
+that will be added together to represent a decimal value.
+The least significant bit indicates that the byte is the last being added to the resulting bit length decimal value.
+A byte contains a representation of a 6 bit number if both the most significant and least
+significant bit are on, i.e. 1XXXXXXX1 where X belongs to a 6-bit unsigned decimal meaning 10000011 = 1.

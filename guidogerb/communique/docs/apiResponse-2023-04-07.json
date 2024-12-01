@@ -1,0 +1,19 @@
+{
+  "id": "cmpl-72p4BazrsYJV67O8gGomt2KOHX6is",
+  "object": "text_completion",
+  "created": 1680907311,
+  "model": "text-davinci-003",
+  "choices": [
+    {
+      "text": "\n\nI am a statistical language model.",
+      "index": 0,
+      "logprobs": 0.0,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 11,
+    "completion_tokens": 9,
+    "total_tokens": 20
+  }
+}
