@@ -1,0 +1,105 @@
+.que-box {
+	display: block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: #fff;
+	box-shadow: -3px 0 10px rgba(0,0,0,0.1) inset;
+}
+.que-box table {
+	width: 100%;
+	background: #fff;
+	font-size: 1.1em;
+}
+.que-box tr td {
+	line-height: 1.6em;
+}
+.que-box tr .que-title {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 85%;
+	padding: 15px;
+	box-shadow: -3px -5px 10px -5px rgba(0,0,0,0.5) inset;
+	color: #ffffff;
+	font-weight: 300;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+.que-box tr:hover {
+	cursor: pointer;
+}
+.que-box tr:hover .que-title {
+	background: #1A99AA;
+}
+.que-box tr.selected .que-title {
+	background: #1A99AA;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+.que-box tr .que-title.full {
+	width: 100%;
+}
+.que-box tr .que-number {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 15%;
+	text-align: center;
+	padding: 15px 0;
+	box-shadow: -5px -5px 10px -5px rgba(0,0,0,0.5) inset;
+	vertical-align: middle;
+	color: #ffffff;
+	font-weight: 600;
+	transition: all 500ms;
+}
+.que-box tr.selected .que-number {
+	color: #303641; /* blue */
+	background: #A5CDD3;
+}
+
+
+.que-box .searchfield {
+	border: 0;
+}
+
+
+.background-dark, .background-dark.button, .background-dark > a {
+	background: #303641;
+}
+.background-dark .icon.calendar, .background-dark .icon.calendar.button, .background-dark .icon.calendar > a {
+	/* it was getting a transparent background and on a dark background so the calendar wasn't showing */
+	background: #fafafa !important;
+}
+
+
+.fluidfixedsidebar {
+	width: 400px;
+	height: calc(100% - 52px);
+	position: fixed;
+	overflow-y: auto;
+	overflow-x: hidden;
+	z-index: 100;
+}
+@media only screen and (max-width: 1024px) {
+	.fluidfixedsidebar {
+		position: absolute;
+	}
+}
+
+.inputs-left {
+	width: 100%;
+	padding: 20px 30px;
+	box-sizing: border-box;
+}
+
+.inputs-left button {
+	display: block;
+	width: 100%;
+	font-size: 24px;
+	line-height: 54px;
+	padding: 10px;
+	text-align: center;
+	margin: 15px 0 0 0;
+}
+
+
+.inputs-left label {
+	color: white;
+}

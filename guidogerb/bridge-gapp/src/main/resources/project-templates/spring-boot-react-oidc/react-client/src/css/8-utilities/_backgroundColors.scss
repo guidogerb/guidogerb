@@ -1,0 +1,173 @@
+.transparentglass {
+	background: rgba(255,255,255,0.5);
+}
+.grad-glass {
+	background: #cccccc;
+	background: linear-gradient(to bottom, #f1f1f1 0%,#cccccc 50%,#f6f6f6 100%) left top repeat-x;
+}
+.grad-ltgray {
+	background: #cccccc;
+	background: linear-gradient(to bottom, #f6f6f6 0%,#cccccc 100%) left top repeat-x;
+}
+.grad-blue {
+	background: #0071bc;
+	background: linear-gradient(to bottom, #29abe2 0%,#0071bc 100%);
+}
+.grad-darkbottomhighlight {
+	background: #333333;
+	background: linear-gradient(to bottom, #000000 0%,#000000 67%,#333333 100%);
+}
+.grad-darkgray {
+	background: rgb(32, 32, 32);
+	background : linear-gradient(0deg, rgb(32, 32, 32) 0%, rgb(85, 85, 85) 100%);
+}
+.grad-darkgrayblack {
+	background: rgba(51, 51, 51, 1);
+	background : linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(51, 51, 51, 1) 100%);
+}
+.grad-green {
+	background: #6e8c16;
+	background: linear-gradient(to bottom, #98c21f 0%,#6e8c16 100%);
+}
+.grad-yelloworange {
+	background: rgb(241, 111, 0);
+	background: linear-gradient(0deg, rgb(241, 111, 0) 0%, rgb(251, 188, 0) 100%);
+}
+.grad-red {
+	background: rgb(237, 28, 36);
+	background : linear-gradient(0deg, rgb(237, 28, 36) 0%, rgb(241, 90, 36) 100%);
+}
+
+.background-darker, .background-darker.button, .background-darker > a {
+	background: #232830;
+}
+.background-dark, .background-dark.button, .background-dark > a {
+	background: #303641;
+}
+.background-lighter, .background-lighter.button, .background-lighter > a {
+	background: #363C46;
+}
+
+.background-ltgray, .background-ltgray.button, .background-ltgray  > a {
+	background: #fafafa;
+}
+.background-gray, .background-gray.button, .background-gray > a {
+	background: #f3f3f3;
+}
+.background-medgray, .background-medgray.button, .background-medgray > a {
+	background: #eaeaea;
+}
+.background-meddarkgray, .background-meddarkgray.button, .background-meddarkgray > a {
+	background: #aaa;
+}
+.background-darkgray, .background-darkgray.button, .background-darkgray > a {
+	background: #333;
+}
+.background-white, .background-white.button, .background-white > a {
+	background: #FFFFFF;
+}
+
+.color-slate-midtone {
+	color: #476073;
+}
+.background-slate-midtone, .background-slate-midtone.button, .background-slate-midtone > a {
+	background: #476073;
+}
+
+.color-red-midtone {
+	color: #DF6C4F;
+}
+.background-red-midtone, .background-red-midtone.button, .background-red-midtone > a {
+	background: #DF6C4F;
+}
+.accessibilityview .color-red-midtone {
+	color: #8e372c;
+}
+.accessibilityview .background-red-midtone, .accessibilityview .background-red-midtone.button, .accessibilityview .background-red-midtone > a {
+	background: #8e372c;
+}
+.color-red-lighttone {
+	color: #E1BFB7;
+}
+.background-red-lighttone, .background-red-lighttone.button, .background-red-lighttone > a {
+	background: #E1BFB7;
+}
+.color-yellow-midtone {
+	color: #EAA731;
+}
+.background-yellow-midtone, .background-yellow-midtone.button, .background-yellow-midtone > a {
+	background: #EAA731;
+}
+.color-yellow-lighttone {
+	color: #EAD89D;
+}
+.background-yellow-lighttone, .background-yellow-lighttone.button, .background-yellow-lighttone > a {
+	background: #EAD89D;
+}
+.color-green-midtone {
+	color: #6f933c;
+}
+.background-green-midtone, .background-green-midtone.button, .background-green-midtone > a {
+	background: #6f933c;
+}
+.accessibilityview .color-green-midtone {
+	color: #3E5A2D;
+}
+.accessibilityview .background-green-midtone, .accessibilityview .background-green-midtone.button, .accessibilityview .background-green-midtone > a {
+	background: #3E5A2D;
+}
+.color-green-lighttone {
+	color: #a4c475;
+}
+.background-green-lighttone, .background-green-lighttone.button, .background-green-lighttone > a {
+	background: #a4c475;
+}
+.color-green-xlighttone {
+	color: #d5e6b8;
+}
+.background-green-xlighttone, .background-green-xlighttone.button, .background-green-xlighttone > a {
+	background: #d5e6b8;
+}
+.color-aqua-midtone {
+	color: #3C948B;
+}
+.background-aqua-midtone, .background-aqua-midtone.button, .background-aqua-midtone > a {
+	background: #3C948B;
+}
+.accessibilityview .color-aqua-midtone {
+	color: #27554c;
+}
+.accessibilityview .background-aqua-midtone, .accessibilityview .background-aqua-midtone.button, .accessibilityview .background-aqua-midtone > a {
+	background: #27554c;
+}
+.color-aqua-lighttone {
+	color: #B0CBC9;
+}
+.background-aqua-lighttone, .background-aqua-lighttone.button, .background-aqua-lighttone > a {
+	background: #B0CBC9;
+}
+.color-blue-midtone {
+	color: #1A99AA;
+}
+.background-blue-midtone, .background-blue-midtone.button, .background-blue-midtone > a {
+	background: #1A99AA;
+}
+.accessibilityview .color-blue-midtone {
+	color: #174152;
+}
+.accessibilityview .background-blue-midtone, .accessibilityview .background-blue-midtone.button, .accessibilityview .background-blue-midtone > a {
+	background: #174152;
+}
+.color-blue-lighttone {
+	color: #A5CDD3;
+}
+.background-blue-lighttone, .background-blue-lighttone.button, .background-blue-lighttone > a {
+	background: #A5CDD3;
+}
+.background-blue-vlighttone, .background-blue-vlighttone.button, .background-blue-vlighttone > a {
+	background: #E6EEEF;
+}
+
+.revdropshadowtext {
+	color: #fff;
+}

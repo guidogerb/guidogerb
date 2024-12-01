@@ -1,0 +1,157 @@
+#!groovy
+
+pipeline {
+    agent any
+
+    environment {
+        emailNotifications = 'garygerber@bluepantsmedia.com, #{support.email}'
+
+        //artifactory
+        artifactoryUrl = ''
+        artifactoryReleaseRepo = ''
+        artifactorySnapshotRepo = ''
+        artifactoryArtifactName = '#{project.name}Client'
+        artifactoryGroup = '/com/bluepantsmedia/dev/bridgegapp/#{artifact-id}'
+        ci_ids = null
+        artifactoryUploadSpec = null
+        buildInfo = null
+
+        //git
+        gitCommitShort = null
+        gitLifecycle = null
+
+        //misc
+        artifactUrl = null
+        versionJson = null
+        applicationVersion = null
+        applicationPackaging = 'zip'
+        instructionsFile = "ci.json"
+    }
+
+    stages {
+        stage('Clean') {
+            steps {
+                deleteDir()
+            }
+        }
+
+        stage('Clone sources') {
+            steps {
+                echo 'Starting pipeline'
+                script {
+                    gitCommitShort = env.gitlabMergeRequestLastCommit ? env.gitlabMergeRequestLastCommit.substring(0,7) : 'MANUAL'
+                    gitLifecycle = env.gitlabBranch ? env.gitlabBranch : 'at'
+                    echo "gitCommitShort $gitCommitShort"
+                    echo "gitLifecycle $gitLifecycle"
+                }
+
+                // Get some code from a GitHub repository
+                git branch: gitLifecycle, credentialsId: 'efd52286-1e8c-4aa5-9493-9d4f762590b2', url: 'git@git.bluepantsmedia.com:sixthfloor-east/#{project.git.group}/#{project.git}.git'
+            }
+        }
+
+        stage('Run npm version plugin') {
+            steps {
+                nodejs(configId: 'Default', nodeJSInstallationName: 'NodeJS Default') {
+                    sh 'npm install --no-optional'
+                    sh 'node ./getGitVersion.js'
+                }
+            }
+        }
+
+        stage('Read version json') {
+            steps {
+                script {
+                    versionJson = readJSON file: './src/static/version.json'
+                    applicationVersion = versionJson['version']
+                }
+            }
+        }
+
+        stage('Run npm version replace plugin') {
+            steps {
+                nodejs(configId: 'Default', nodeJSInstallationName: 'NodeJS Default') {
+                     sh 'node ./genericReplaceTextInFiles.js -s sonar-project.properties -f REPLACE_VERSION -t ' + applicationVersion
+                }
+            }
+        }
+
+        stage('Artifactory config') {
+            steps {
+                script {
+                    ci_ids = Artifactory.newServer url: artifactoryUrl, credentialsId: 'ce74b44c-7035-48c9-802c-fa747710b3f9'
+                    // Create an Artifactory upload spec.
+                    artifactoryUploadSpec = """{
+                                                "files": [
+                                                    {
+                                                        "pattern": "archive/*.zip",
+                                                        "target": "${artifactoryReleaseRepo}${artifactoryGroup}${artifactoryArtifactName}/${applicationVersion}/"
+                                                    }
+                                                 ]
+                                            }"""
+                }
+            }
+        }
+
+        stage('Run npm build') {
+            steps {
+                nodejs(configId: 'Default', nodeJSInstallationName: 'NodeJS Default') {
+                    sh 'npm run prod_build'
+                }
+            }
+        }
+
+        stage ('Zip artifact') {
+            steps {
+                sh 'mkdir archive'
+                zip zipFile: 'archive/' + artifactoryArtifactName + '-' + applicationVersion + '.' + applicationPackaging, dir: 'dist', archive: false
+            }
+        }
+
+        stage ('Publish artifact') {
+            steps {
+                script {
+                    buildInfo = ci_ids.upload(artifactoryUploadSpec)
+                    buildInfo.env.capture = true
+                    buildInfo.env.collect()
+
+                    ci_ids.publishBuildInfo buildInfo
+                }
+            }
+        }
+
+        stage ('Starting AutoDeployStack job') {
+            steps {
+                script {
+                    artifactUrl = artifactoryUrl + '/' + artifactoryReleaseRepo + artifactoryGroup + artifactoryArtifactName + '/' + applicationVersion + '/' + artifactoryArtifactName + '-' + applicationVersion + '.' + applicationPackaging
+                    echo "AutoDeployStack job params: \n artifactUrl=$artifactUrl, ciJSON=$instructionsFile, lifeCycle=$gitLifecycle, mailTo=$emailNotifications"
+
+                }
+                build job: 'Docker/AutoDeployStack', parameters: [text(name: 'ciJSON', value: readFile(instructionsFile)), string(name: 'lifeCycle', value: gitLifecycle), string(name: 'mailTo', value: emailNotifications), string(name: 'artifactURL', value: artifactUrl)]
+            }
+        }
+    }
+
+    post {
+        always {
+            script {
+                def currentResult = currentBuild.result ?: 'SUCCESS'
+                if (currentResult == 'UNSTABLE') {
+                    echo 'This will run only if the run was marked as unstable'
+                }
+
+                def previousResult = currentBuild.previousBuild?.result ?: 'SUCCESS'
+                echo "Previous Result: $previousResult"
+                if (previousResult != currentResult) {
+                    echo 'This will run only if the state of the Pipeline has changed, if the Pipeline was previously failing but is now successful'
+
+                    mail to: emailNotifications,
+                            subject: "Build ${currentBuild.fullDisplayName}: " + currentResult,
+                            body: "${env.BUILD_URL}"
+                }
+
+                echo "Pipeline ended: $currentResult"
+            }
+        }
+    }
+}

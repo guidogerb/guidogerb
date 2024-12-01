@@ -1,0 +1,81 @@
+{
+  "stackBasics": {
+    "elcid": "#{stackBasics.elcid}",
+    "devName": "Gary Gerber",
+    "devPhone": "",
+    "devMail": "garygerber@bluepantsmedia.com",
+    "campus": "#{stackBasics.campus}",
+    "agency": "#{stackBasics.agency}",
+    "appName": "#{stackBasics.appName}",
+    "appDescription": "#{stackBasics.appDescription}",
+    "uniqueID": "#{stackBasics.uniqueID}"
+  },
+  "docker": {
+    "web": {
+      "default": {
+        "image": "apache24/centos7:2201809211816",
+        "exposedPorts": "81",
+        "replicas": 1,
+        "environment": {
+          "ARTIFACT_URL": "{artifactURL}",
+          "APACHE_SERVERNAME": "#{local.apache.servername}",
+          "APACHE_DIRECTORYINDEX": "index.html",
+          "ARTIFACT_APIKEY": "/run/secrets/artifact_api_key"
+        },
+        "secret": {
+          "docker_artifactory_ro": {
+            "target": "artifact_api_key"
+          }
+        }
+      },
+      "DEV": {
+        "image": "apache24/centos7:201902111144",
+        "exposedPorts": "81",
+        "replicas": 1,
+        "environment": {
+          "ARTIFACT_URL": "{artifactURL}",
+          "APACHE_SERVERNAME": "#{dev.apache.servername}",
+          "APACHE_DIRECTORYINDEX": "index.html",
+          "ARTIFACT_APIKEY": "/run/secrets/artifact_api_key"
+        },
+        "secret": {
+          "docker_artifactory_ro": {
+            "target": "artifact_api_key"
+          }
+        }
+      },
+      "AT": {
+        "image": "apache24/centos7:201902111144",
+        "exposedPorts": "81",
+        "replicas": 1,
+        "environment": {
+          "ARTIFACT_URL": "{artifactURL}",
+          "APACHE_SERVERNAME": "#{at.apache.servername}",
+          "APACHE_DIRECTORYINDEX": "index.html",
+          "ARTIFACT_APIKEY": "/run/secrets/artifact_api_key"
+        },
+        "secret": {
+          "docker_artifactory_ro": {
+            "target": "artifact_api_key"
+          }
+        }
+      },
+      "PROD": {
+        "image": "apache24/centos7:201902111144",
+        "exposedPorts": "81",
+        "replicas": 1,
+        "environment": {
+          "ARTIFACT_URL": "{artifactURL}",
+          "APACHE_SERVERNAME": "#{prod.apache.servername}",
+          "APACHE_DIRECTORYINDEX": "index.html",
+          "ARTIFACT_APIKEY": "/run/secrets/artifact_api_key"
+        },
+        "secret": {
+          "docker_artifactory_ro": {
+            "target": "artifact_api_key"
+          }
+        }
+      }
+    }
+  }
+}

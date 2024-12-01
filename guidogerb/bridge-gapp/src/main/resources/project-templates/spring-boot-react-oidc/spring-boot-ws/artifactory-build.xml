@@ -1,0 +1,29 @@
+<project name="maven_pom" default="dist-dev" basedir=".">
+	<!-- set global properties for this build -->
+	<property name="src" location="src/main/resources" />
+	<property name="versionfile" location="${src}/version.properties" />
+	<property name="build" location="target/classes" />
+	<property file="${build}/git.properties"/>
+
+	<target name="version">
+		<echo message="Git property value: ${git.commit.id.describe}" />
+		<property name="current_version" value="${git.commit.id.describe}" />
+		<condition property="conditionBlank">
+			<equals arg1="${git.commit.id.describe}" arg2=""/>
+		</condition>
+	</target>
+
+	<target name="conditional_target" if="conditionBlank">
+		<property environment="env"/>
+		<property name="current_version" value="${env.JOB_NAME}-${env.BUILD_NUMBER}"/>
+		<echo message="Git version not found, using Jenkins default: ${current_version}" />
+	</target>
+
+	<target name="change-release" depends="version, conditional_target">
+		<replace file="pom.xml" token="REPLACE_VERSION" value="${current_version}" />
+		<replace file="sonar-project.properties" token="REPLACE_VERSION" value="${current_version}" />
+		<echo file="${versionfile}" append="false">version=${current_version}</echo>
+		<echo message="Changed Version to: ${current_version} and created ${versionfile}" />
+	</target>
+
+</project>

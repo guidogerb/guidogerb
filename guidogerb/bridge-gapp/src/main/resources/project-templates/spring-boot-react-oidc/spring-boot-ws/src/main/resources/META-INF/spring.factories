@@ -1,0 +1,2 @@
+#Used to inject docker secrets into environment properties
+org.springframework.boot.env.EnvironmentPostProcessor=com.bluepantsmedia.dev.bridgegapp.#{artifact-id}.config.ContainerSecretsAwareEnvironmentPostProcessor
