@@ -4,8 +4,20 @@ git clone git@github.com:guidogerb/guidogerb.git
 
 # init_submodules.sh
 git submodule update --init --recursive
+git submodule status
 
-git remote add upstream git@github.com:ollama/ollama.git
+git remote add guidogerb/app git@github.com:guidogerb/app.git
+git remote add guidogerb/blockchainvoting git@github.com:guidogerb/blockchainvoting.git
+git remote add guidogerb/bridge-gapp git@github.com:guidogerb/bridge-gapp.git
+git remote add guidogerb/communique git@github.com:guidogerb/communique.git
+git remote add guidogerb/fsutil git@github.com:guidogerb/fsutil.git
+git remote add guidogerb/ids git@github.com:guidogerb/ids.git
+git remote add guidogerb/pojo-gernerator git@github.com:guidogerb/pojo-gernerator.git
+git remote add guidogerb/vector git@github.com:guidogerb/vector.git
+
+git remote -v
+
+
 git fetch upstream
 git merge --allow-unrelated-histories upstream/main
 git push origin main
