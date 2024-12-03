@@ -36,6 +36,9 @@ git subtree add --prefix guidogerb/vector git@github.com:guidogerb/vector.git ma
 
 ```shell
 # stash guidogerb subtrees
+# cd "C:\path\to\your\project" # CHANGE THIS
+cd "J:\Home\Projects\Development\Sources\guidogerb"
+ 
 cd ./guidogerb/app
 git stash
 cd ../blockchainvoting
