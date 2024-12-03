@@ -3,6 +3,7 @@
 git clone git@github.com:guidogerb/guidogerb.git
 
 # init_submodules.sh
+```shell
 git submodule update --init --recursive
 git submodule status
 
@@ -22,6 +23,7 @@ git fetch upstream
 git merge --allow-unrelated-histories upstream/main
 git push origin main
 
+```
 
 ## Description
 
