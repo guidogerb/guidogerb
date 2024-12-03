@@ -1,9 +1,16 @@
-# clone GuidoGerb
+# Initialized GuidoGerb Steps
 
+```shell
+# add submodules and remote
 git clone git@github.com:guidogerb/guidogerb.git
 
-# init_submodules.sh
-```shell
+git submodule add git@github.com:guidogerb/ollama.git .\third-party-repos\ollama
+git submodule add git@github.com:guidogerb/Prompt-Engineering-Guide.git .\third-party-repos\prompt-engineering-guide
+git submodule add git@github.com:guidogerb/spring-ai.git .\third-party-repos\spring-ai
+git submodule add git@github.com:guidogerb/spring-boot.git .\third-party-repos\spring-boot
+git submodule add git@github.com:guidogerb/spring-data-relational.git .\third-party-repos\spring-data-relational
+git submodule add git@github.com:guidogerb/spring-framework.git .\third-party-repos\spring-framework
+
 git submodule update --init --recursive
 git submodule status
 
@@ -16,13 +23,77 @@ git remote add guidogerb/ids git@github.com:guidogerb/ids.git
 git remote add guidogerb/pojo-gernerator git@github.com:guidogerb/pojo-gernerator.git
 git remote add guidogerb/vector git@github.com:guidogerb/vector.git
 
-git remote -v
+git subtree add --prefix guidogerb/app git@github.com:guidogerb/app.git main
+git subtree add --prefix guidogerb/blockchainvoting git@github.com:guidogerb/blockchainvoting.git main
+git subtree add --prefix guidogerb/bridge-gapp git@github.com:guidogerb/bridge-gapp.git main
+git subtree add --prefix guidogerb/communique git@github.com:guidogerb/communique.git main
+git subtree add --prefix guidogerb/fsutil git@github.com:guidogerb/fsutil.git main
+git subtree add --prefix guidogerb/ids git@github.com:guidogerb/ids.git main
+git subtree add --prefix guidogerb/pojo-gernerator git@github.com:guidogerb/pojo-gernerator.git main
+git subtree add --prefix guidogerb/vector git@github.com:guidogerb/vector.git main
 
+```
+
+```shell
+# stash guidogerb subtrees
+cd ./guidogerb/app
+git stash
+cd ../blockchainvoting
+git stash
+cd ../bridge-gapp
+git stash
+cd ../communique
+git stash
+cd ../fsutil
+git stash
+cd ../ids
+git stash
+cd ../pojo-generator
+git stash
+cd ..
+```
+
+```shell
+# pull guidogerb subtrees
+
+git subtree pull --prefix guidogerb/app git@github.com:guidogerb/app.git main
+git subtree pull --prefix guidogerb/blockchainvoting git@github.com:guidogerb/blockchainvoting.git main
+git subtree pull --prefix guidogerb/bridge-gapp git@github.com:guidogerb/bridge-gapp.git main
+git subtree pull --prefix guidogerb/communique git@github.com:guidogerb/communique.git main
+git subtree pull --prefix guidogerb/fsutil git@github.com:guidogerb/fsutil.git main
+git subtree pull --prefix guidogerb/ids git@github.com:guidogerb/ids.git main
+git subtree pull --prefix guidogerb/pojo-gernerator git@github.com:guidogerb/pojo-gernerator.git main
+git subtree pull --prefix guidogerb/vector git@github.com:guidogerb/vector.git main
+
+```
+
+```shell
+git remote -v
 
 git fetch upstream
 git merge --allow-unrelated-histories upstream/main
 git push origin main
+````
 
+```shell
+# push subtree repos
+git subtree push --prefix guidogerb/app guidogerb/app main
+git subtree push --prefix guidogerb/blockchainvoting guidogerb/blockchainvoting main
+git subtree push --prefix guidogerb/bridge-gapp guidogerb/bridge-gapp main
+git subtree push --prefix guidogerb/communique guidogerb/communique main
+git subtree push --prefix guidogerb/fsutil guidogerb/fsutil main
+git subtree push --prefix guidogerb/ids guidogerb/ids main
+git subtree push --prefix guidogerb/pojo-gernerator guidogerb/pojo-generator main
+git subtree push --prefix guidogerb/vector guidogerb/vector main
+```
+
+```shell
+# To pull the latest changes from the submodule:
+cd <path-to-submodule>
+git pull origin <branch>
+cd ..
+git add <path-to-submodule>
+git commit -m "Updated submodule"
 ```
 
 ## Description
