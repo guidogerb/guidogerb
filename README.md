@@ -34,6 +34,20 @@ git subtree add --prefix guidogerb/vector git@github.com:guidogerb/vector.git ma
 
 ```
 
+````shell
+# init all submodules
+git submodule update --remote --recursive
+
+git subtree update  --prefix guidogerb/app git@github.com:guidogerb/app.git main
+git subtree update  --prefix guidogerb/blockchainvoting git@github.com:guidogerb/blockchainvoting.git main
+git subtree update  --prefix guidogerb/bridge-gapp git@github.com:guidogerb/bridge-gapp.git main
+git subtree update  --prefix guidogerb/communique git@github.com:guidogerb/communique.git main
+git subtree update  --prefix guidogerb/fsutil git@github.com:guidogerb/fsutil.git main
+git subtree update  --prefix guidogerb/ids git@github.com:guidogerb/ids.git main
+git subtree update  --prefix guidogerb/pojo-gernerator git@github.com:guidogerb/pojo-gernerator.git main
+git subtree update  --prefix guidogerb/vector git@github.com:guidogerb/vector.git main
+````
+
 ```shell
 # stash guidogerb subtrees
 # cd "C:\path\to\your\project" # CHANGE THIS

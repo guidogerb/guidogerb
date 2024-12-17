@@ -33,7 +33,13 @@ export default defineConfig({
                 ]
             },
             workbox: {
-                globPatterns: ["**/*.{js,css,html,png,jpg,svg}"], // Adjust these patterns to match your assets
+                globPatterns: [
+                    "**/*.{js,css,html,ico}",
+                    "**/*.{png,jpg,jpeg,gif,svg,webp}",
+                    "**/*.{mp3,wav,ogg}",
+                    "**/*.{mp4,webm,ogv}",
+                    "**/*.{woff,woff2,ttf,eot}"
+                ], // Adjust these patterns to match your assets
             },
         })
     ], build: {
