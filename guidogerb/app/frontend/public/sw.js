@@ -6,7 +6,7 @@ const INITIAL_CACHED_RESOURCES = [
     '/',
     '/index.html',
     '/offline.html',
-    '/assets/main-HPYbcG_Q.js',
+    '/assets/main-BpqKFx-Z.js',
     '/assets/main-Dijg1YTW.css',
     '/icons/favicon.ico',
     '/manifest.json',

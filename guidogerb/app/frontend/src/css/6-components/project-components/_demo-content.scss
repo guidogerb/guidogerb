@@ -1,0 +1,265 @@
+@use "../../1-settings/class-vars";
+@use "../../1-settings/color-swatches";
+
+/*
+############     _demo-content.scss      ############
+*/
+
+.text-on-primary-color {
+  color: white;
+  #{class-vars.$base-class}#{class-vars.$primary-color-is-light} & {
+    color: var(--gray-on-primary-color) !important;
+  }
+}
+.text-on-primary-color-light,
+.date-input__popup {
+  color: var(--gray-color);
+  a {
+    color: var(--primary-color);
+  }
+  #{class-vars.$base-class}#{class-vars.$primary-color-is-light} & {
+    a {
+      color: var(--primary-color-dark);
+    }
+  }
+
+  &.primary-color {
+    color: var(--primary-color);
+    a {
+      color: var(--primary-color);
+    }
+    #{class-vars.$base-class}#{class-vars.$primary-color-is-light} & {
+      color: var(--primary-color-dark);
+      a {
+        color: var(--primary-color-dark);
+      }
+    }
+  }
+}
+.text-on-secondary-color {
+  color: white;
+  #{class-vars.$base-class}#{class-vars.$secondary-color-is-light} & {
+    color: var(--gray-on-secondary-color);
+  }
+}
+
+.demo-content {
+  .hero {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      background: url("../../../../public/images/delicate-arch.jpg") no-repeat left/100%;
+      background-size: cover;
+    }
+
+    &__title-wrapper {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      box-sizing: border-box;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__title {
+      font-size: var(--font-size-6xl);
+      font-weight: var(--font-weight-semi-bold);
+      text-align: center;
+      z-index: 1;
+      padding: var(--spacing-l) 0;
+
+      &-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-color);
+        opacity: 0.75;
+        border-radius: 6px 6px 0 0;
+      }
+    }
+    &__title-h-divider {
+      width: 100%;
+      height: 1px;
+      background: white;
+      margin: var(--spacing) 0;
+      @at-root #{class-vars.$primary-color-is-light}#{&} {
+        background: var(--gray-color);
+      }
+    }
+    &__sub-title {
+      font-size: 1.5rem;
+      font-weight: var(--font-weight-semi-bold);
+      text-align: right;
+    }
+    &__branding {
+      width: 130px;
+      height: 130px;
+      position: absolute;
+      border-radius: 999px;
+      z-index: 1;
+      background: white;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 70px;
+      }
+    }
+  }
+
+  .cards.grid-fixed {
+      max-width: 800px;
+      gap: var(--spacing);
+      grid-template-columns: repeat(2, minmax(375px, 1fr));
+  }
+
+  .action-card {
+    &:hover {
+      cursor: pointer;
+    }
+    h3 {
+      text-transform: capitalize;
+    }
+  }
+
+  .activities {
+    position: relative;
+    margin-bottom: 200px;
+
+    &__image {
+      height: 375px;
+      width: 100%;
+      background: url("../../../../public/images/antelope.jpg") no-repeat center/cover;
+    }
+
+    &__content {
+      background-color: var(--gray-light-color);
+      border-radius: 6px;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+      position: absolute;
+      top: var(--spacing-6xl);
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: var(--content-width-narrow);
+    }
+
+    .white-color-background {
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .icon-map {
+      fill: var(--primary-color);
+    }
+  }
+
+  .events,
+  .permits,
+  .visit {
+    &__content {
+      max-width: var(--content-width-narrow);
+    }
+  }
+
+  .permits {
+    background-color: var(--gray-light-color);
+    &__image {
+      border-radius: 99999px;
+      background: url("../../../../public/images/hiker.jpg") no-repeat center/cover;
+      width: 350px;
+      height: 350px;
+      border: 2px solid var(--primary-color);
+    }
+  }
+
+  .visit {
+    ul,
+    li {
+      list-style: none;
+      padding: 0;
+    }
+    ul {
+      padding-left: var(--spacing);
+    }
+    svg {
+      fill: var(--primary-color);
+    }
+  }
+
+  .faq,
+  .news {
+    & > div > div:first-child {
+      max-width: var(--content-width-narrow);
+    }
+  }
+
+  *:not(.accordion__header) > h2 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: var(--font-size-3xl);
+  }
+
+
+  @media screen and (max-width: 875px) {
+    .content-width {
+      width: auto;
+    }
+  }
+
+  @media screen and (max-width: 860px) {
+    .faq,
+    .news {
+      padding: 0 var(--spacing-xl);
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .cards.grid-fixed {
+      padding: 0 var(--spacing);
+      grid-template-columns: repeat(1, minmax(375px, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .permits__content > div:first-child {
+      flex-direction: column;
+    }
+
+    .news .flex.gap {
+      flex-direction: column;
+      padding: var(--spacing);
+    }
+  }
+
+  @media screen and (max-width: 545px) {
+    .activities__content > div:first-child {
+      flex-direction: column;
+    }
+    .activities {
+      margin-bottom: 400px;
+      .white-color-background {
+        border-radius: 0 0 6px 6px;
+      }
+    }
+    .visit__content > .flex {
+      flex-direction: column;
+      gap: var(--spacing);
+    }
+  }
+}

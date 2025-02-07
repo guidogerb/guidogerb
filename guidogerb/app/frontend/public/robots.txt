@@ -19,4 +19,4 @@ Disallow: /
 # Crawl-delay: 10
 
 # Sitemap (uncomment and update when you have a sitemap)
-Sitemap: https://guidogerb.com/sitemap.xml
+Sitemap: https://guidogerbpublishing.com/sitemap.xml

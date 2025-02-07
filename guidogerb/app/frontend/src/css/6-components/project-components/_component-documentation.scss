@@ -1,0 +1,36 @@
+@use "../../1-settings/color-swatches";
+
+table {
+  th.css-classes {
+    width: 45%;
+  }
+}
+
+.documentation-content {
+  &--wider {
+    margin: 0 -4rem;
+  }
+  &--small-text {
+    font-size: var(--font-size-s);
+  }
+}
+
+.prop {
+  &__types {
+    font-style: italic;
+    color: color-swatches.$celadon-green-03;
+  }
+  &__optional {
+    color: color-swatches.$celadon-green-04;
+    font-size: .9rem;
+  }
+  &__section-title {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-l);
+  }
+}
+
+.icon-24 {
+  width: 24px;
+  fill: currentColor;
+}

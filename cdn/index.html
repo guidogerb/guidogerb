@@ -1,0 +1,1190 @@
+<html>
+
+<head>
+    <title>Time Capsule by Route10</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Time Capsule by Route10 is a heartfelt and lively collection of country songs that celebrate the quiet joys of rural Utah life, the awe-inspiring beauty of the San Rafael Swell, and the deep bonds of family and faith.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Time Capsule by Route10">
+    <meta property="og:description"
+        content="Time Capsule by Route10 is a heartfelt and lively collection of country songs that celebrate the quiet joys of rural Utah life, the awe-inspiring beauty of the San Rafael Swell, and the deep bonds of family and faith. The album is a tribute to the family band&#39;s leader, Kay, whose steadfast love for music, his family, and God inspires their journey. Blending tender ballads with upbeat tunes, the album captures the vibrant energy of family life, the bittersweet awareness of growing older, and the enduring joy of shared music. With themes ranging from love, laughter, and faith to popcorn, cheese, and guitars, Time Capsule is a nostalgic yet uplifting ode to togetherness and the timeless beauty of the simple life.">
+    <meta property="og:image" content="https://www.guidogerbpublishing.com/cdn/TimeCapsule/route10cover.png">
+    <meta property="og:url" content="https://www.guidogerbpublishing.com/cdn/TimeCapsule/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card"
+        content="Time Capsule by Route10 is a heartfelt and lively collection of country songs that celebrate the quiet joys of rural Utah life">
+    <meta name="twitter:title" content="Time Capsule by Route10">
+    <meta name="twitter:description"
+        content="Time Capsule by Route10 is a heartfelt and lively collection of country songs that celebrate the quiet joys of rural Utah life, the awe-inspiring beauty of the San Rafael Swell, and the deep bonds of family and faith. The album is a tribute to the family band&#39;s leader, Kay, whose steadfast love for music, his family, and God inspires their journey. Blending tender ballads with upbeat tunes, the album captures the vibrant energy of family life, the bittersweet awareness of growing older, and the enduring joy of shared music. With themes ranging from love, laughter, and faith to popcorn, cheese, and guitars, Time Capsule is a nostalgic yet uplifting ode to togetherness and the timeless beauty of the simple life.">
+    <meta name="twitter:image" content="https://www.guidogerbpublishing.com/cdn/TimeCapsule/route10cover.png">
+    <meta name="twitter:site" content="@guidogerber1966">
+
+</head>
+<style>
+    :root {
+        --primary-tan: #E5D3B3;
+        --secondary-tan: #D4C4A7;
+        --accent-tan: #BFB09B;
+        --dark-tan: #A69882;
+        --light-tan: #F2E6D4;
+        --lighter-tan: #F7F0E6;
+        --text-color: #6B5B45;
+        --shadow-color: rgba(166, 152, 130, 0.2);
+    }
+
+    body {
+        background-color: var(--light-tan);
+        color: var(--text-color);
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    /* Center all heading tags */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+        margin: 20px auto;
+        /* Adds consistent vertical spacing */
+        color: var(--text-color);
+    }
+
+    /* If you want to style specific headings differently */
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.75em;
+    }
+
+    .centered-heading {
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    button {
+        background-color: var(--primary-tan);
+        border: none;
+        border-radius: 4px;
+        color: var(--text-color);
+        cursor: pointer;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 4px var(--shadow-color);
+    }
+
+    button:hover {
+        background-color: var(--secondary-tan);
+    }
+
+    button:active {
+        background-color: var(--accent-tan);
+    }
+
+    /* Audio Player Styles */
+    .audio-player audio {
+        width: 100%;
+        height: 40px;
+        display: block;
+        position: sticky;
+        top: 80px;
+        z-index: 999;
+        background-color: var(--primary-tan);
+        padding: 15px;
+        margin: 0;
+        box-shadow: 0 2px 4px var(--shadow-color);
+        border-radius: 0 0 8px 8px;
+
+    }
+
+    /* Webkit (Chrome, Safari, newer Edge) */
+    audio::-webkit-media-controls-panel {
+        background-color: var(--secondary-tan);
+        border-radius: 4px;
+    }
+
+    audio::-webkit-media-controls-play-button {
+        background-color: var(--accent-tan);
+        border-radius: 50%;
+        margin: 0 8px;
+    }
+
+    audio::-webkit-media-controls-timeline {
+        background-color: var(--light-tan);
+        border-radius: 2px;
+        margin: 0 10px;
+    }
+
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display {
+        color: var(--text-color);
+        margin: 0 4px;
+    }
+
+    audio::-webkit-media-controls-volume-slider {
+        background-color: var(--light-tan);
+        border-radius: 2px;
+        padding: 0 5px;
+    }
+
+    audio::-webkit-media-controls-mute-button {
+        background-color: var(--accent-tan);
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+
+    /* Firefox specific styles */
+    @-moz-document url-prefix() {
+        audio {
+            background-color: var(--secondary-tan);
+            border-radius: 4px;
+        }
+    }
+
+    .player-wrapper {
+        background-color: var(--secondary-tan);
+        padding: 15px;
+        border-radius: 6px;
+        margin: 10px 0;
+    }
+
+    .title {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-tan);
+        box-shadow: 0 2px 4px var(--shadow-color);
+        z-index: 1000;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-text {
+        color: var(--text-color);
+        font-size: calc(0.9em * 2.5);
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .title-player {
+        width: 100%;
+        max-width: 600px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .title-player audio {
+        width: 100%;
+        height: 40px;
+    }
+
+    /* Main content wrapper */
+    .content-wrapper {
+        position: relative;
+        z-index: 1;
+        /* Lower z-index than header/footer */
+        margin-top: 80px;
+        /* Match header height */
+        margin-bottom: 60px;
+        /* Match footer height */
+        min-height: calc(100vh - 140px);
+        /* Viewport height minus header and footer */
+        overflow-y: auto;
+    }
+
+    .controls {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .controls button {
+        flex: 1;
+    }
+
+    /* Cover art container */
+    .cover-art-container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 120px auto 20px auto;
+        /* Top margin matches body padding-top */
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        /* Lower than title's z-index */
+    }
+
+    /* Cover art styles */
+    .cover-art {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px var(--shadow-color);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cover-art:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px var(--shadow-color);
+    }
+
+    .table-container {
+        width: 100%;
+        max-width: 1140px;
+        /* Match your container max-width */
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Song table styles */
+    .song-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 0 auto;
+        background-color: var(--light-tan);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px var(--shadow-color);
+    }
+
+    .song-table tr.group1 {
+        background-color: var(--light-tan);
+    }
+
+    .song-table tr.group2 {
+        background-color: var(--lighter-tan);
+    }
+
+    .song-table tr.group1:last-of-type,
+    .song-table tr.group2:last-of-type {
+        border-bottom: 2px solid var(--accent-tan);
+    }
+
+    .song-table th,
+    .song-table td {
+        padding: 12px 15px;
+        text-align: left;
+        color: var(--text-color);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .song-table td[rowspan] {
+        vertical-align: middle;
+        border-right: 2px solid var(--accent-tan);
+    }
+
+    /* Group-specific background colors for rowspanned cells */
+    .song-table tr.group1 td[rowspan] {
+        background-color: var(--light-tan) !important;
+    }
+
+    .song-table tr.group2 td[rowspan] {
+        background-color: var(--lighter-tan) !important;
+    }
+
+    /* Large screens (default) */
+    .song-table td.title-wrapper {
+        max-width: 400px;
+    }
+
+    .song-table td.player-wrapper {
+        max-width: 300px;
+    }
+
+    .song-table td.lyrics-wrapper {
+        width: 100px;
+    }
+
+    /* Keep hover effect only for non-rowspan cells */
+    .song-table tr:hover td:not([rowspan]) {
+        background-color: var(--dark-tan);
+        transition: background-color 0.2s ease;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: var(--light-tan);
+        margin: 50px auto;
+        padding: 20px;
+        width: 90%;
+        max-width: 800px;
+        height: 80vh;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px var(--shadow-color);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-iframe-wrapper {
+        flex: 1;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+
+    .modal-iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: var(--light-tan);
+    }
+
+    .modal-footer {
+        position: sticky;
+        bottom: 0;
+        background-color: var(--light-tan);
+        padding: 15px 0;
+        text-align: center;
+        border-top: 1px solid var(--accent-tan);
+        margin-top: 20px;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-tan);
+        padding: 10px 0;
+        text-align: center;
+        font-size: 0.9em;
+        color: var(--text-color);
+        box-shadow: 0 -2px 4px var(--shadow-color);
+        z-index: 999;
+    }
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer a {
+        color: var(--text-color);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Base styles (outside media queries) */
+    .title {
+        font-size: calc(0.9em * 2.5);
+        padding: 15px 0;
+        letter-spacing: 2px;
+    }
+
+    .login-dialog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+    }
+
+    .login-box {
+        background: var(--primary-tan);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .login-box h2 {
+        margin-bottom: 20px;
+        color: var(--text-color);
+    }
+
+    .login-box input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid var(--accent-tan);
+        border-radius: 4px;
+    }
+
+    .login-box button {
+        padding: 10px 20px;
+        background: var(--accent-tan);
+        border: none;
+        border-radius: 4px;
+        color: var(--text-color);
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .login-box button:hover {
+        background: var(--dark-tan);
+    }
+
+    /* Desktop (992px to 1199px) */
+    @media screen and (max-width: 1199px) {
+
+        .cover-art {
+            max-width: 500px;
+        }
+
+        .song-table td.title-wrapper {
+            max-width: 350px;
+        }
+
+        .song-table td.player-wrapper {
+            max-width: 250px;
+        }
+
+        .song-table td.lyrics-wrapper {
+            width: 90px;
+        }
+
+        .table-container {
+            max-width: calc(450px * 2);
+        }
+
+    }
+
+    /* Tablet Landscape (768px to 991px) */
+    @media screen and (max-width: 991px) {
+        .title {
+            font-size: calc(0.9em * 1.7);
+            padding: 12px 0;
+        }
+
+        body {
+            padding-top: 70px;
+        }
+
+
+        .audio-player audio {
+            top: 70px;
+        }
+
+        .cover-art {
+            max-width: 450px;
+        }
+
+        .song-table td.title-wrapper {
+            max-width: 300px;
+        }
+
+        .song-table td.player-wrapper {
+            max-width: 200px;
+        }
+
+        .song-table td.lyrics-wrapper {
+            width: 80px;
+        }
+
+    }
+
+    /* Tablet Portrait (576px to 767px) */
+    @media screen and (max-width: 767px) {
+        .title-text {
+            font-size: calc(0.9em * 1.5);
+        }
+
+        .title-player {
+            max-width: 400px;
+        }
+
+        body {
+            padding-top: 100px;
+        }
+
+
+        body {
+            padding-top: 60px;
+        }
+
+        .cover-art-container {
+            margin-top: 100px;
+            padding: 15px;
+        }
+
+        .audio-player audio {
+            top: 60px;
+        }
+
+        .controls {
+            flex-wrap: wrap;
+        }
+
+        .table-container {
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        .song-table {
+            display: block;
+            overflow-x: auto;
+        }
+
+
+        .song-table td.title-wrapper {
+            max-width: 200px;
+        }
+
+        .song-table td.player-wrapper {
+            max-width: 150px;
+        }
+
+        .song-table td.lyrics-wrapper {
+            width: 70px;
+        }
+
+        .modal-content {
+            width: 95%;
+            margin: 30px auto;
+        }
+    }
+
+    /* Mobile Large (400px to 575px) */
+    @media screen and (max-width: 575px) {
+        .title-text {
+            font-size: calc(0.9em * 1.2);
+        }
+
+        .title-player {
+            max-width: 300px;
+        }
+
+        body {
+            padding-top: 90px;
+        }
+
+
+        .audio-player audio {
+            top: 50px;
+        }
+
+        .cover-art-container {
+            margin-top: 90px;
+            padding: 10px;
+        }
+
+        .song-table td.title-wrapper {
+            max-width: 150px;
+        }
+
+        .song-table td.player-wrapper {
+            max-width: 100px;
+        }
+
+        .song-table td.lyrics-wrapper {
+            width: 60px;
+        }
+
+        .footer-content {
+            padding: 0 10px;
+            font-size: 0.85em;
+        }
+    }
+
+    /* Mobile Small (320px to 399px) */
+    @media screen and (max-width: 399px) {
+        body {
+            padding-top: 40px;
+        }
+
+
+        .audio-player audio {
+            top: 40px;
+        }
+
+        .song-table td.title-wrapper {
+            max-width: 120px;
+        }
+
+        .song-table td.player-wrapper {
+            max-width: 80px;
+        }
+
+        .song-table td.lyrics-wrapper {
+            width: 50px;
+        }
+
+        .modal-content {
+            width: 98%;
+            margin: 20px auto;
+        }
+
+        .footer-content {
+            font-size: 0.8em;
+        }
+    }
+</style>
+<script>
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Login functionality
+        const CORRECT_PASSWORD = 'route10isawesome';
+        const contentWrapper = document.querySelector('.content-wrapper');
+
+        // Create login dialog
+        const loginDialog = document.createElement('div');
+        loginDialog.className = 'login-dialog';
+        loginDialog.innerHTML = `
+        <div class="login-box">
+            <h2>Enter Password</h2>
+            <form id="loginForm">
+                <input type="password" id="passwordInput" placeholder="Password" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    `;
+
+        function checkLogin() {
+            return document.cookie.split(';').some(item => item.trim().startsWith('loggedIn=true'));
+        }
+
+        function setLoginCookie() {
+            const date = new Date();
+            date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));
+            document.cookie = `loggedIn=true; expires=${date.toUTCString()}; path=/`;
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const password = document.getElementById('passwordInput').value;
+
+            if (password === CORRECT_PASSWORD) {
+                setLoginCookie();
+                loginDialog.remove();
+                contentWrapper.style.display = 'block';
+            } else {
+                alert('Incorrect password');
+                document.getElementById('passwordInput').value = '';
+            }
+        }
+
+        // Initialize login
+        if (!checkLogin()) {
+            contentWrapper.style.display = 'none';
+            document.body.appendChild(loginDialog);
+            document.getElementById('loginForm').addEventListener('submit', handleLogin);
+        }
+
+
+
+        // Media player and playlist
+        const playlist = [
+            {
+                title: "When Strings Fade",
+                url: "https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/When+Strings+Fade.mp3"
+            },
+            {
+                title: "Ridin' Route 10, Ride!",
+                url: "https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Ridin%27%20Route%2010%2C%20Ride%21.mp3"
+            },
+            {
+                title: "Little Grand Canyon Dreams",
+                url: "https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Little%20Grand%20Canyon%20dreams.mp3"
+            },
+            {
+                title: "Singin' Sister Showdown",
+                url: "https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Singin%27%20Sister%20Showdown.mp3"
+            },
+            {
+                title: "Linda's Lullaby",
+                url: "https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/LindasLullaby.mp3"
+            },
+            {
+                title: "Lassoing Dad",
+                url: "https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Lassoing%20Dad.mp3"
+            },
+            {
+                title: "Country Chores & Kitchen Wars",
+                url: "https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Country%20Chores%20%26%20Kitchen%20Wars.mp3"
+            },
+            {
+                title: "Home Is Where We Sing",
+                url: "https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Home%20Is%20Where%20We%20Sing.mp3"
+            },
+            {
+                title: "Gas Pumps and Glamour",
+                url: "https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Gas%20Pumps%20and%20Glamour.mp3"
+            },
+            {
+                title: "The Quiet Ride Home",
+                url: "https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/The%20Quiet%20Road%20Home.mp3"
+            }
+        ];
+
+        let currentTrack = 0;
+        let errorCount = 0;
+        const MAX_ERRORS = 2;
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        if (audioPlayer) {
+            audioPlayer.src = playlist[currentTrack].url;
+
+            audioPlayer.addEventListener('error', function (e) {
+                console.error('Audio error:', e);
+                if (errorCount < MAX_ERRORS) {
+                    errorCount++;
+                    playNextTrack();
+                } else {
+                    console.error('Too many errors, stopping playlist');
+                    errorCount = 0;
+                    currentTrack = 0;
+                    audioPlayer.src = playlist[currentTrack].url;
+                }
+            });
+
+            audioPlayer.addEventListener('ended', function () {
+                errorCount = 0; // Reset error count on successful playback
+                playNextTrack();
+            });
+        }
+
+        function playNextTrack() {
+            try {
+                currentTrack++;
+                if (currentTrack >= playlist.length) {
+                    currentTrack = 0;
+                }
+                audioPlayer.src = playlist[currentTrack].url;
+                audioPlayer.play().catch(e => {
+                    console.error('Error playing audio:', e);
+                    if (errorCount < MAX_ERRORS) {
+                        errorCount++;
+                        // Add delay before trying next track
+                        setTimeout(playNextTrack, 1000);
+                    } else {
+                        console.error('Too many errors, stopping playlist');
+                        errorCount = 0;
+                        currentTrack = 0;
+                        audioPlayer.src = playlist[currentTrack].url;
+                    }
+                });
+            } catch (e) {
+                console.error('Error in playNextTrack:', e);
+                currentTrack = 0;
+                errorCount = 0;
+                audioPlayer.src = playlist[currentTrack].url;
+            }
+        }
+
+        window.playAudio = function (audioUrl) {
+            if (audioPlayer) {
+                try {
+                    errorCount = 0; // Reset error count when manually playing
+                    audioPlayer.src = audioUrl;
+                    audioPlayer.play().catch(e => console.error('Error playing audio:', e));
+
+                    currentTrack = playlist.findIndex(track => track.url === audioUrl);
+                    if (currentTrack === -1) currentTrack = 0;
+                } catch (e) {
+                    console.error('Error in playAudio:', e);
+                }
+            }
+        };
+    });
+</script>
+
+<body>
+    <div class="title">
+        <div class="title-text">Route10 - Time Capsule</div>
+        <div class="title-player">
+            <audio id="audioPlayer" controlsList="nodownload" controls>
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="cover-art-container">
+            <img class="cover-art" src="https://www.guidogerbpublishing.com/cdn/TimeCapsule/route10cover.png"
+                alt="Route10 TimeCapsule Cover Art">
+        </div>
+        <div class="table-container">
+            <table class="song-table">
+                <thead>
+                    <tr>
+                        <th>Track</th>
+                        <th>Play</th>
+                        <th>Download Lyrics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="group1">
+                        <td rowspan="3">
+                            When Strings Fade
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/When%20Strings%20Fade.mp3')"><span
+                                    class="play-icon">▶</span>When
+                                Strings Fade</button></td>
+                        <td rowspan="3"><a
+                                href="https://www.guidogerbpublishing.com/cdn/TimeCapsule/lyrics/01-WhenTheStringsFade.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+                    <tr class="group1">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/When%20Strings%20Fade%20-%20Instrumental.mp3')"><span
+                                    class="play-icon">▶</span>Instrumental</button>
+                        </td>
+                    </tr>
+                    <tr class="group1">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/When%20Strings%20Fade%20-%20Vocals.mp3')"><span
+                                    class="play-icon">▶</span>Vocals</button>
+                        </td>
+                    </tr>
+
+                    <tr class="group2">
+                        <td rowspan="3">
+                            Ridin' Route 10, Ride!
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Ridin%27%20Route%2010%2C%20Ride%21.mp3')"><span
+                                    class="play-icon">▶</span>Ridin' Route 10, Ride!</button>
+                        </td>
+                        <td rowspan="3"><a
+                                href="https://www.guidogerbpublishing.com/cdn/TimeCapsule/lyrics/02-RidingRoute10Ride.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+                    <tr class="group2">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Ridin%27%20Route%2010%2C%20Ride%21%20-%20Instrumental.mp3')"><span
+                                    class="play-icon">▶</span>Instrumental</button>
+                        </td>
+                    </tr>
+                    <tr class="group2">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Ridin%27%20Route%2010%2C%20Ride%21%20-%20Vocals.mp3')"><span
+                                    class="play-icon">▶</span>Vocals</button>
+                        </td>
+                    </tr>
+
+                    <tr class="group1">
+                        <td rowspan="3">
+                            Little Grand Canyon dreams
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Little%20Grand%20Canyon%20dreams.mp3')"><span
+                                    class="play-icon">▶</span>Little Grand Canyon Dreams</button>
+                        </td>
+                        <td rowspan="3"><a
+                                href="https://www.guidogerbpublishing.com/cdn/TimeCapsule/lyrics/03-LittleGrandCanyonDreams.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+                    <tr class="group1">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Little%20Grand%20Canyon%20dreams%20-%20Instrumental.mp3')"><span
+                                    class="play-icon">▶</span>Instrumental</button>
+                        </td>
+                    </tr>
+                    <tr class="group1">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Little%20Grand%20Canyon%20dreams%20-%20Vocals.mp3')"><span
+                                    class="play-icon">▶</span>Vocals</button>
+                        </td>
+                    </tr>
+
+                    <tr class="group2">
+                        <td rowspan="3">
+                            Singin' Sister Showdown
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Singin%27%20Sister%20Showdown.mp3')"><span
+                                    class="play-icon">▶</span>Singin' Sister Showdown</button>
+                        </td>
+                        <td rowspan="3"><a
+                                href="https://www.guidogerbpublishing.com/cdn/TimeCapsule/lyrics/04-SinginSisterShowdown.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+                    <tr class="group2">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Singin%27%20Sister%20Showdown%20-%20Instrumental.mp3')"><span
+                                    class="play-icon">▶</span>Instrumental</button>
+                        </td>
+                    </tr>
+                    <tr class="group2">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Singin%27%20Sister%20Showdown%20-%20Vocals.mp3')"><span
+                                    class="play-icon">▶</span>Vocals</button>
+                        </td>
+                    </tr>
+
+                    <tr class="group1">
+                        <td rowspan="3">
+                            Linda's Lullaby
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/LindasLullaby.mp3')"><span
+                                    class="play-icon">▶</span>Linda's Lullaby</button>
+                        </td>
+                        <td rowspan="3"><a
+                                href="https://www.guidogerbpublishing.com/cdn/TimeCapsule/lyrics/05-LindasLullaby.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+                    <tr class="group1">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/LindasLullaby%20-%20Instrumental.mp3')"><span
+                                    class="play-icon">▶</span>Instrumental</button>
+                        </td>
+                    </tr>
+                    <tr class="group1">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/LindasLullaby%20-%20Vocals.mp3')"><span
+                                    class="play-icon">▶</span>Vocals</button>
+                        </td>
+                    </tr>
+
+                    <tr class="group2">
+                        <td rowspan="3">
+                            Lassoing Dad
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Lassoing%20Dad.mp3')"><span
+                                    class="play-icon">▶</span>Lassoing Dad</button>
+                        </td>
+                        <td rowspan="3"><a
+                                href="https://www.guidogerbpublishing.com/cdn/TimeCapsule/lyrics/06-LassoingDad.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+                    <tr class="group2">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Lassoing%20Dad%20-%20Instrumental.mp3')"><span
+                                    class="play-icon">▶</span>Instrumental</button>
+                        </td>
+                    </tr>
+                    <tr class="group2">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Lassoing%20Dad%20-%20Vocals.mp3')"><span
+                                    class="play-icon">▶</span>Vocals</button>
+                        </td>
+                    </tr>
+
+                    <tr class="group1">
+                        <td rowspan="3">
+                            Country Chores & Kitchen Wars
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Country%20Chores%20%26%20Kitchen%20Wars.mp3')"><span
+                                    class="play-icon">▶</span>Country Chores & Kitchen Wars</button>
+                        </td>
+                        <td rowspan="3"><a
+                                href="https://www.guidogerbpublishing.com/cdn/TimeCapsule/lyrics/07-CountryChoresAndKitchenWars.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+                    <tr class="group1">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Country%20Chores%20%26%20Kitchen%20Wars%20-%20Instrumental.mp3')"><span
+                                    class="play-icon">▶</span>Instrumental</button>
+                        </td>
+                    </tr>
+                    <tr class="group1">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Country%20Chores%20%26%20Kitchen%20Wars%20-%20Vocals.mp3')"><span
+                                    class="play-icon">▶</span>Vocals</button>
+                        </td>
+                    </tr>
+
+                    <tr class="group2">
+                        <td rowspan="3">
+                            Home Is Where We Sing
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Home%20Is%20Where%20We%20Sing.mp3')"><span
+                                    class="play-icon">▶</span>Home Is Where We Sing</button>
+                        </td>
+                        <td rowspan="3"><a
+                                href="https://www.guidogerbpublishing.com/cdn/TimeCapsule/lyrics/08-HomeIsWhereWeSing.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+                    <tr class="group2">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Home%20Is%20Where%20We%20Sing%20-%20Instrumental.mp3')"><span
+                                    class="play-icon">▶</span>Instrumental</button>
+                        </td>
+                    </tr>
+                    <tr class="group2">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Home%20Is%20Where%20We%20Sing%20-%20Vocals.mp3')"><span
+                                    class="play-icon">▶</span>Vocals</button>
+                        </td>
+                    </tr>
+
+                    <tr class="group1">
+                        <td rowspan="3">
+                            Gas Pumps and Glamour
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Gas%20Pumps%20and%20Glamour.mp3')"><span
+                                    class="play-icon">▶</span>Gas Pumps and Glamour</button>
+                        </td>
+                        <td rowspan="3"><a
+                                href="https://www.guidogerbpublishing.com/cdn/TimeCapsule/lyrics/09-GasPumpsAndGlamour.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+                    <tr class="group1">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Gas%20Pumps%20and%20Glamour%20-%20Instrumental.mp3')"><span
+                                    class="play-icon">▶</span>Instrumental</button>
+                        </td>
+                    </tr>
+                    <tr class="group1">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/Gas%20Pumps%20and%20Glamour%20-%20Vocals.mp3')"><span
+                                    class="play-icon">▶</span>Vocals</button>
+                        </td>
+                    </tr>
+
+                    <tr class="group2">
+                        <td rowspan="3">
+                            The Quiet Road Home
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/The%20Quiet%20Road%20Home.mp3')"><span
+                                    class="play-icon">▶</span>The Quiet Road Home</button>
+                        </td>
+                        <td rowspan="3"><a
+                                href="https://www.guidogerbpublishing.com/cdn/TimeCapsule/lyrics/10-TheQuietRoadHome.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+                    <tr class="group2">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/The%20Quiet%20Road%20Home%20-%20Instrumental.mp3')"><span
+                                    class="play-icon">▶</span>Instrumental</button>
+                        </td>
+                    </tr>
+                    <tr class="group2">
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/TimeCapsule/audio/The%20Quiet%20Road%20Home%20-%20Vocals.mp3')"><span
+                                    class="play-icon">▶</span>Vocals</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Updated modal structure -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-iframe-wrapper">
+                <iframe class="modal-iframe" src="https://www.guidogerbpublishing.com/privacy.html"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal('privacyModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-iframe-wrapper">
+                <iframe class="modal-iframe" src="https://www.guidogerbpublishing.com/terms.html"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal('termsModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Updated JavaScript to handle iframe loading
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+
+            // Reset iframe src to force refresh if needed
+            const iframe = modal.querySelector('iframe');
+            const src = iframe.src;
+            iframe.src = src;
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close modal if clicking outside content
+        window.onclick = function (event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.style.display = "none";
+                });
+                document.body.style.overflow = "auto";
+            }
+        });
+    </script>
+    <div class="footer">
+        <div class="footer-content">
+            &copy; 2025 GuidoGerb Publishing, LLC. All rights reserved. |
+            <a onclick="openModal('privacyModal')" style="cursor: pointer;">Privacy Policy</a> |
+            <a onclick="openModal('termsModal')" style="cursor: pointer;">Terms of Use</a>
+        </div>
+    </div>
+</body>
+
+</html>
