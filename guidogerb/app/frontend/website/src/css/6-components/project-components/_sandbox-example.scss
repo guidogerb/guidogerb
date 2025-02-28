@@ -1,0 +1,74 @@
+@use "../../../../../design-system/css/1-settings/color-swatches";
+@use "../../../../../design-system/css/1-settings/class-vars";
+@use "../../../../../design-system/css/1-settings/media-size-vars";
+
+#{class-vars.$base-class} {
+  .sandbox-example {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 var(--spacing) 0 ;
+
+    &__top {
+      display: flex;
+      flex-direction: row;
+      gap: var(--spacing);
+    }
+    &__component {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--gray-light-color);
+      padding: var(--spacing);
+      border-radius: var(--radius-medium);
+      flex: 2 1 70%;
+      min-width: 0;
+      &--flex-start {
+        justify-content: flex-start;
+      }
+      &--outline {
+        border: 1px solid var(--gray-medium-light-color);
+        background: white;
+      }
+    }
+    &__props-inputs {
+      background-color: color-swatches.$neutral-gray-16;
+      padding: var(--spacing);
+      border-radius: var(--radius-medium);
+      min-width: 0;
+      max-width: 250px;
+    }
+    &__bottom {
+      margin: var(--spacing) 0 0 0;
+      background: var(--gray-light-color);
+      border-radius: var(--radius-medium);
+      code {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{media-size-vars.$media-size-desktop-small}) {
+  #{class-vars.$base-class} {
+    .sandbox-example {
+      &__props-inputs {
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{media-size-vars.$media-size-tablet-portrait}) {
+  #{class-vars.$base-class} {
+    .sandbox-example {
+      &__top {
+        flex-wrap: wrap-reverse;
+      }
+      &__props-inputs {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+  }
+}

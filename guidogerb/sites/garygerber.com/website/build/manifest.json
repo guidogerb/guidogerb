@@ -1,0 +1,19 @@
+// public/manifest.json
+{
+  "name": "Gary Gerber",
+  "short_name": "Guido",
+  "description": "All of your creative needs",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+/*    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }*/
+  ]
+}

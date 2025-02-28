@@ -1,0 +1,1058 @@
+<html>
+
+<head>
+    <title>This Is My Story by Gayle Gayler</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A Collection of Family Memories in Song. Step into the heart and soul of a loving mother's timeless tales with `This Is My Story,` a modern Nashville country album that weaves her heartfelt memories into music. From childhood lessons and family traditions to moments of love, loss, and redemption, this album captures the beauty of life's small but meaningful moments. Featuring poignant lyrics, warm acoustic melodies, and the unmistakable twang of Nashville, each song is a tribute to the wisdom, resilience, and humor of a mother whose stories shaped generations. This is an album that feels like sitting on the porch, sharing memories with family over a sunset and sweet tea.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="This Is My Story">
+    <meta property="og:description"
+        content="A Collection of Family Memories in Song. Step into the heart and soul of a loving mother's timeless tales with `This Is My Story,` a modern Nashville country album that weaves her heartfelt memories into music. From childhood lessons and family traditions to moments of love, loss, and redemption, this album captures the beauty of life's small but meaningful moments. Featuring poignant lyrics, warm acoustic melodies, and the unmistakable twang of Nashville, each song is a tribute to the wisdom, resilience, and humor of a mother whose stories shaped generations. This is an album that feels like sitting on the porch, sharing memories with family over a sunset and sweet tea.">
+    <meta property="og:image" content="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/ThisIsMyStory.png">
+    <meta property="og:url" content="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="This Is My Story by Gayle Gayler is a collection of family memories in song">
+    <meta name="twitter:title" content="This Is My Story">
+    <meta name="twitter:description"
+        content="A Collection of Family Memories in Song. Step into the heart and soul of a loving mother's timeless tales with `This Is My Story,` a modern Nashville country album that weaves her heartfelt memories into music. From childhood lessons and family traditions to moments of love, loss, and redemption, this album captures the beauty of life's small but meaningful moments. Featuring poignant lyrics, warm acoustic melodies, and the unmistakable twang of Nashville, each song is a tribute to the wisdom, resilience, and humor of a mother whose stories shaped generations. This is an album that feels like sitting on the porch, sharing memories with family over a sunset and sweet tea.">
+    <meta name="twitter:image" content="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/ThisIsMyStory.png">
+    <meta name="twitter:site" content="@guidogerber1966">
+
+</head>
+<style>
+    :root {
+        --primary-tan: #E5D3B3;
+        --secondary-tan: #D4C4A7;
+        --accent-tan: #BFB09B;
+        --dark-tan: #A69882;
+        --light-tan: #F2E6D4;
+        --lighter-tan: #F7F0E6;
+        --text-color: #6B5B45;
+        --shadow-color: rgba(166, 152, 130, 0.2);
+    }
+
+    body {
+        background-color: var(--light-tan);
+        color: var(--text-color);
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    /* Center all heading tags */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+        margin: 20px auto;
+        /* Adds consistent vertical spacing */
+        color: var(--text-color);
+    }
+
+    /* If you want to style specific headings differently */
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.75em;
+    }
+
+    .centered-heading {
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    button {
+        background-color: var(--primary-tan);
+        border: none;
+        border-radius: 4px;
+        color: var(--text-color);
+        cursor: pointer;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 4px var(--shadow-color);
+    }
+
+    button:hover {
+        background-color: var(--secondary-tan);
+    }
+
+    button:active {
+        background-color: var(--accent-tan);
+    }
+
+    /* Audio Player Styles */
+    .audio-player audio {
+        width: 100%;
+        height: 40px;
+        display: block;
+        position: sticky;
+        top: 80px;
+        z-index: 999;
+        background-color: var(--primary-tan);
+        padding: 15px;
+        margin: 0;
+        box-shadow: 0 2px 4px var(--shadow-color);
+        border-radius: 0 0 8px 8px;
+
+    }
+
+    /* Webkit (Chrome, Safari, newer Edge) */
+    audio::-webkit-media-controls-panel {
+        background-color: var(--secondary-tan);
+        border-radius: 4px;
+    }
+
+    audio::-webkit-media-controls-play-button {
+        background-color: var(--accent-tan);
+        border-radius: 50%;
+        margin: 0 8px;
+    }
+
+    audio::-webkit-media-controls-timeline {
+        background-color: var(--light-tan);
+        border-radius: 2px;
+        margin: 0 10px;
+    }
+
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display {
+        color: var(--text-color);
+        margin: 0 4px;
+    }
+
+    audio::-webkit-media-controls-volume-slider {
+        background-color: var(--light-tan);
+        border-radius: 2px;
+        padding: 0 5px;
+    }
+
+    audio::-webkit-media-controls-mute-button {
+        background-color: var(--accent-tan);
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+
+    /* Firefox specific styles */
+    @-moz-document url-prefix() {
+        audio {
+            background-color: var(--secondary-tan);
+            border-radius: 4px;
+        }
+    }
+
+    .player-wrapper {
+        background-color: var(--secondary-tan);
+        padding: 15px;
+        border-radius: 6px;
+        margin: 10px 0;
+    }
+
+    .title {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-tan);
+        box-shadow: 0 2px 4px var(--shadow-color);
+        z-index: 1000;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-text {
+        color: var(--text-color);
+        font-size: calc(0.9em * 2.5);
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .title-player {
+        width: 100%;
+        max-width: 600px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .title-player audio {
+        width: 100%;
+        height: 40px;
+    }
+
+    /* Main content wrapper */
+    .content-wrapper {
+        position: relative;
+        z-index: 1;
+        /* Lower z-index than header/footer */
+        margin-top: 80px;
+        /* Match header height */
+        margin-bottom: 60px;
+        /* Match footer height */
+        min-height: calc(100vh - 140px);
+        /* Viewport height minus header and footer */
+        overflow-y: auto;
+    }
+
+    .controls {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .controls button {
+        flex: 1;
+    }
+
+    /* Cover art container */
+    .cover-art-container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 120px auto 20px auto;
+        /* Top margin matches body padding-top */
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        /* Lower than title's z-index */
+    }
+
+    /* Cover art styles */
+    .cover-art {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px var(--shadow-color);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cover-art:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px var(--shadow-color);
+    }
+
+    .table-container {
+        width: 100%;
+        max-width: 1140px;
+        /* Match your container max-width */
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Song table styles */
+    .song-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 0 auto;
+        background-color: var(--light-tan);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px var(--shadow-color);
+    }
+
+    .song-table tr.group1 {
+        background-color: var(--light-tan);
+    }
+
+    .song-table tr.group2 {
+        background-color: var(--lighter-tan);
+    }
+
+    .song-table tr.group1:last-of-type,
+    .song-table tr.group2:last-of-type {
+        border-bottom: 2px solid var(--accent-tan);
+    }
+
+    .song-table th,
+    .song-table td {
+        padding: 12px 15px;
+        text-align: left;
+        color: var(--text-color);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .song-table tr.group1 {
+        background-color: var(--light-tan) !important;
+    }
+
+    .song-table tr.group2 td[rowspan] {
+        background-color: var(--lighter-tan) !important;
+    }
+
+    /* Large screens (default) */
+    .song-table td.title-wrapper {
+        max-width: 400px;
+    }
+
+    .song-table td.player-wrapper {
+        max-width: 300px;
+    }
+
+    .song-table td.lyrics-wrapper {
+        width: 100px;
+    }
+
+    .song-table tr:hover {
+        background-color: var(--dark-tan);
+        transition: background-color 0.2s ease;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: var(--light-tan);
+        margin: 50px auto;
+        padding: 20px;
+        width: 90%;
+        max-width: 800px;
+        height: 80vh;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px var(--shadow-color);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-iframe-wrapper {
+        flex: 1;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+
+    .modal-iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: var(--light-tan);
+    }
+
+    .modal-footer {
+        position: sticky;
+        bottom: 0;
+        background-color: var(--light-tan);
+        padding: 15px 0;
+        text-align: center;
+        border-top: 1px solid var(--accent-tan);
+        margin-top: 20px;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-tan);
+        padding: 10px 0;
+        text-align: center;
+        font-size: 0.9em;
+        color: var(--text-color);
+        box-shadow: 0 -2px 4px var(--shadow-color);
+        z-index: 999;
+    }
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer a {
+        color: var(--text-color);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Base styles (outside media queries) */
+    .title {
+        font-size: calc(0.9em * 2.5);
+        padding: 15px 0;
+        letter-spacing: 2px;
+    }
+
+    .login-dialog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+    }
+
+    .login-box {
+        background: var(--primary-tan);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .login-box h2 {
+        margin-bottom: 20px;
+        color: var(--text-color);
+    }
+
+    .login-box input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid var(--accent-tan);
+        border-radius: 4px;
+    }
+
+    .login-box button {
+        padding: 10px 20px;
+        background: var(--accent-tan);
+        border: none;
+        border-radius: 4px;
+        color: var(--text-color);
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .login-box button:hover {
+        background: var(--dark-tan);
+    }
+
+    /* Desktop (992px to 1199px) */
+    @media screen and (max-width: 1199px) {
+
+        .cover-art {
+            max-width: 500px;
+        }
+
+        .song-table td.title-wrapper {
+            max-width: 350px;
+        }
+
+        .song-table td.player-wrapper {
+            max-width: 250px;
+        }
+
+        .song-table td.lyrics-wrapper {
+            width: 90px;
+        }
+
+        .table-container {
+            max-width: calc(450px * 2);
+        }
+
+    }
+
+    /* Tablet Landscape (768px to 991px) */
+    @media screen and (max-width: 991px) {
+        .title {
+            font-size: calc(0.9em * 1.7);
+            padding: 12px 0;
+        }
+
+        body {
+            padding-top: 70px;
+        }
+
+
+        .audio-player audio {
+            top: 70px;
+        }
+
+        .cover-art {
+            max-width: 450px;
+        }
+
+        .song-table td.title-wrapper {
+            max-width: 300px;
+        }
+
+        .song-table td.player-wrapper {
+            max-width: 200px;
+        }
+
+        .song-table td.lyrics-wrapper {
+            width: 80px;
+        }
+
+    }
+
+    /* Tablet Portrait (576px to 767px) */
+    @media screen and (max-width: 767px) {
+        .title-text {
+            font-size: calc(0.9em * 1.5);
+        }
+
+        .title-player {
+            max-width: 400px;
+        }
+
+        body {
+            padding-top: 100px;
+        }
+
+
+        body {
+            padding-top: 60px;
+        }
+
+        .cover-art-container {
+            margin-top: 100px;
+            padding: 15px;
+        }
+
+        .audio-player audio {
+            top: 60px;
+        }
+
+        .controls {
+            flex-wrap: wrap;
+        }
+
+        .table-container {
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        .song-table {
+            display: block;
+            overflow-x: auto;
+        }
+
+
+        .song-table td.title-wrapper {
+            max-width: 200px;
+        }
+
+        .song-table td.player-wrapper {
+            max-width: 150px;
+        }
+
+        .song-table td.lyrics-wrapper {
+            width: 70px;
+        }
+
+        .modal-content {
+            width: 95%;
+            margin: 30px auto;
+        }
+    }
+
+    /* Mobile Large (400px to 575px) */
+    @media screen and (max-width: 575px) {
+        .title-text {
+            font-size: calc(0.9em * 1.2);
+        }
+
+        .title-player {
+            max-width: 300px;
+        }
+
+        body {
+            padding-top: 90px;
+        }
+
+
+        .audio-player audio {
+            top: 50px;
+        }
+
+        .cover-art-container {
+            margin-top: 90px;
+            padding: 10px;
+        }
+
+        .song-table td.title-wrapper {
+            max-width: 150px;
+        }
+
+        .song-table td.player-wrapper {
+            max-width: 100px;
+        }
+
+        .song-table td.lyrics-wrapper {
+            width: 60px;
+        }
+
+        .footer-content {
+            padding: 0 10px;
+            font-size: 0.85em;
+        }
+    }
+
+    /* Mobile Small (320px to 399px) */
+    @media screen and (max-width: 399px) {
+        body {
+            padding-top: 40px;
+        }
+
+
+        .audio-player audio {
+            top: 40px;
+        }
+
+        .song-table td.title-wrapper {
+            max-width: 120px;
+        }
+
+        .song-table td.player-wrapper {
+            max-width: 80px;
+        }
+
+        .song-table td.lyrics-wrapper {
+            width: 50px;
+        }
+
+        .modal-content {
+            width: 98%;
+            margin: 20px auto;
+        }
+
+        .footer-content {
+            font-size: 0.8em;
+        }
+    }
+</style>
+<script>
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Login functionality
+        const CORRECT_PASSWORD = 'cookie26';
+        const contentWrapper = document.querySelector('.content-wrapper');
+
+        // Create login dialog
+        const loginDialog = document.createElement('div');
+        loginDialog.className = 'login-dialog';
+        loginDialog.innerHTML = `
+        <div class="login-box">
+            <h2>Enter Password</h2>
+            <form id="loginForm">
+                <input type="password" id="passwordInput" placeholder="Password" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    `;
+
+        function checkLogin() {
+            return document.cookie.split(';').some(item => item.trim().startsWith('loggedIn=true'));
+            //return true;
+        }
+
+        function setLoginCookie() {
+            const date = new Date();
+            date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));
+            document.cookie = `loggedIn=true; expires=${date.toUTCString()}; path=/`;
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const password = document.getElementById('passwordInput').value;
+
+            if (password === CORRECT_PASSWORD) {
+                setLoginCookie();
+                loginDialog.remove();
+                contentWrapper.style.display = 'block';
+            } else {
+                alert('Incorrect password');
+                document.getElementById('passwordInput').value = '';
+            }
+        }
+
+        // Initialize login
+        if (!checkLogin()) {
+            contentWrapper.style.display = 'none';
+            document.body.appendChild(loginDialog);
+            document.getElementById('loginForm').addEventListener('submit', handleLogin);
+        }
+
+
+
+        // Media player and playlist
+        const playlist = [
+            {
+                title: "Crossing Rosecrans Boulevard",
+                url: "https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/01-CrossingRosecransBoulevard.mp3"
+            },
+            {
+                title: "Playtime Is Over",
+                url: "https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/02-PlaytimeIsOver.mp3"
+            },
+            {
+                title: "Fairies In The Tears",
+                url: "https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/03-FairiesInTheTears.mp3"
+            },
+            {
+                title: "The Only Spanking",
+                url: "https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/04-TheOnlySpanking.mp3"
+            },
+            {
+                title: "Poison Ivy And Pajamas",
+                url: "https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/05-PoisonIvyAndPajamas.mp3"
+            },
+            {
+                title: "Furry Little Friends",
+                url: "https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/06-FurryLittleFriends.mp3"
+            },
+            {
+                title: "Never Worry Mama Again",
+                url: "https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/07-NeverWorryMamaAgain.mp3"
+            },
+            {
+                title: "A Pregnant Mother's Cry",
+                url: "https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/08-APregnantMothersCry.mp3"
+            },
+            {
+                title: "My Mom",
+                url: "https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/09-MyMom.mp3"
+            },
+            {
+                title: "The Heart Of My Stories",
+                url: "https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/10-TheHeartOfMyStories.mp3"
+            }
+        ];
+
+        let currentTrack = 0;
+        let errorCount = 0;
+        const MAX_ERRORS = 2;
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        if (audioPlayer) {
+            audioPlayer.src = playlist[currentTrack].url;
+
+            audioPlayer.addEventListener('error', function (e) {
+                console.error('Audio error:', e);
+                if (errorCount < MAX_ERRORS) {
+                    errorCount++;
+                    playNextTrack();
+                } else {
+                    console.error('Too many errors, stopping playlist');
+                    errorCount = 0;
+                    currentTrack = 0;
+                    audioPlayer.src = playlist[currentTrack].url;
+                }
+            });
+
+            audioPlayer.addEventListener('ended', function () {
+                errorCount = 0; // Reset error count on successful playback
+                playNextTrack();
+            });
+        }
+
+        function playNextTrack() {
+            try {
+                currentTrack++;
+                if (currentTrack >= playlist.length) {
+                    currentTrack = 0;
+                }
+                audioPlayer.src = playlist[currentTrack].url;
+                audioPlayer.play().catch(e => {
+                    console.error('Error playing audio:', e);
+                    if (errorCount < MAX_ERRORS) {
+                        errorCount++;
+                        // Add delay before trying next track
+                        setTimeout(playNextTrack, 1000);
+                    } else {
+                        console.error('Too many errors, stopping playlist');
+                        errorCount = 0;
+                        currentTrack = 0;
+                        audioPlayer.src = playlist[currentTrack].url;
+                    }
+                });
+            } catch (e) {
+                console.error('Error in playNextTrack:', e);
+                currentTrack = 0;
+                errorCount = 0;
+                audioPlayer.src = playlist[currentTrack].url;
+            }
+        }
+
+        window.playAudio = function (audioUrl) {
+            if (audioPlayer) {
+                try {
+                    errorCount = 0; // Reset error count when manually playing
+                    audioPlayer.src = audioUrl;
+                    audioPlayer.play().catch(e => console.error('Error playing audio:', e));
+
+                    currentTrack = playlist.findIndex(track => track.url === audioUrl);
+                    if (currentTrack === -1) currentTrack = 0;
+                } catch (e) {
+                    console.error('Error in playAudio:', e);
+                }
+            }
+        };
+    });
+</script>
+
+<body>
+    <div class="title">
+        <div class="title-text">This Is My Story - Gayle Gayler</div>
+        <div class="title-player">
+            <audio id="audioPlayer" controlsList="nodownload" controls>
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="cover-art-container">
+            <img class="cover-art" src="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/ThisIsMyStory.png"
+                alt="This Is My Story Cover Art">
+        </div>
+        <div class="table-container">
+            <table class="song-table">
+                <thead>
+                    <tr>
+                        <th>Track</th>
+                        <th>Play</th>
+                        <th>Download Lyrics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="group1">
+                        <td>
+                            Crossing Rosecrans Boulevard
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/01-CrossingRosecransBoulevard.mp3')"><span
+                                    class="play-icon">▶</span>Crossing Rosecrans Boulevard</button></td>
+                        <td><a href="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/lyrics/01-CrossingRosecransBlvd.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+
+
+                    <tr class="group2">
+                        <td>
+                            Playtime Is Over
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/02-PlaytimeIsOver.mp3')"><span
+                                    class="play-icon">▶</span>Playtime Is Over</button>
+                        </td>
+                        <td><a href="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/lyrics/02-PlaytimesOver.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+
+
+                    <tr class="group1">
+                        <td>
+                            Fairies In The Tears
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/03-FairiesInTheTears.mp3')"><span
+                                    class="play-icon">▶</span>Fairies In The Tears</button>
+                        </td>
+                        <td><a href="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/lyrics/03-FairiesInTheTears.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+
+
+                    <tr class="group2">
+                        <td>
+                            The Only Spanking
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/04-TheOnlySpanking.mp3')"><span
+                                    class="play-icon">▶</span>The Only Spanking</button>
+                        </td>
+                        <td><a href="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/lyrics/04-TheOnlySpanking.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+
+
+                    <tr class="group1">
+                        <td>
+                            Poison Ivy And Pajamas
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/05-PoisonIvyAndPajamas.mp3')"><span
+                                    class="play-icon">▶</span>Poison Ivy And Pajamas</button>
+                        </td>
+                        <td><a href="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/lyrics/05-PoisonIvyAndPajamas.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+
+
+                    <tr class="group2">
+                        <td>
+                            Furry Little Friends
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/06-FurryLittleFriends.mp3')"><span
+                                    class="play-icon">▶</span>Furry Little Friends</button>
+                        </td>
+                        <td><a href="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/lyrics/06-FurryLittleFriends.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+
+                    <tr class="group1">
+                        <td>
+                            Never Worry Mama Again
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/07-NeverWorryMamaAgain.mp3')"><span
+                                    class="play-icon">▶</span>Never Worry Mama Again</button>
+                        </td>
+                        <td><a href="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/lyrics/07-NeverWorryMamaAgain.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+
+                    <tr class="group2">
+                        <td>
+                            A Pregnant Mother's Cry
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/08-APregnantMothersCry.mp3')"><span
+                                    class="play-icon">▶</span>A Pregnant Mother's Cry</button>
+                        </td>
+                        <td><a href="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/lyrics/08-ThePregnantMothersCry.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+
+                    <tr class="group1">
+                        <td>
+                            My Mom
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/09-MyMom.mp3')"><span
+                                    class="play-icon">▶</span>My Mom</button>
+                        </td>
+                        <td><a href="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/lyrics/09-MyMom.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+
+                    <tr class="group2">
+                        <td>
+                            The Heart Of My Stories
+                        </td>
+                        <td><button
+                                onclick="playAudio('https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/audio/10-TheHeartOfMyStories.mp3')"><span
+                                    class="play-icon">▶</span>The Heart Of My Stories</button>
+                        </td>
+                        <td><a href="https://www.guidogerbpublishing.com/cdn/ThisIsMyStory/lyrics/10-TheHeartOfMyStories.txt"
+                                download>Download</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Updated modal structure -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-iframe-wrapper">
+                <iframe class="modal-iframe" src="https://www.guidogerbpublishing.com/privacy.html"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal('privacyModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-iframe-wrapper">
+                <iframe class="modal-iframe" src="https://www.guidogerbpublishing.com/terms.html"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal('termsModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Updated JavaScript to handle iframe loading
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+
+            // Reset iframe src to force refresh if needed
+            const iframe = modal.querySelector('iframe');
+            const src = iframe.src;
+            iframe.src = src;
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close modal if clicking outside content
+        window.onclick = function (event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.style.display = "none";
+                });
+                document.body.style.overflow = "auto";
+            }
+        });
+    </script>
+    <div class="footer">
+        <div class="footer-content">
+            &copy; 2025 GuidoGerb Publishing, LLC. All rights reserved. |
+            <a onclick="openModal('privacyModal')" style="cursor: pointer;">Privacy Policy</a> |
+            <a onclick="openModal('termsModal')" style="cursor: pointer;">Terms of Use</a>
+        </div>
+    </div>
+</body>
+
+</html>

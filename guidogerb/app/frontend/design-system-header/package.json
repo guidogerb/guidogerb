@@ -1,0 +1,48 @@
+{
+  "name": "design-system-header",
+  "version": "1.0.0",
+  "description": "Header for the Design System",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/design-system-header.es.js"
+      },
+      "require": "./dist/design-system-header.umd.js"
+    },
+    "./css": "./dist/style.css",
+    "./dist/*": "./dist/*"
+  },
+  "main": "./dist/design-system-header.umd.js",
+  "module": "./dist/design-system-header.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "design-system": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "sass": "^1.70.0",
+    "typescript": "^5.3.0",
+    "vite": "^5.0.0",
+    "design-system": "^1.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run build:types",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:watch": "vite build --watch",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "clean": "rimraf dist node_modules package-lock.json"
+  }
+}

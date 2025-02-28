@@ -1,0 +1,40 @@
+@use "../../../../../design-system/css/1-settings/media-size-vars";
+
+.getting-started {
+  &__top-buttons {
+    display: flex;
+    gap: var(--spacing);
+    margin-bottom: var(--spacing-l);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    a {
+      flex: 1;
+      min-width: 200px;
+    }
+  }
+
+  &__toc {
+    display: flex;
+    gap: var(--spacing-l);
+
+    &-card {
+      padding: var(--spacing);
+      border-radius: var(--radius-small);
+      background: var(--primary-color-light);
+      text-align: center;
+      flex: 1;
+
+      a {
+        display: block;
+        margin-bottom: var(--spacing-2xs);
+      }
+    }
+    &-title {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-semi-bold);
+    }
+    &-subtitle {
+      font-size: var(--font-size-l);
+    }
+  }
+}

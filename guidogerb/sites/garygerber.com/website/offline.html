@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Gary Gerber</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        #offlineMessage {
+            display: none;
+        }
+        #loadingMessage {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="loadingMessage">
+        <h1>Loading cached content...</h1>
+        <p>Attempting to load the application from cache.</p>
+    </div>
+
+    <div id="offlineMessage">
+        <h1>You're Offline</h1>
+        <p>Unable to load the cached application.</p>
+        <button onclick="window.location.reload()">Try Again</button>
+    </div>
+
+    <div id="root"></div>
+
+    <script>
+        async function loadCachedApp() {
+            try {
+                // Try to load the main assets from cache
+                const cssResponse = await fetch('/assets/main-BEX1ocfc.css');
+                const jsResponse = await fetch('/assets/main-BvQcH7J_.js');
+
+                if (cssResponse.ok && jsResponse.ok) {
+                    // If assets are available, recreate the app structure
+                    const head = document.getElementsByTagName('head')[0];
+                    
+                    // Add CSS
+                    const cssLink = document.createElement('link');
+                    cssLink.rel = 'stylesheet';
+                    cssLink.href = '/assets/main-BEX1ocfc.css';
+                    head.appendChild(cssLink);
+
+                    // Add JS
+                    const script = document.createElement('script');
+                    script.type = 'module';
+                    script.src = '/assets/main-BvQcH7J_.js';
+                    document.body.appendChild(script);
+
+                    // Hide loading message
+                    document.getElementById('loadingMessage').style.display = 'none';
+                } else {
+                    throw new Error('Could not load cached assets');
+                }
+            } catch (error) {
+                showOfflineMessage();
+            }
+        }
+
+        function showOfflineMessage() {
+            document.getElementById('loadingMessage').style.display = 'none';
+            document.getElementById('offlineMessage').style.display = 'block';
+        }
+
+        // Try to load the cached app
+        loadCachedApp();
+
+        // Add a timeout in case the loading takes too long
+        setTimeout(showOfflineMessage, 5000);
+    </script>
+</body>
+</html>
