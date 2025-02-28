@@ -1,8 +1,0 @@
-.character-count {
-  text-align: right;
-  font-size: var(--font-size-s);
-  margin: var(--spacing-2xs) 0 0 0;
-  &--over-limit {
-    color: var(--danger-color);
-  }
-}
