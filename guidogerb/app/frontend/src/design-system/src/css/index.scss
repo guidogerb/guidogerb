@@ -1,0 +1,34 @@
+// Base styles
+:root {
+  // Colors
+  --ds-primary: #0066cc;
+  --ds-secondary: #666666;
+  --ds-success: #28a745;
+  --ds-danger: #dc3545;
+  --ds-warning: #ffc107;
+  --ds-info: #17a2b8;
+  
+  // Typography
+  --ds-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ds-font-size-base: 16px;
+  --ds-line-height-base: 1.5;
+  
+  // Spacing
+  --ds-spacing-unit: 8px;
+  
+  // Border
+  --ds-border-radius: 4px;
+}
+
+// Reset
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ds-font-family);
+  font-size: var(--ds-font-size-base);
+  line-height: var(--ds-line-height-base);
+}

@@ -1,0 +1,10 @@
+.ds-citizen-experience-wrapper, .ds-citizen-experience-wrapper--mobile {
+  justify-content: flex-end;
+  flex: 1;
+}
+.ds-citizen-experience-wrapper {
+  display: flex;
+}
+.ds-citizen-experience-wrapper--mobile {
+  display: none;
+}
