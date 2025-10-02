@@ -6,10 +6,6 @@ git clone git@github.com:guidogerb/guidogerb.git
 
 git submodule add git@github.com:guidogerb/ollama.git .\third-party-repos\ollama
 git submodule add git@github.com:guidogerb/Prompt-Engineering-Guide.git .\third-party-repos\prompt-engineering-guide
-git submodule add git@github.com:guidogerb/spring-ai.git .\third-party-repos\spring-ai
-git submodule add git@github.com:guidogerb/spring-boot.git .\third-party-repos\spring-boot
-git submodule add git@github.com:guidogerb/spring-data-relational.git .\third-party-repos\spring-data-relational
-git submodule add git@github.com:guidogerb/spring-framework.git .\third-party-repos\spring-framework
 
 git submodule update --init --recursive
 git submodule status
