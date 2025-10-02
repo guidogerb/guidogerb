@@ -1,1 +1,0 @@
-## Python versions relevant to project builds
