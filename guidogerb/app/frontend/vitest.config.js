@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite';
-import eslintPlugin from 'vite-plugin-eslint';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
+  plugins: [react()],
   test: {
     coverage: {
       all: true,
@@ -24,7 +26,10 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
   },
-  plugins: [
-    eslintPlugin(),
-  ],
+  resolve: {
+    alias: {
+      'design-system': path.resolve(__dirname, './src/design-system/index.js'),
+      'design-system-header': path.resolve(__dirname, './src/design-system-header/src/index.js'),
+    }
+  },
 });

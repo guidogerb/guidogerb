@@ -5,8 +5,7 @@
  * @returns {HTMLElement[]}
  */
 export function getFocusableElements(element) {
-  // @ts-expect-error Element vs HTMLElement... why?!?!?!
-  return [
-    ...element.querySelectorAll('a[href], area[href], button, input, textarea, select, object, [tabindex]:not([tabindex="-1"])'),
-  ].filter((item) => !item.hasAttribute('disabled'));
+  /** @type {NodeListOf<HTMLElement>} */
+  const elements = element.querySelectorAll('a[href], area[href], button, input, textarea, select, object, [tabindex]:not([tabindex="-1"])');
+  return Array.from(elements).filter((item) => !item.hasAttribute('disabled'));
 }

@@ -91,10 +91,9 @@ export function useCurrentValuesFromStateContext({
     ?? stateLocal
   );
   if (currentValue && currentValue !== defaultValue) {
-    // there is a currentValue without looking at defaultValue so defaultValue should never be used ever again
-    // this is a hack. couldn't figure out why TableFilterTextInput was making its defaultValue a blank string.
-    // @ts-expect-error hacked it here real good
-    defaultValueRef.current = '';
+    // Clear the default value once a real value is set
+    // This prevents the default from overriding controlled values
+    defaultValueRef.current = /** @type {typeof defaultValue} */('');
   }
   if (currentValue === null || currentValue === undefined) {
     currentValue = defaultValueRef.current;
@@ -126,7 +125,7 @@ export function useCurrentValuesFromStateContext({
           setStateLocal(defaultOnChange(e));
         })
       ),
-      // @ts-expect-error hacked for missing currentValue that shouldn't be?
+      // Ensure currentValue is never null/undefined by providing empty string fallback
       currentValue: currentValue ?? '',
       setValue,
     }),

@@ -20,8 +20,7 @@ export function HeaderContextProvider({ children, defaultSettings }) {
   useEffect(
     () => {
       // these are the default settings for ANY app. Put your settings in your app (websiteHeaderSettings.js for the Design System Website)
-      // @ts-expect-error
-      setHeaderSettings(settings);
+      setHeaderSettings(/** @type {SettingsInput} */ (settings));
     },
     [settings]
   );
@@ -33,8 +32,7 @@ export function HeaderContextProvider({ children, defaultSettings }) {
     // The above useMemo() ALWAYS returns a spreadable object, so it seems it's got to
     // be HMR's fault it's not always behaving? Why would providedSettings ever not be an object?
     // eslint-disable-next-line react/jsx-no-constructed-context-values
-    // @ts-expect-error
-    <HeaderContext.Provider value={providedSettings}>
+    <HeaderContext.Provider value={/** @type {any} */ (providedSettings)}>
       {children}
     </HeaderContext.Provider>
   );

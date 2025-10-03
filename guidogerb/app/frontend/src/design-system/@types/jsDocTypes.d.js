@@ -90,8 +90,7 @@
 
 /** @typedef {MouseEvent | TouchEvent | KeyboardEvent} Event */
 
-// TODO: replace EventAction with import('react').MouseEventHandler<HTMLButtonElement>
-/** @typedef {((e: Event) => void)} EventAction */
+/** @typedef {import('react').MouseEventHandler<HTMLButtonElement>} EventAction */
 /** @typedef {((e: Event) => boolean)} EventActionBoolean */
 
 // ========== Table stuff ========== //

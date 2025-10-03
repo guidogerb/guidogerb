@@ -138,23 +138,25 @@ export function MultiSelectComboBox({
               let eventIsHandled = false;
               // check that filter is blank and that there are options selected
               if (!currentFilter && multiSelectContextValueRef.current.selectedValues.length) {
-                // @ts-expect-error
-                if (e.key === 'Backspace') {
+                /** @type {KeyboardEvent} */
+                const keyEvent = e;
+                if (keyEvent.key === 'Backspace') {
                   eventIsHandled = true;
                   setMultiSelectContextValue((draftContext) => {
                     const deadTag = draftContext.selectedValues.pop();
                     addPoliteMessage(`${deadTag} removed`);
                   });
-                  // close the combo box popup. the state of the popup being open is in the combobox context and has no external controls
-                  // but, it closes when the input blurs, so this is a big hack to make the popup close on blur
+                  // Close the combo box popup by triggering blur/focus cycle
+                  // The ComboBox component closes when the input loses focus
                   const { activeElement } = document;
-                  // @ts-expect-error
-                  activeElement?.blur();
-                  // @ts-expect-error
-                  activeElement?.focus();
+                  if (activeElement && 'blur' in activeElement && 'focus' in activeElement) {
+                    /** @type {HTMLElement} */
+                    const element = activeElement;
+                    element.blur();
+                    element.focus();
+                  }
                 }
-                // @ts-expect-error
-                if (e.key === 'ArrowLeft') {
+                if (keyEvent.key === 'ArrowLeft') {
                   eventIsHandled = true;
                   setMultiSelectContextValue((draftContext) => {
                     draftContext.focusedValueTagIndex = draftContext.selectedValues.length - 1;

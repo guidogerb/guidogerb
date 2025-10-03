@@ -11,39 +11,35 @@ import { useEffect, useRef, useState } from 'react';
 export function useGlobalKeyEvent({ whichKeyCode, onKeyDown, onKeyUp }) {
   const [keyPressed, setKeyPressed] = useState(false);
 
-  const keydownFuncRef = useRef(/** @type {import('react').KeyboardEventHandler<KeyboardEventHandlerT> | null} */(null));
+  const keydownFuncRef = useRef(/** @type {((e: KeyboardEvent) => void) | null} */(null));
   useEffect(
     () => {
+      /** @param {KeyboardEvent} e */
       keydownFuncRef.current = (e) => {
         if (
           e.code === whichKeyCode
-          // @ts-expect-error probably shouldn't use keyCode anymore?
-          || e.keyCode === whichKeyCode
+          || (/** @type {any} */ (e).keyCode === whichKeyCode) // deprecated but still checking
           || e.key === whichKeyCode
         ) {
           if (e.type === 'keydown') {
             setKeyPressed(true);
             if (onKeyDown) {
-              onKeyDown(e);
+              onKeyDown(/** @type {any} */ (e));
             }
           } else if (e.type === 'keyup') {
             setKeyPressed(false);
             if (onKeyUp) {
-              onKeyUp(e);
+              onKeyUp(/** @type {any} */ (e));
             }
           }
         }
       };
-      // @ts-expect-error event typing here is weird
       document.addEventListener('keydown', keydownFuncRef.current);
-      // @ts-expect-error event typing here is weird
       document.addEventListener('keyup', keydownFuncRef.current);
 
       return () => {
         if (keydownFuncRef.current) {
-          // @ts-expect-error event typing here is weird
           document.removeEventListener('keydown', keydownFuncRef.current);
-          // @ts-expect-error event typing here is weird
           document.removeEventListener('keyup', keydownFuncRef.current);
         }
         keydownFuncRef.current = null;

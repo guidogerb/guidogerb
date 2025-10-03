@@ -3,8 +3,11 @@ import { DemoForm } from '../../../../../demo/DemoForm';
 import { PreCodeForCodeString } from '../../../../../preCode/PreCodeForCodeString';
 import { pageUrls } from '../../../../../routing/pageUrls';
 
-// TODO: Maybe this should be replaced by useBanner() now that real banners are implemented?
-/** @param {string} role */
+/**
+ * Demo function for screen reader testing - adds a banner element with a role attribute.
+ * Note: For production use, consider using the useBanner() hook from design-system.
+ * @param {string} role
+ */
 function addBanner(role) {
   const banner = document.createElement('span');
   banner.setAttribute('role', role);

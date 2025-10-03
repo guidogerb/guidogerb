@@ -13,12 +13,23 @@ export function valueAtPath({ object, path }) {
   return /** @type {ValueT} */ (
     /** @type {any} */ (
       split(path, '.').reduce(
-        (obj, field) => (
-          (field && obj)
-            // @ts-expect-error just go ahead and give it a try...
-            ? obj[field]
-            : obj
-        ),
+        /**
+         * @param {unknown} obj
+         * @param {string} field
+         * @returns {unknown}
+         */
+        (obj, field) => {
+          if (!field) {
+            return obj;
+          }
+          if (obj === null) {
+            return null;
+          }
+          if (obj && typeof obj === 'object') {
+            return /** @type {Record<string, unknown>} */ (obj)[field];
+          }
+          return undefined;
+        },
         object
       )
     )

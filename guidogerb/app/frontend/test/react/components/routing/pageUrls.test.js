@@ -2,6 +2,8 @@ import { camelCase } from 'lodash';
 import { describe, expect, test } from 'vitest';
 import { pageUrls } from '../../../../src/react/components/routing/pageUrls';
 import { constructMainMenu } from '../../../../src/react/components/routing/util/constructMainMenu';
+import { allMenus } from '../../../../src/react/components/routing/menus';
+import { actionFunctionForUrl } from '../../../../src/react/components/routing/util/actionFunctionForUrl';
 import { notNull } from '../../../../src/react/util/notNull/notNull';
 
 /** @typedef {import('design-system-header').MenuItem} MenuItem */
@@ -66,7 +68,8 @@ function deconstructMainMenuPaths(menuItems, basePath = '') {
     );
 
     // add entry for menuItem
-    const menuItemPath = `${basePath}/${cleanMenuItemTitlePath(menuItem.title)}`;
+    const menuItemTitle = menuItem.title || menuItem.label || '';
+    const menuItemPath = `${basePath}/${cleanMenuItemTitlePath(menuItemTitle)}`;
     if (pageUrl) {
       pagePaths[notNull(pageUrlReverseLookup[pageUrl], 'reverse lookup will always get a value')] = combinePaths(pagePaths[pageUrl], [menuItemPath]);
     }
@@ -87,7 +90,11 @@ function deconstructMainMenuPaths(menuItems, basePath = '') {
 
 describe('pageUrls - match menu path', () => {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  const mainMenu = constructMainMenu(undefined, () => { });
+  const mainMenu = constructMainMenu({
+    currentMenuItem: { link: pageUrls.home, title: 'Home' },
+    allMenus,
+    actionFunctionForUrl,
+  });
   const menuPaths = deconstructMainMenuPaths(mainMenu.menuItems);
 
   /* *** !!!!!! PUT OLD LINKS IN pages.[pageBeingChanged].legacyLinks !!! so that links aren't broken !!!!!! *** */

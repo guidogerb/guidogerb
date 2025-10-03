@@ -56,9 +56,8 @@ export function Switch({
   );
 
   const internalOnChange = useCallback(
-    /** @param {import('react').KeyboardEvent<HTMLInputElement>} e */
+    /** @param {import('react').ChangeEvent<HTMLInputElement>} e */
     (e) => {
-      // @ts-expect-error
       setCurrentValue(e.target.checked);
     },
     [id]
@@ -83,14 +82,13 @@ export function Switch({
         <span className={joinClassNames('switch__label', labelClassName)}>{label}</span>
 
         <input
-          aria-describedby={errorMessage ? `${id}-error` : null}
+          aria-describedby={errorMessage ? `${id}-error` : undefined}
           checked={currentValue}
           className={joinClassNames('switch visually-hidden', className)}
           disabled={isDisabled}
           id={id}
           name={name || id}
-          // @ts-expect-error
-          onChange={currentOnChange}
+          onChange={/** @type {import('react').ChangeEventHandler<HTMLInputElement>} */ (currentOnChange)}
           role="switch"
           type="checkbox"
           {...rest}
