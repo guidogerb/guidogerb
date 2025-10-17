@@ -1,0 +1,166 @@
+# GuidoGerb Microservices - Python Edition
+
+Master docker-compose for all converted services.
+
+version: '3.8'
+
+services:
+  # Shared Infrastructure
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: guidogerb
+      POSTGRES_PASSWORD: guidogerb_password
+      POSTGRES_DB: guidogerb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - guidogerb-network
+  
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - guidogerb-network
+  
+  chromadb:
+    image: chromadb/chroma:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma-data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+    networks:
+      - guidogerb-network
+  
+  # Service 1: Backend (Main App)
+  backend:
+    build: ./guidogerb/app/backend-python
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://guidogerb:guidogerb_password@postgres/guidogerb
+      - REDIS_URL=redis://redis:6379
+      - SECRET_KEY=development-secret-key-change-in-production
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - guidogerb-network
+  
+  # Service 2: Blockchain Voting
+  blockchainvoting:
+    build: ./guidogerb/blockchainvoting-python
+    ports:
+      - "8081:8081"
+    networks:
+      - guidogerb-network
+  
+  # Service 3: Vector Database
+  vector:
+    build: ./guidogerb/vector-python
+    ports:
+      - "8082:8082"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CHROMA_HOST=chromadb
+      - CHROMA_PORT=8000
+    depends_on:
+      - chromadb
+    networks:
+      - guidogerb-network
+  
+  # Service 4: Filesystem Utility
+  fsutil:
+    build: ./guidogerb/fsutil-python
+    ports:
+      - "8083:8083"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://guidogerb:guidogerb_password@postgres/guidogerb
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - guidogerb-network
+    volumes:
+      - /path/to/scan:/data  # Mount directories to scan
+  
+  fsutil-celery:
+    build: ./guidogerb/fsutil-python
+    command: celery -A app.tasks.file_tasks worker --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://guidogerb:guidogerb_password@postgres/guidogerb
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - guidogerb-network
+    volumes:
+      - /path/to/scan:/data
+  
+  # Service 5: Communique (OpenAI)
+  communique:
+    build: ./guidogerb/communique-python
+    ports:
+      - "8084:8084"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    networks:
+      - guidogerb-network
+  
+  # Service 6: Bridge Gateway
+  bridge-gapp:
+    build: ./guidogerb/bridge-gapp-python
+    ports:
+      - "8085:8085"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://guidogerb:guidogerb_password@postgres/guidogerb
+    depends_on:
+      - postgres
+    networks:
+      - guidogerb-network
+  
+  # Service 7: Model Generator
+  pojo-generator:
+    build: ./guidogerb/pojo-generator-python
+    ports:
+      - "8086:8086"
+    networks:
+      - guidogerb-network
+  
+  # Service 8: IDS (Database Normalization)
+  ids:
+    build: ./guidogerb/ids-python
+    ports:
+      - "8087:8087"
+    networks:
+      - guidogerb-network
+  
+  # Monitoring & Admin
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@guidogerb.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - guidogerb-network
+
+networks:
+  guidogerb-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
+  chroma-data:
