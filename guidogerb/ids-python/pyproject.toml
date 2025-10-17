@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "ids"
+version = "0.1.0"
+description = "Identity and Database Normalization Framework (dbNF7)"
+authors = ["Gary Gerber <email@example.com>"]
+readme = "README.md"
+packages = [{include = "app", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+sqlalchemy = "^2.0.23"
+pydantic = "^2.5.0"
+numpy = "^1.26.2"
+bitarray = "^2.8.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,47 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: fsutil
+      POSTGRES_USER: fsutil
+      POSTGRES_PASSWORD: fsutil_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+  
+  fsutil-api:
+    build: .
+    ports:
+      - "8083:8083"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://fsutil:fsutil_password@postgres/fsutil
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./src:/app/src
+  
+  celery-worker:
+    build: .
+    command: celery -A app.tasks.file_tasks worker --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://fsutil:fsutil_password@postgres/fsutil
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./src:/app/src
+      - /path/to/scan:/data  # Mount directories to scan
+
+volumes:
+  postgres-data:

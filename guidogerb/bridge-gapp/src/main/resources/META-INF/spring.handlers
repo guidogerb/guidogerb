@@ -1,2 +1,0 @@
-http\://www.springframework.org/schema/gemfire=org.springframework.data.gemfire.config.xml.GemfireNamespaceHandler
-http\://www.springframework.org/schema/data/gemfire=org.springframework.data.gemfire.config.xml.GemfireDataNamespaceHandler
