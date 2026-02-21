@@ -45,7 +45,7 @@ Ways to get involved:
 
 1. Open an issue to propose a feature, experiment, or integration.
 2. Fork a repo, create a small, focused PR (bugfix, refactor, new example, or doc).
-3. Share example notebooks, demo projects, or datasets that others can build on.[web:94][web:100]
+3. Share example notebooks, demo projects, or datasets that others can build on.
 
 Please keep contributions:
 
