@@ -6,7 +6,7 @@ This GitHub org hosts experiments, tools, and libraries for:
 
 - Music information retrieval, audio feature extraction, and DSP for composition, mixing, and analysis.
 - Machine learning / AI tooling for music, sound design, and visual art.
-- Reproducible scientific workflows, data pipelines, and research prototypes in Python and JS/TS.[web:96][web:99]
+- Reproducible scientific workflows, data pipelines, and research prototypes in Python and JS/TS.
 
 ---
 
@@ -16,7 +16,7 @@ I’m interested in using open tooling to make it easier for researchers, engine
 
 - Prototype and share audio/ML experiments quickly.
 - Reuse models, datasets, and notebooks across projects.
-- Bridge DAWs, live performance tools, and research codebases.[web:95][web:98]
+- Bridge DAWs, live performance tools, and research codebases.
 
 If your work touches music tech, MIR, generative models, creative coding, or applied data science for the arts, you’re in the right place.
 
