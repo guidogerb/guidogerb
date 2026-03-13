@@ -16,3 +16,6 @@
 [submodule "third-party-repos/ollama"]
 	path = third-party-repos/ollama
 	url = git@github.com:guidogerb/ollama.git
+[submodule "seleniumish"]
+	path = seleniumish
+	url = https://github.com/guidogerb/seleniumish.git
