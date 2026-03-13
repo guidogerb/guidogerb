@@ -10,12 +10,606 @@
 [submodule "third-party-repos/spring-data-relational"]
 	path = third-party-repos/spring-data-relational
 	url = git@github.com:guidogerb/spring-data-relational.git
-[submodule "third-party-repos/prompt-engineering-guide"]
-	path = third-party-repos/prompt-engineering-guide
-	url = git@github.com:guidogerb/Prompt-Engineering-Guide.git
-[submodule "third-party-repos/ollama"]
-	path = third-party-repos/ollama
-	url = git@github.com:guidogerb/ollama.git
-[submodule "seleniumish"]
-	path = seleniumish
+[submodule "submodules/7digital-api"]
+	path = submodules/7digital-api
+	url = https://github.com/guidogerb/7digital-api.git
+[submodule "submodules/AgentCPM-GUI"]
+	path = submodules/AgentCPM-GUI
+	url = https://github.com/guidogerb/AgentCPM-GUI.git
+[submodule "submodules/AlchemistCoder"]
+	path = submodules/AlchemistCoder
+	url = https://github.com/guidogerb/AlchemistCoder.git
+[submodule "submodules/AnchorWeave"]
+	path = submodules/AnchorWeave
+	url = https://github.com/guidogerb/AnchorWeave.git
+[submodule "submodules/ArcLight"]
+	path = submodules/ArcLight
+	url = https://github.com/guidogerb/ArcLight.git
+[submodule "submodules/AudioX"]
+	path = submodules/AudioX
+	url = https://github.com/guidogerb/AudioX.git
+[submodule "submodules/CUDA-Agent"]
+	path = submodules/CUDA-Agent
+	url = https://github.com/guidogerb/CUDA-Agent.git
+[submodule "submodules/ChatDev"]
+	path = submodules/ChatDev
+	url = https://github.com/guidogerb/ChatDev.git
+[submodule "submodules/CogVideo"]
+	path = submodules/CogVideo
+	url = https://github.com/guidogerb/CogVideo.git
+[submodule "submodules/ComfyUI"]
+	path = submodules/ComfyUI
+	url = https://github.com/guidogerb/ComfyUI.git
+[submodule "submodules/ComfyUI-KJNodes"]
+	path = submodules/ComfyUI-KJNodes
+	url = https://github.com/guidogerb/ComfyUI-KJNodes.git
+[submodule "submodules/ComfyUI-LTXVideo"]
+	path = submodules/ComfyUI-LTXVideo
+	url = https://github.com/guidogerb/ComfyUI-LTXVideo.git
+[submodule "submodules/ComfyUI-Mickmumpitz-Nodes"]
+	path = submodules/ComfyUI-Mickmumpitz-Nodes
+	url = https://github.com/guidogerb/ComfyUI-Mickmumpitz-Nodes.git
+[submodule "submodules/ComfyUI-Qwen-TTS"]
+	path = submodules/ComfyUI-Qwen-TTS
+	url = https://github.com/guidogerb/ComfyUI-Qwen-TTS.git
+[submodule "submodules/ComfyUI_OmnimatteZero"]
+	path = submodules/ComfyUI_OmnimatteZero
+	url = https://github.com/guidogerb/ComfyUI_OmnimatteZero.git
+[submodule "submodules/ComfyUI_RH_DreamID-V"]
+	path = submodules/ComfyUI_RH_DreamID-V
+	url = https://github.com/guidogerb/ComfyUI_RH_DreamID-V.git
+[submodule "submodules/ComfyUI_examples"]
+	path = submodules/ComfyUI_examples
+	url = https://github.com/guidogerb/ComfyUI_examples.git
+[submodule "submodules/CubeComposer"]
+	path = submodules/CubeComposer
+	url = https://github.com/guidogerb/CubeComposer.git
+[submodule "submodules/DreamID-V"]
+	path = submodules/DreamID-V
+	url = https://github.com/guidogerb/DreamID-V.git
+[submodule "submodules/FastVMT"]
+	path = submodules/FastVMT
+	url = https://github.com/guidogerb/FastVMT.git
+[submodule "submodules/FreeCAD"]
+	path = submodules/FreeCAD
+	url = https://github.com/guidogerb/FreeCAD.git
+[submodule "submodules/GLM-5"]
+	path = submodules/GLM-5
+	url = https://github.com/guidogerb/GLM-5.git
+[submodule "submodules/GLM-OCR"]
+	path = submodules/GLM-OCR
+	url = https://github.com/guidogerb/GLM-OCR.git
+[submodule "submodules/HY-WU"]
+	path = submodules/HY-WU
+	url = https://github.com/guidogerb/HY-WU.git
+[submodule "submodules/Helios"]
+	path = submodules/Helios
+	url = https://github.com/guidogerb/Helios.git
+[submodule "submodules/HiFi-Inpaint"]
+	path = submodules/HiFi-Inpaint
+	url = https://github.com/guidogerb/HiFi-Inpaint.git
+[submodule "submodules/HunyuanVideo"]
+	path = submodules/HunyuanVideo
+	url = https://github.com/guidogerb/HunyuanVideo.git
+[submodule "submodules/IC-Light"]
+	path = submodules/IC-Light
+	url = https://github.com/guidogerb/IC-Light.git
+[submodule "submodules/Intern-S1"]
+	path = submodules/Intern-S1
+	url = https://github.com/guidogerb/Intern-S1.git
+[submodule "submodules/InternLM"]
+	path = submodules/InternLM
+	url = https://github.com/guidogerb/InternLM.git
+[submodule "submodules/InternLM-Math"]
+	path = submodules/InternLM-Math
+	url = https://github.com/guidogerb/InternLM-Math.git
+[submodule "submodules/InternLM-XComposer"]
+	path = submodules/InternLM-XComposer
+	url = https://github.com/guidogerb/InternLM-XComposer.git
+[submodule "submodules/JanusCoder"]
+	path = submodules/JanusCoder
+	url = https://github.com/guidogerb/JanusCoder.git
+[submodule "submodules/Kiwi-Edit"]
+	path = submodules/Kiwi-Edit
+	url = https://github.com/guidogerb/Kiwi-Edit.git
+[submodule "submodules/LTX-2"]
+	path = submodules/LTX-2
+	url = https://github.com/guidogerb/LTX-2.git
+[submodule "submodules/LTX-Desktop"]
+	path = submodules/LTX-Desktop
+	url = https://github.com/guidogerb/LTX-Desktop.git
+[submodule "submodules/LTX-Video"]
+	path = submodules/LTX-Video
+	url = https://github.com/guidogerb/LTX-Video.git
+[submodule "submodules/MFLUX-WEBUI"]
+	path = submodules/MFLUX-WEBUI
+	url = https://github.com/guidogerb/MFLUX-WEBUI.git
+[submodule "submodules/MSongsDB"]
+	path = submodules/MSongsDB
+	url = https://github.com/guidogerb/MSongsDB.git
+[submodule "submodules/MindSearch"]
+	path = submodules/MindSearch
+	url = https://github.com/guidogerb/MindSearch.git
+[submodule "submodules/MiniCPM"]
+	path = submodules/MiniCPM
+	url = https://github.com/guidogerb/MiniCPM.git
+[submodule "submodules/MiniCPM-o"]
+	path = submodules/MiniCPM-o
+	url = https://github.com/guidogerb/MiniCPM-o.git
+[submodule "submodules/Modernizr"]
+	path = submodules/Modernizr
+	url = https://github.com/guidogerb/Modernizr.git
+[submodule "submodules/MonarchRT"]
+	path = submodules/MonarchRT
+	url = https://github.com/guidogerb/MonarchRT.git
+[submodule "submodules/MuseScore"]
+	path = submodules/MuseScore
+	url = https://github.com/guidogerb/MuseScore.git
+[submodule "submodules/OmniXtreme"]
+	path = submodules/OmniXtreme
+	url = https://github.com/guidogerb/OmniXtreme.git
+[submodule "submodules/OmnimatteZero"]
+	path = submodules/OmnimatteZero
+	url = https://github.com/guidogerb/OmnimatteZero.git
+[submodule "submodules/OpenAOE"]
+	path = submodules/OpenAOE
+	url = https://github.com/guidogerb/OpenAOE.git
+[submodule "submodules/OpenDiloco"]
+	path = submodules/OpenDiloco
+	url = https://github.com/guidogerb/OpenDiloco.git
+[submodule "submodules/Prompt-Engineering-Guide"]
+	path = submodules/Prompt-Engineering-Guide
+	url = https://github.com/guidogerb/Prompt-Engineering-Guide.git
+[submodule "submodules/Qwen-Agent"]
+	path = submodules/Qwen-Agent
+	url = https://github.com/guidogerb/Qwen-Agent.git
+[submodule "submodules/Qwen-Image"]
+	path = submodules/Qwen-Image
+	url = https://github.com/guidogerb/Qwen-Image.git
+[submodule "submodules/Qwen3-Coder"]
+	path = submodules/Qwen3-Coder
+	url = https://github.com/guidogerb/Qwen3-Coder.git
+[submodule "submodules/Qwen3-Coder-Next-Zeta-GGUF"]
+	path = submodules/Qwen3-Coder-Next-Zeta-GGUF
+	url = https://github.com/guidogerb/Qwen3-Coder-Next-Zeta-GGUF.git
+[submodule "submodules/Qwen3-Omni"]
+	path = submodules/Qwen3-Omni
+	url = https://github.com/guidogerb/Qwen3-Omni.git
+[submodule "submodules/Qwen3-VL"]
+	path = submodules/Qwen3-VL
+	url = https://github.com/guidogerb/Qwen3-VL.git
+[submodule "submodules/Qwen3.5"]
+	path = submodules/Qwen3.5
+	url = https://github.com/guidogerb/Qwen3.5.git
+[submodule "submodules/RealWonder"]
+	path = submodules/RealWonder
+	url = https://github.com/guidogerb/RealWonder.git
+[submodule "submodules/SWE-ReX"]
+	path = submodules/SWE-ReX
+	url = https://github.com/guidogerb/SWE-ReX.git
+[submodule "submodules/SWE-agent"]
+	path = submodules/SWE-agent
+	url = https://github.com/guidogerb/SWE-agent.git
+[submodule "submodules/SevenDigital.Api.Schema"]
+	path = submodules/SevenDigital.Api.Schema
+	url = https://github.com/guidogerb/SevenDigital.Api.Schema.git
+[submodule "submodules/SevenDigital.Api.Wrapper"]
+	path = submodules/SevenDigital.Api.Wrapper
+	url = https://github.com/guidogerb/SevenDigital.Api.Wrapper.git
+[submodule "submodules/SpatialT2I"]
+	path = submodules/SpatialT2I
+	url = https://github.com/guidogerb/SpatialT2I.git
+[submodule "submodules/Spectrum"]
+	path = submodules/Spectrum
+	url = https://github.com/guidogerb/Spectrum.git
+[submodule "submodules/Stable-Video-Infinity"]
+	path = submodules/Stable-Video-Infinity
+	url = https://github.com/guidogerb/Stable-Video-Infinity.git
+[submodule "submodules/Step-3.5-Flash"]
+	path = submodules/Step-3.5-Flash
+	url = https://github.com/guidogerb/Step-3.5-Flash.git
+[submodule "submodules/StoryDiffusion"]
+	path = submodules/StoryDiffusion
+	url = https://github.com/guidogerb/StoryDiffusion.git
+[submodule "submodules/Track4World"]
+	path = submodules/Track4World
+	url = https://github.com/guidogerb/Track4World.git
+[submodule "submodules/UltraRAG"]
+	path = submodules/UltraRAG
+	url = https://github.com/guidogerb/UltraRAG.git
+[submodule "submodules/Utonia"]
+	path = submodules/Utonia
+	url = https://github.com/guidogerb/Utonia.git
+[submodule "submodules/VoxCPM"]
+	path = submodules/VoxCPM
+	url = https://github.com/guidogerb/VoxCPM.git
+[submodule "submodules/Wan2GP"]
+	path = submodules/Wan2GP
+	url = https://github.com/guidogerb/Wan2GP.git
+[submodule "submodules/Z-Image"]
+	path = submodules/Z-Image
+	url = https://github.com/guidogerb/Z-Image.git
+[submodule "submodules/agentlego"]
+	path = submodules/agentlego
+	url = https://github.com/guidogerb/agentlego.git
+[submodule "submodules/ai-toolkit"]
+	path = submodules/ai-toolkit
+	url = https://github.com/guidogerb/ai-toolkit.git
+[submodule "submodules/ampache"]
+	path = submodules/ampache
+	url = https://github.com/guidogerb/ampache.git
+[submodule "submodules/ampache-administrator"]
+	path = submodules/ampache-administrator
+	url = https://github.com/guidogerb/ampache-administrator.git
+[submodule "submodules/amplify-js"]
+	path = submodules/amplify-js
+	url = https://github.com/guidogerb/amplify-js.git
+[submodule "submodules/amplify-ui"]
+	path = submodules/amplify-ui
+	url = https://github.com/guidogerb/amplify-ui.git
+[submodule "submodules/anus"]
+	path = submodules/anus
+	url = https://github.com/guidogerb/anus.git
+[submodule "submodules/api-stub"]
+	path = submodules/api-stub
+	url = https://github.com/guidogerb/api-stub.git
+[submodule "submodules/app"]
+	path = submodules/app
+	url = https://github.com/guidogerb/app.git
+[submodule "submodules/apps"]
+	path = submodules/apps
+	url = https://github.com/guidogerb/apps.git
+[submodule "submodules/asset-manager"]
+	path = submodules/asset-manager
+	url = https://github.com/guidogerb/asset-manager.git
+[submodule "submodules/asset-manager-xfer"]
+	path = submodules/asset-manager-xfer
+	url = https://github.com/guidogerb/asset-manager-xfer.git
+[submodule "submodules/audiveris"]
+	path = submodules/audiveris
+	url = https://github.com/guidogerb/audiveris.git
+[submodule "submodules/awesome-cursorrules"]
+	path = submodules/awesome-cursorrules
+	url = https://github.com/guidogerb/awesome-cursorrules.git
+[submodule "submodules/awesome-python"]
+	path = submodules/awesome-python
+	url = https://github.com/guidogerb/awesome-python.git
+[submodule "submodules/awesome-saleor"]
+	path = submodules/awesome-saleor
+	url = https://github.com/guidogerb/awesome-saleor.git
+[submodule "submodules/blacklist-hosts"]
+	path = submodules/blacklist-hosts
+	url = https://github.com/guidogerb/blacklist-hosts.git
+[submodule "submodules/blender-addons"]
+	path = submodules/blender-addons
+	url = https://github.com/guidogerb/blender-addons.git
+[submodule "submodules/blender-addons-contrib"]
+	path = submodules/blender-addons-contrib
+	url = https://github.com/guidogerb/blender-addons-contrib.git
+[submodule "submodules/blender-dev-tools"]
+	path = submodules/blender-dev-tools
+	url = https://github.com/guidogerb/blender-dev-tools.git
+[submodule "submodules/blender-translations"]
+	path = submodules/blender-translations
+	url = https://github.com/guidogerb/blender-translations.git
+[submodule "submodules/blockchainvoting"]
+	path = submodules/blockchainvoting
+	url = https://github.com/guidogerb/blockchainvoting.git
+[submodule "submodules/bridge-gapp"]
+	path = submodules/bridge-gapp
+	url = https://github.com/guidogerb/bridge-gapp.git
+[submodule "submodules/camel"]
+	path = submodules/camel
+	url = https://github.com/guidogerb/camel.git
+[submodule "submodules/communique"]
+	path = submodules/communique
+	url = https://github.com/guidogerb/communique.git
+[submodule "submodules/configurator"]
+	path = submodules/configurator
+	url = https://github.com/guidogerb/configurator.git
+[submodule "submodules/crewAI"]
+	path = submodules/crewAI
+	url = https://github.com/guidogerb/crewAI.git
+[submodule "submodules/cycles"]
+	path = submodules/cycles
+	url = https://github.com/guidogerb/cycles.git
+[submodule "submodules/diloco_simple"]
+	path = submodules/diloco_simple
+	url = https://github.com/guidogerb/diloco_simple.git
+[submodule "submodules/fastapi"]
+	path = submodules/fastapi
+	url = https://github.com/guidogerb/fastapi.git
+[submodule "submodules/fastapi-cli"]
+	path = submodules/fastapi-cli
+	url = https://github.com/guidogerb/fastapi-cli.git
+[submodule "submodules/fastmcp"]
+	path = submodules/fastmcp
+	url = https://github.com/guidogerb/fastmcp.git
+[submodule "submodules/ffmpeg-custom"]
+	path = submodules/ffmpeg-custom
+	url = https://github.com/guidogerb/ffmpeg-custom.git
+[submodule "submodules/fsutil"]
+	path = submodules/fsutil
+	url = https://github.com/guidogerb/fsutil.git
+[submodule "submodules/garygerber-website"]
+	path = submodules/garygerber-website
+	url = https://github.com/guidogerb/garygerber-website.git
+[submodule "submodules/ggml"]
+	path = submodules/ggml
+	url = https://github.com/guidogerb/ggml.git
+[submodule "submodules/ggp-design-system"]
+	path = submodules/ggp-design-system
+	url = https://github.com/guidogerb/ggp-design-system.git
+[submodule "submodules/ggp-mcp-agent"]
+	path = submodules/ggp-mcp-agent
+	url = https://github.com/guidogerb/ggp-mcp-agent.git
+[submodule "submodules/ggp-midi-to-musicxml"]
+	path = submodules/ggp-midi-to-musicxml
+	url = https://github.com/guidogerb/ggp-midi-to-musicxml.git
+[submodule "submodules/ggp-python-project"]
+	path = submodules/ggp-python-project
+	url = https://github.com/guidogerb/ggp-python-project.git
+[submodule "submodules/ggp-react-project"]
+	path = submodules/ggp-react-project
+	url = https://github.com/guidogerb/ggp-react-project.git
+[submodule "submodules/ggp-studio"]
+	path = submodules/ggp-studio
+	url = https://github.com/guidogerb/ggp-studio.git
+[submodule "submodules/gitea"]
+	path = submodules/gitea
+	url = https://github.com/guidogerb/gitea.git
+[submodule "submodules/gpt-builder"]
+	path = submodules/gpt-builder
+	url = https://github.com/guidogerb/gpt-builder.git
+[submodule "submodules/gpt-engineer"]
+	path = submodules/gpt-engineer
+	url = https://github.com/guidogerb/gpt-engineer.git
+[submodule "submodules/graffiti-monkey"]
+	path = submodules/graffiti-monkey
+	url = https://github.com/guidogerb/graffiti-monkey.git
+[submodule "submodules/grok-1"]
+	path = submodules/grok-1
+	url = https://github.com/guidogerb/grok-1.git
+[submodule "submodules/guidogerb-paleontology"]
+	path = submodules/guidogerb-paleontology
+	url = https://github.com/guidogerb/guidogerb-paleontology.git
+[submodule "submodules/guidogerb-web"]
+	path = submodules/guidogerb-web
+	url = https://github.com/guidogerb/guidogerb-web.git
+[submodule "submodules/guidogerb-website"]
+	path = submodules/guidogerb-website
+	url = https://github.com/guidogerb/guidogerb-website.git
+[submodule "submodules/guidolib"]
+	path = submodules/guidolib
+	url = https://github.com/guidogerb/guidolib.git
+[submodule "submodules/hedgedoc"]
+	path = submodules/hedgedoc
+	url = https://github.com/guidogerb/hedgedoc.git
+[submodule "submodules/hivemind"]
+	path = submodules/hivemind
+	url = https://github.com/guidogerb/hivemind.git
+[submodule "submodules/hunyuan-text2video-comfyui-workflows"]
+	path = submodules/hunyuan-text2video-comfyui-workflows
+	url = https://github.com/guidogerb/hunyuan-text2video-comfyui-workflows.git
+[submodule "submodules/ids"]
+	path = submodules/ids
+	url = https://github.com/guidogerb/ids.git
+[submodule "submodules/improved-aesthetic-predictor"]
+	path = submodules/improved-aesthetic-predictor
+	url = https://github.com/guidogerb/improved-aesthetic-predictor.git
+[submodule "submodules/kaprekar-thermodynamics"]
+	path = submodules/kaprekar-thermodynamics
+	url = https://github.com/guidogerb/kaprekar-thermodynamics.git
+[submodule "submodules/lambda-graffiti-monkey"]
+	path = submodules/lambda-graffiti-monkey
+	url = https://github.com/guidogerb/lambda-graffiti-monkey.git
+[submodule "submodules/langchain"]
+	path = submodules/langchain
+	url = https://github.com/guidogerb/langchain.git
+[submodule "submodules/langchain-ts-starter"]
+	path = submodules/langchain-ts-starter
+	url = https://github.com/guidogerb/langchain-ts-starter.git
+[submodule "submodules/llama.cpp"]
+	path = submodules/llama.cpp
+	url = https://github.com/guidogerb/llama.cpp.git
+[submodule "submodules/llm-agent-break"]
+	path = submodules/llm-agent-break
+	url = https://github.com/guidogerb/llm-agent-break.git
+[submodule "submodules/lmdeploy"]
+	path = submodules/lmdeploy
+	url = https://github.com/guidogerb/lmdeploy.git
+[submodule "submodules/localStorage"]
+	path = submodules/localStorage
+	url = https://github.com/guidogerb/localStorage.git
+[submodule "submodules/markdown-to-pdf"]
+	path = submodules/markdown-to-pdf
+	url = https://github.com/guidogerb/markdown-to-pdf.git
+[submodule "submodules/matrix.to"]
+	path = submodules/matrix.to
+	url = https://github.com/guidogerb/matrix.to.git
+[submodule "submodules/mb3d"]
+	path = submodules/mb3d
+	url = https://github.com/guidogerb/mb3d.git
+[submodule "submodules/mediawiki-bootstrap"]
+	path = submodules/mediawiki-bootstrap
+	url = https://github.com/guidogerb/mediawiki-bootstrap.git
+[submodule "submodules/mini-swe-agent"]
+	path = submodules/mini-swe-agent
+	url = https://github.com/guidogerb/mini-swe-agent.git
+[submodule "submodules/musicbrainz-docker"]
+	path = submodules/musicbrainz-docker
+	url = https://github.com/guidogerb/musicbrainz-docker.git
+[submodule "submodules/musicbrainz-server"]
+	path = submodules/musicbrainz-server
+	url = https://github.com/guidogerb/musicbrainz-server.git
+[submodule "submodules/new-uid-portal"]
+	path = submodules/new-uid-portal
+	url = https://github.com/guidogerb/new-uid-portal.git
+[submodule "submodules/nopaste"]
+	path = submodules/nopaste
+	url = https://github.com/guidogerb/nopaste.git
+[submodule "submodules/nu"]
+	path = submodules/nu
+	url = https://github.com/guidogerb/nu.git
+[submodule "submodules/nucleon-switch"]
+	path = submodules/nucleon-switch
+	url = https://github.com/guidogerb/nucleon-switch.git
+[submodule "submodules/ollama"]
+	path = submodules/ollama
+	url = https://github.com/guidogerb/ollama.git
+[submodule "submodules/ollama-fargate"]
+	path = submodules/ollama-fargate
+	url = https://github.com/guidogerb/ollama-fargate.git
+[submodule "submodules/ome"]
+	path = submodules/ome
+	url = https://github.com/guidogerb/ome.git
+[submodule "submodules/omnimatte"]
+	path = submodules/omnimatte
+	url = https://github.com/guidogerb/omnimatte.git
+[submodule "submodules/open-llms"]
+	path = submodules/open-llms
+	url = https://github.com/guidogerb/open-llms.git
+[submodule "submodules/openai-node"]
+	path = submodules/openai-node
+	url = https://github.com/guidogerb/openai-node.git
+[submodule "submodules/openai-python"]
+	path = submodules/openai-python
+	url = https://github.com/guidogerb/openai-python.git
+[submodule "submodules/openclaw"]
+	path = submodules/openclaw
+	url = https://github.com/guidogerb/openclaw.git
+[submodule "submodules/opensheetmusicdisplay"]
+	path = submodules/opensheetmusicdisplay
+	url = https://github.com/guidogerb/opensheetmusicdisplay.git
+[submodule "submodules/organize-models"]
+	path = submodules/organize-models
+	url = https://github.com/guidogerb/organize-models.git
+[submodule "submodules/owl"]
+	path = submodules/owl
+	url = https://github.com/guidogerb/owl.git
+[submodule "submodules/paperbanana"]
+	path = submodules/paperbanana
+	url = https://github.com/guidogerb/paperbanana.git
+[submodule "submodules/penpot"]
+	path = submodules/penpot
+	url = https://github.com/guidogerb/penpot.git
+[submodule "submodules/photoshop"]
+	path = submodules/photoshop
+	url = https://github.com/guidogerb/photoshop.git
+[submodule "submodules/playwright-python"]
+	path = submodules/playwright-python
+	url = https://github.com/guidogerb/playwright-python.git
+[submodule "submodules/pojo-gernerator"]
+	path = submodules/pojo-gernerator
+	url = https://github.com/guidogerb/pojo-gernerator.git
+[submodule "submodules/portal-client"]
+	path = submodules/portal-client
+	url = https://github.com/guidogerb/portal-client.git
+[submodule "submodules/prime"]
+	path = submodules/prime
+	url = https://github.com/guidogerb/prime.git
+[submodule "submodules/puppeteer"]
+	path = submodules/puppeteer
+	url = https://github.com/guidogerb/puppeteer.git
+[submodule "submodules/python-sdk"]
+	path = submodules/python-sdk
+	url = https://github.com/guidogerb/python-sdk.git
+[submodule "submodules/runner-images"]
+	path = submodules/runner-images
+	url = https://github.com/guidogerb/runner-images.git
+[submodule "submodules/saleor"]
+	path = submodules/saleor
+	url = https://github.com/guidogerb/saleor.git
+[submodule "submodules/saleor-dashboard"]
+	path = submodules/saleor-dashboard
+	url = https://github.com/guidogerb/saleor-dashboard.git
+[submodule "submodules/saleor-vatrc"]
+	path = submodules/saleor-vatrc
+	url = https://github.com/guidogerb/saleor-vatrc.git
+[submodule "submodules/seleniumish"]
+	path = submodules/seleniumish
 	url = https://github.com/guidogerb/seleniumish.git
+[submodule "submodules/sgl-cookbook"]
+	path = submodules/sgl-cookbook
+	url = https://github.com/guidogerb/sgl-cookbook.git
+[submodule "submodules/sgl-docs"]
+	path = submodules/sgl-docs
+	url = https://github.com/guidogerb/sgl-docs.git
+[submodule "submodules/sgl-learning-materials"]
+	path = submodules/sgl-learning-materials
+	url = https://github.com/guidogerb/sgl-learning-materials.git
+[submodule "submodules/sgl-project.github.io"]
+	path = submodules/sgl-project.github.io
+	url = https://github.com/guidogerb/sgl-project.github.io.git
+[submodule "submodules/sglang"]
+	path = submodules/sglang
+	url = https://github.com/guidogerb/sglang.git
+[submodule "submodules/sglang-omni"]
+	path = submodules/sglang-omni
+	url = https://github.com/guidogerb/sglang-omni.git
+[submodule "submodules/spksrc"]
+	path = submodules/spksrc
+	url = https://github.com/guidogerb/spksrc.git
+[submodule "submodules/spring-cli"]
+	path = submodules/spring-cli
+	url = https://github.com/guidogerb/spring-cli.git
+[submodule "submodules/spring-data-relational"]
+	path = submodules/spring-data-relational
+	url = https://github.com/guidogerb/spring-data-relational.git
+[submodule "submodules/sqlmodel"]
+	path = submodules/sqlmodel
+	url = https://github.com/guidogerb/sqlmodel.git
+[submodule "submodules/stable-diffusion-webui"]
+	path = submodules/stable-diffusion-webui
+	url = https://github.com/guidogerb/stable-diffusion-webui.git
+[submodule "submodules/storefront"]
+	path = submodules/storefront
+	url = https://github.com/guidogerb/storefront.git
+[submodule "submodules/streamlit"]
+	path = submodules/streamlit
+	url = https://github.com/guidogerb/streamlit.git
+[submodule "submodules/surge"]
+	path = submodules/surge
+	url = https://github.com/guidogerb/surge.git
+[submodule "submodules/tasks-tracker"]
+	path = submodules/tasks-tracker
+	url = https://github.com/guidogerb/tasks-tracker.git
+[submodule "submodules/temp-uid"]
+	path = submodules/temp-uid
+	url = https://github.com/guidogerb/temp-uid.git
+[submodule "submodules/terraform-aws-lambda-scheduler-stop-start"]
+	path = submodules/terraform-aws-lambda-scheduler-stop-start
+	url = https://github.com/guidogerb/terraform-aws-lambda-scheduler-stop-start.git
+[submodule "submodules/terraform-ggp"]
+	path = submodules/terraform-ggp
+	url = https://github.com/guidogerb/terraform-ggp.git
+[submodule "submodules/test"]
+	path = submodules/test
+	url = https://github.com/guidogerb/test.git
+[submodule "submodules/tiny-aya-tech-report"]
+	path = submodules/tiny-aya-tech-report
+	url = https://github.com/guidogerb/tiny-aya-tech-report.git
+[submodule "submodules/vexchords"]
+	path = submodules/vexchords
+	url = https://github.com/guidogerb/vexchords.git
+[submodule "submodules/vexflow"]
+	path = submodules/vexflow
+	url = https://github.com/guidogerb/vexflow.git
+[submodule "submodules/whisper"]
+	path = submodules/whisper
+	url = https://github.com/guidogerb/whisper.git
+[submodule "submodules/whisper.cpp"]
+	path = submodules/whisper.cpp
+	url = https://github.com/guidogerb/whisper.cpp.git
+[submodule "submodules/wixy"]
+	path = submodules/wixy
+	url = https://github.com/guidogerb/wixy.git
+[submodule "submodules/wordlebuster"]
+	path = submodules/wordlebuster
+	url = https://github.com/guidogerb/wordlebuster.git
+[submodule "submodules/zenphoto"]
+	path = submodules/zenphoto
+	url = https://github.com/guidogerb/zenphoto.git
+[submodule "submodules/blender"]
+	path = submodules/blender
+	url = https://github.com/guidogerb/blender.git
