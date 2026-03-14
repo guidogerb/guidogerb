@@ -109,6 +109,7 @@ Let’s build tools that make science and art talk to each other.
 | [LTX-Desktop](https://github.com/guidogerb/LTX-Desktop) | LTX Desktop is an open-source desktop app for generating videos with LTX models — locally on supported Windows/Linux NVIDIA GPUs, with an API mode ... |
 | [LTX-Video](https://github.com/guidogerb/LTX-Video) | <div align="center"> |
 | [LavaSR](https://github.com/guidogerb/LavaSR) | <p align="center"> <a href="https://huggingface.co/YatharthS/LavaSR"> <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-FF... |
+| [LoRWeB](https://github.com/guidogerb/LoRWeB) | <div align="center"> |
 | [MFLUX-WEBUI](https://github.com/guidogerb/MFLUX-WEBUI) | A pinokio script for git@github.com:CharafChnioune/MFLUX-WEBUI.git |
 | [MSongsDB](https://github.com/guidogerb/MSongsDB) | MILLION SONG DATASET |
 | [MindSearch](https://github.com/guidogerb/MindSearch) | <div id="top"></div> |
@@ -121,6 +122,7 @@ Let’s build tools that make science and art talk to each other.
 | [OmnimatteZero](https://github.com/guidogerb/OmnimatteZero) | Official implementation of **OmnimatteZero: Training-Free Video Matting and Compositing via Latent Diffusion Models** |
 | [OpenAOE](https://github.com/guidogerb/OpenAOE) | <div align="center"> <img src="docs/_static/image/aoe-logo.svg" width="250"/> |
 | [OpenDiloco](https://github.com/guidogerb/OpenDiloco) | This repository contains the training code and experiment results for the paper [OpenDiLoCo: An Open-Source Framework for Globally Distributed Low-... |
+| [PhysicEdit](https://github.com/guidogerb/PhysicEdit) | <div align="center" style="font-family: charter;"> <h1><i>From Statics to Dynamics:</i></br>Physics-Aware Image Editing with Latent Transition Prio... |
 | [Prompt-Engineering-Guide](https://github.com/guidogerb/Prompt-Engineering-Guide) | <h5 align="center"> Sponsored by&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://serpapi.com/"><img src="https://cdn.rawgit.com/standard/standard/master/do... |
 | [Qwen-Agent](https://github.com/guidogerb/Qwen-Agent) | Copyright 2023 The Qwen team, Alibaba Group. All rights reserved. |
 | [Qwen-Image](https://github.com/guidogerb/Qwen-Image) | <p align="center"> <img src="https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/qwen_image_logo.png" width="400"/> <p> <p align="center">&n... |

@@ -631,3 +631,9 @@
 [submodule "submodules/videomt"]
 	path = submodules/videomt
 	url = https://github.com/guidogerb/videomt.git
+[submodule "submodules/LoRWeB"]
+	path = submodules/LoRWeB
+	url = https://github.com/guidogerb/LoRWeB.git
+[submodule "submodules/PhysicEdit"]
+	path = submodules/PhysicEdit
+	url = https://github.com/guidogerb/PhysicEdit.git
