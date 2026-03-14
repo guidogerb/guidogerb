@@ -88,6 +88,7 @@ Let’s build tools that make science and art talk to each other.
 | [ComfyUI_RH_DreamID-V](https://github.com/guidogerb/ComfyUI_RH_DreamID-V) | <p align="center"> <img src="https://img.shields.io/badge/ComfyUI-Plugin-blue" alt="ComfyUI Plugin"> <img src="https://img.shields.io/badge/License... |
 | [ComfyUI_examples](https://github.com/guidogerb/ComfyUI_examples) | This [repo](https://github.com/comfyanonymous/ComfyUI_examples) contains examples of what is achievable with [ComfyUI](https://github.com/comfyanon... |
 | [CubeComposer](https://github.com/guidogerb/CubeComposer) | <p align="center"> <b> CubeComposer: Spatio-Temporal Autoregressive 4K 360° Video Generation from Perspective Video </b> </p> |
+| [DreamID-Omni](https://github.com/guidogerb/DreamID-Omni) | > [!NOTE] > This repository is forked from the `omni` branch of **[DreamID-V](https://github.com/bytedance/DreamID-V)**. <p align="center"> <a href... |
 | [DreamID-V](https://github.com/guidogerb/DreamID-V) | <p align="center"> <a href="https://guoxu1233.github.io/DreamID-V/">🌐 Project Page</a> — <a href="https://arxiv.org/abs/2601.01425">📜 Arxiv</a> — <... |
 | [FastVMT](https://github.com/guidogerb/FastVMT) | <div align="center"> <h2><font color="red"> FastVMT⚡️: Eliminating Redundancy in Video Motion Transfer</h2> |
 | [FreeCAD](https://github.com/guidogerb/FreeCAD) | <a href="https://freecad.org"><img src="/src/Gui/Icons/freecad.svg" height="100px" width="100px"></a> |
@@ -107,6 +108,7 @@ Let’s build tools that make science and art talk to each other.
 | [LTX-2](https://github.com/guidogerb/LTX-2) | **LTX-2** is the first DiT-based audio-video foundation model that contains all core capabilities of modern video generation in one model: synchron... |
 | [LTX-Desktop](https://github.com/guidogerb/LTX-Desktop) | LTX Desktop is an open-source desktop app for generating videos with LTX models — locally on supported Windows/Linux NVIDIA GPUs, with an API mode ... |
 | [LTX-Video](https://github.com/guidogerb/LTX-Video) | <div align="center"> |
+| [LavaSR](https://github.com/guidogerb/LavaSR) | <p align="center"> <a href="https://huggingface.co/YatharthS/LavaSR"> <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-FF... |
 | [MFLUX-WEBUI](https://github.com/guidogerb/MFLUX-WEBUI) | A pinokio script for git@github.com:CharafChnioune/MFLUX-WEBUI.git |
 | [MSongsDB](https://github.com/guidogerb/MSongsDB) | MILLION SONG DATASET |
 | [MindSearch](https://github.com/guidogerb/MindSearch) | <div id="top"></div> |
@@ -140,6 +142,7 @@ Let’s build tools that make science and art talk to each other.
 | [Track4World](https://github.com/guidogerb/Track4World) | <div align="center"> <img src='assets/logo.jpg' style="height:100px"></img> </div> |
 | [UltraRAG](https://github.com/guidogerb/UltraRAG) | <p align="center"> <picture> <source media="(prefers-color-scheme: dark)" srcset="./docs/ultrarag_dark.svg"> <source media="(prefers-color-scheme: ... |
 | [Utonia](https://github.com/guidogerb/Utonia) | **TL;DR:** This repo provide cross-domain pre-trained [Point Transformer V3](https://github.com/Pointcept/PointTransformerV3) for 3D point cloud do... |
+| [VecGlypher](https://github.com/guidogerb/VecGlypher) | This repository contains the re-implementation for **VecGlypher: Unified Vector Glyph Generation with Language Models**. |
 | [VoxCPM](https://github.com/guidogerb/VoxCPM) | <div align="center"> <img src="assets/voxcpm_logo.png" alt="VoxCPM Logo" width="40%"> </div> |
 | [Wan2GP](https://github.com/guidogerb/Wan2GP) | <p align="center"> <b>WanGP by DeepBeepMeep : The best Open Source Video Generative Models Accessible to the GPU Poor</b> </p> |
 | [Z-Image](https://github.com/guidogerb/Z-Image) | <h1 align="center">⚡️- Image<br><sub><sup>An Efficient Image Generation Foundation Model with Single-Stream Diffusion Transformer</sup></sub></h1> |
@@ -249,6 +252,8 @@ Let’s build tools that make science and art talk to each other.
 | [sgl-project.github.io](https://github.com/guidogerb/sgl-project.github.io) | This is the documentation website for the SGLang project (https://github.com/sgl-project/sglang). |
 | [sglang](https://github.com/guidogerb/sglang) | <div align="center" id="sglangtop"> <img src="https://raw.githubusercontent.com/sgl-project/sglang/main/assets/logo.png" alt="logo" width="400" mar... |
 | [sglang-omni](https://github.com/guidogerb/sglang-omni) | SGLang-Omni is an ecosystem project for SGLang. Omni models refer to models that have multi-modal inputs and multi-modal outputs. These models typi... |
+| [solaris](https://github.com/guidogerb/solaris) | This repository contains the JAX implementation of the Solaris multiplayer world model for Minecraft. It supports GCP TPU training and inference, a... |
+| [solaris-engine](https://github.com/guidogerb/solaris-engine) | This repository contains a multiplayer data collection framework for Minecraft. It uses [Mineflayer](https://github.com/PrismarineJS/mineflayer) bo... |
 | [spksrc](https://github.com/guidogerb/spksrc) | SynoCommunity is now on Discord! |
 | [spring-cli](https://github.com/guidogerb/spring-cli) | A CLI focused on developer productivity |
 | [spring-data-relational](https://github.com/guidogerb/spring-data-relational) | Spring Data Relational. Home of Spring Data JDBC and Spring Data R2DBC. |
@@ -266,6 +271,7 @@ Let’s build tools that make science and art talk to each other.
 | [tttLRM](https://github.com/guidogerb/tttLRM) | <h1 align="center">tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction</h1> <p align="center"><a href="https://arxiv.o... |
 | [vexchords](https://github.com/guidogerb/vexchords) | VexChords renders guitar chords in your browser. |
 | [vexflow](https://github.com/guidogerb/vexflow) | VexFlow is an open-source library for rendering music notation. It is written in TypeScript (compiled to ES6), and outputs scores to HTML Canvas an... |
+| [videomt](https://github.com/guidogerb/videomt) | **CVPR 2026** · **[📄 Paper](https://arxiv.org/abs/2602.17807)** |
 | [whisper](https://github.com/guidogerb/whisper) | [[Blog]](https://openai.com/blog/whisper) [[Paper]](https://arxiv.org/abs/2212.04356) [[Model card]](https://github.com/openai/whisper/blob/main/mo... |
 | [whisper.cpp](https://github.com/guidogerb/whisper.cpp) | Stable: [v1.7.3](https://github.com/ggerganov/whisper.cpp/releases/tag/v1.7.3) / [Roadmap — F.A.Q.](https://github.com/ggerganov/whisper.cpp/discus... |
 | [wixy](https://github.com/guidogerb/wixy) | A powerful, Wix Studio-inspired web design builder built with Vite, React, and TypeScript. Create stunning web pages with an intuitive drag-and-dro... |

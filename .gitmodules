@@ -613,3 +613,21 @@
 [submodule "submodules/tttLRM"]
 	path = submodules/tttLRM
 	url = https://github.com/guidogerb/tttLRM.git
+[submodule "submodules/DreamID-Omni"]
+	path = submodules/DreamID-Omni
+	url = https://github.com/guidogerb/DreamID-Omni.git
+[submodule "submodules/LavaSR"]
+	path = submodules/LavaSR
+	url = https://github.com/guidogerb/LavaSR.git
+[submodule "submodules/VecGlypher"]
+	path = submodules/VecGlypher
+	url = https://github.com/guidogerb/VecGlypher.git
+[submodule "submodules/solaris"]
+	path = submodules/solaris
+	url = https://github.com/guidogerb/solaris.git
+[submodule "submodules/solaris-engine"]
+	path = submodules/solaris-engine
+	url = https://github.com/guidogerb/solaris-engine.git
+[submodule "submodules/videomt"]
+	path = submodules/videomt
+	url = https://github.com/guidogerb/videomt.git
