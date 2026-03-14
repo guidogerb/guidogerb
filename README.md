@@ -184,7 +184,7 @@ Let’s build tools that make science and art talk to each other.
 | [ggp-mcp-agent](https://github.com/guidogerb/ggp-mcp-agent) | > **A secure MCP client and agentic workflow manager for Synology NAS** |
 | [ggp-midi-to-musicxml](https://github.com/guidogerb/ggp-midi-to-musicxml) | The translation of a condensed musical sketch—specifically, a three-track MIDI file comprising a melody, a bassline, and a harmonic chord progressi... |
 | [ggp-python-project](https://github.com/guidogerb/ggp-python-project) | **Zero-dependency 3D geometry processor** — native HTML5 Web Components + Rust WebAssembly. **Python-only toolchain** — no Node.js, npm, or any JS ... |
-| [ggp-react-project](https://github.com/guidogerb/ggp-react-project) | No description available |
+| [ggp-react-project](https://github.com/guidogerb/ggp-react-project) | AWS Amplify application with a Vite React frontend (Cognito OIDC authentication) and a Python Lambda backend. |
 | [ggp-studio](https://github.com/guidogerb/ggp-studio) | **GGP Studio** is a comprehensive, monolithic AI video production workspace. It unifies state-of-the-art generative models (LTX-2, DreamID-V, Wan-A... |
 | [gitea](https://github.com/guidogerb/gitea) | [繁體中文](./README.zh-tw.md) — [简体中文](./README.zh-cn.md) |
 | [gpt-builder](https://github.com/guidogerb/gpt-builder) | Welcome to the https://github.com/guidogerb/gpt-dev repository! This repository hosts the custom GPT (Generative Pre-trained Transformer) model nam... |
@@ -217,7 +217,6 @@ Let’s build tools that make science and art talk to each other.
 | [musicbrainz-server](https://github.com/guidogerb/musicbrainz-server) | The MusicBrainz Server README |
 | [new-uid-portal](https://github.com/guidogerb/new-uid-portal) | new-uid-portal |
 | [nopaste](https://github.com/guidogerb/nopaste) | [NoPaste](https://nopaste.boris.sh/) is an open-source website similar to Pastebin where you can store any piece of code, and generate links for ea... |
-| [nu](https://github.com/guidogerb/nu) | A Vite + React application deployed on AWS Amplify with a serverless backend, authenticated via Amazon Cognito (OIDC). |
 | [nucleon-switch](https://github.com/guidogerb/nucleon-switch) | The "Nucleon Switch" represents a highly advanced, theoretical thought experiment designed to probe the extreme boundaries of nuclear physics, ther... |
 | [ollama](https://github.com/guidogerb/ollama) | <div align="center"> <img alt="ollama" height="200px" src="https://github.com/ollama/ollama/assets/3325447/0d0b44e2-8f4a-4e99-9b52-a5c1c741c8f7"> <... |
 | [ollama-fargate](https://github.com/guidogerb/ollama-fargate) | This repository contains a Docker image for running Ollama as an AWS Fargate service, exposing Ollama endpoints to React applications running in AW... |
@@ -264,6 +263,7 @@ Let’s build tools that make science and art talk to each other.
 | [terraform-ggp](https://github.com/guidogerb/terraform-ggp) | Terraform GuidoGerb Publishing, LLC terraform init terraform fmt terraform validate terraform plan terraform apply |
 | [test](https://github.com/guidogerb/test) | No description available |
 | [tiny-aya-tech-report](https://github.com/guidogerb/tiny-aya-tech-report) | No description available |
+| [tttLRM](https://github.com/guidogerb/tttLRM) | <h1 align="center">tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction</h1> <p align="center"><a href="https://arxiv.o... |
 | [vexchords](https://github.com/guidogerb/vexchords) | VexChords renders guitar chords in your browser. |
 | [vexflow](https://github.com/guidogerb/vexflow) | VexFlow is an open-source library for rendering music notation. It is written in TypeScript (compiled to ES6), and outputs scores to HTML Canvas an... |
 | [whisper](https://github.com/guidogerb/whisper) | [[Blog]](https://openai.com/blog/whisper) [[Paper]](https://arxiv.org/abs/2212.04356) [[Model card]](https://github.com/openai/whisper/blob/main/mo... |

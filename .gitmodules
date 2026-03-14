@@ -448,9 +448,6 @@
 [submodule "submodules/nopaste"]
 	path = submodules/nopaste
 	url = https://github.com/guidogerb/nopaste.git
-[submodule "submodules/nu"]
-	path = submodules/nu
-	url = https://github.com/guidogerb/nu.git
 [submodule "submodules/nucleon-switch"]
 	path = submodules/nucleon-switch
 	url = https://github.com/guidogerb/nucleon-switch.git
@@ -613,3 +610,6 @@
 [submodule "submodules/blender"]
 	path = submodules/blender
 	url = https://github.com/guidogerb/blender.git
+[submodule "submodules/tttLRM"]
+	path = submodules/tttLRM
+	url = https://github.com/guidogerb/tttLRM.git
