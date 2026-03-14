@@ -1,0 +1,775 @@
+{
+  "AgentCPM-GUI": {
+    "huggingface": [
+      "openbmb/AgentCPM-GUI"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "ai-toolkit": {
+    "huggingface": [
+      "black-forest-labs/FLUX.1-dev",
+      "ostris/FLUX.1-schnell-training-adapter"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "AlchemistCoder": {
+    "huggingface": [
+      "internlm/AlchemistCoder-CL-7B",
+      "internlm/AlchemistCoder-DS-6.7B",
+      "internlm/AlchemistCoder-L-7B"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "AudioX": {
+    "huggingface": [
+      "HKUSTAudio/AudioX",
+      "HKUSTAudio/AudioX-MAF",
+      "HKUSTAudio/AudioX-MAF-MMDiT"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://huggingface.co/HKUSTAudio/AudioX-MAF-MMDiT/resolve/main/VAE.ckpt",
+      "https://huggingface.co/HKUSTAudio/AudioX-MAF-MMDiT/resolve/main/model.ckpt",
+      "https://huggingface.co/HKUSTAudio/AudioX-MAF/resolve/main/model.ckpt",
+      "https://huggingface.co/HKUSTAudio/AudioX-MAF/resolve/main/synchformer_state_dict.pt",
+      "https://huggingface.co/HKUSTAudio/AudioX/resolve/main/model.ckpt"
+    ]
+  },
+  "CogVideo": {
+    "huggingface": [
+      "THUDM/CogVideoX-2b",
+      "THUDM/CogVideoX-5b",
+      "THUDM/CogVideoX-5b-I2V",
+      "THUDM/cogvlm2-llama3-caption"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "ComfyUI-LTXVideo": {
+    "huggingface": [
+      "Lightricks/LTX-2-19b-IC-LoRA-Detailer",
+      "Lightricks/LTX-2-19b-IC-LoRA-Pose-Control",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-In",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Left",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Out",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Right",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Down",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Up",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Static",
+      "Lightricks/LTX-2.3",
+      "Lightricks/LTX-2.3-22b-IC-LoRA-Motion-Track-Control",
+      "Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control",
+      "google/gemma-3-12b-it-qat-q4_0-unquantized"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Detailer/blob/main/ltx-2-19b-ic-lora-detailer.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Pose-Control/blob/main/ltx-2-19b-ic-lora-pose-control.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-In/blob/main/ltx-2-19b-lora-camera-control-dolly-in.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Left/blob/main/ltx-2-19b-lora-camera-control-dolly-left.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Out/blob/main/ltx-2-19b-lora-camera-control-dolly-out.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Right/blob/main/ltx-2-19b-lora-camera-control-dolly-right.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Down/blob/main/ltx-2-19b-lora-camera-control-jib-down.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Up/blob/main/ltx-2-19b-lora-camera-control-jib-up.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Static/blob/main/ltx-2-19b-lora-camera-control-static.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Motion-Track-Control/blob/main/ltx-2.3-22b-ic-lora-motion-track-control-ref0.5.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control/blob/main/ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-22b-dev.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-22b-distilled-lora-384.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-22b-distilled.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-spatial-upscaler-x1.5-1.0.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-spatial-upscaler-x2-1.0.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-temporal-upscaler-x2-1.0.safetensors"
+    ]
+  },
+  "ComfyUI_OmnimatteZero": {
+    "huggingface": [
+      "a-r-r-o-w/LTX-Video-0.9.7-diffusers",
+      "smthem/LTX-Video-0.9.7-diffusers-merge"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "ComfyUI_RH_DreamID-V": {
+    "huggingface": [
+      "Wan-AI/Wan2.1-T2V-1.3B",
+      "XuGuo699/DreamID-V"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "CubeComposer": {
+    "huggingface": [
+      "TencentARC/CubeComposer"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "DreamID-V": {
+    "huggingface": [
+      "Wan-AI/Wan2.1-T2V-1.3B",
+      "XuGuo699/DreamID-V"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://huggingface.co/XuGuo699/DreamID-V/blob/main/dreamidv_faster.pt"
+    ]
+  },
+  "ggp-studio": {
+    "huggingface": [
+      "Lightricks/LTX-2"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "GLM-5": {
+    "huggingface": [
+      "zai-org/GLM-5",
+      "zai-org/GLM-5-FP8"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "GLM-OCR": {
+    "huggingface": [
+      "PaddlePaddle/PP-DocLayoutV3",
+      "zai-org/GLM-OCR"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "grok-1": {
+    "huggingface": [
+      "xai-org/grok-1"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Helios": {
+    "huggingface": [
+      "BestWishYsh/Helios-Base",
+      "BestWishYsh/Helios-Distilled",
+      "BestWishYsh/Helios-Mid",
+      "BestWishYsh/HeliosBench-Weights"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "HunyuanVideo": {
+    "huggingface": [
+      "Tencent/HunyuanVideo-PromptRewrite",
+      "city96/HunyuanVideo-gguf",
+      "stabilityai/stable-diffusion-3-medium",
+      "tencent/HunyuanVideo",
+      "tencent/HunyuanVideo-PromptRewrite"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://huggingface.co/tencent/HunyuanVideo/blob/main/hunyuan-video-t2v-720p/transformers/mp_rank_00_model_states_fp8.pt",
+      "https://huggingface.co/tencent/HunyuanVideo/blob/main/hunyuan-video-t2v-720p/transformers/mp_rank_00_model_states_fp8_map.pt"
+    ]
+  },
+  "HY-WU": {
+    "huggingface": [
+      "tencent/HY-WU"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "IC-Light": {
+    "huggingface": [
+      "briaai/RMBG-1.4"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "improved-aesthetic-predictor": {
+    "huggingface": [],
+    "google_drive": [
+      "drive.google.com/drive/folders/186XiniJup5Rt9FXsHiAGWhgWz-nmCK_r?usp=sharing"
+    ],
+    "direct": []
+  },
+  "Intern-S1": {
+    "huggingface": [
+      "internlm/Intern-S1",
+      "internlm/Intern-S1-FP8",
+      "internlm/Intern-S1-GGUF",
+      "internlm/Intern-S1-Pro",
+      "internlm/Intern-S1-mini",
+      "internlm/Intern-S1-mini-FP8",
+      "internlm/Intern-S1-mini-GGUF"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "InternLM": {
+    "huggingface": [
+      "internlm/internlm-20b",
+      "internlm/internlm-20b-chat",
+      "internlm/internlm-7b",
+      "internlm/internlm-chat-7b",
+      "internlm/internlm-chat-7b-8k",
+      "internlm/internlm-chat-7b-v1.1"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "InternLM-Math": {
+    "huggingface": [
+      "internlm/internlm2-math-20b",
+      "internlm/internlm2-math-7b",
+      "internlm/internlm2-math-base-20b",
+      "internlm/internlm2-math-base-7b",
+      "internlm/internlm2-math-plus-1_8b",
+      "internlm/internlm2-math-plus-20b",
+      "internlm/internlm2-math-plus-7b",
+      "internlm/internlm2-math-plus-mixtral8x22b",
+      "internlm/internlm2-step-prover",
+      "internlm/internlm2_5-step-prover",
+      "internlm/internlm2_5-step-prover-critic"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "InternLM-XComposer": {
+    "huggingface": [
+      "internlm/internlm-xcomposer-7b",
+      "internlm/internlm-xcomposer-7b-4bit",
+      "internlm/internlm-xcomposer-vl-7b",
+      "internlm/internlm-xcomposer2-4khd-7b",
+      "internlm/internlm-xcomposer2-7b",
+      "internlm/internlm-xcomposer2-7b-4bit",
+      "internlm/internlm-xcomposer2-vl-1_8b",
+      "internlm/internlm-xcomposer2-vl-7b",
+      "internlm/internlm-xcomposer2-vl-7b-4bit",
+      "internlm/internlm-xcomposer2d5-7b",
+      "internlm/internlm-xcomposer2d5-7b-4bit",
+      "internlm/internlm-xcomposer2d5-7b-reward",
+      "internlm/internlm-xcomposer2d5-ol-7b"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "JanusCoder": {
+    "huggingface": [
+      "OpenGVLab/InternVL3_5-8B",
+      "Qwen/Qwen2.5-VL-7B-Instruct",
+      "Qwen/Qwen3-14B",
+      "Qwen/Qwen3-8B",
+      "internlm/JanusCoder-14B",
+      "internlm/JanusCoder-8B",
+      "internlm/JanusCoderV-7B",
+      "internlm/JanusCoderV-8B"
+    ],
+    "google_drive": [
+      "drive.google.com/drive/folders/15V2PMUiFCLDCd8PdCigIchLIGubAoQDw?usp=sharing",
+      "drive.google.com/drive/folders/1H0cK_rzGXVB3bVMbUdS1EptV0COSkw-J?usp=sharing",
+      "drive.google.com/file/d/1dSxNf-co4LGh93NoiUgWKdbcf8Mo_VWG/view?usp=sharing"
+    ],
+    "direct": []
+  },
+  "Kiwi-Edit": {
+    "huggingface": [
+      "Qwen/Qwen-Image-Edit-2511",
+      "Qwen/Qwen2.5-VL-3B-Instruct",
+      "Wan-AI/Wan2.2-TI2V-5B",
+      "linyq/kiwi-edit-5b-instruct-only-diffusers",
+      "linyq/kiwi-edit-5b-instruct-reference-diffusers",
+      "linyq/kiwi-edit-5b-reference-only-diffusers",
+      "linyq/wan2.2_ti2v_5b_qwen25vl_3b_stage1_img_only",
+      "linyq/wan2.2_ti2v_5b_qwen25vl_3b_stage2_img_vid_600x600_81f",
+      "linyq/wan2.2_ti2v_5b_qwen25vl_3b_stage2_img_vid_720x1280_81f",
+      "linyq/wan2.2_ti2v_5b_qwen25vl_3b_stage3_img_vid_refvid_720x1280_81f",
+      "linyq/wan2.2_ti2v_5b_qwen25vl_3b_stage3_refvid_only_720x1280_81f_pad_first"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "llama.cpp": {
+    "huggingface": [
+      "GritLM/GritLM-7B",
+      "GritLM/GritLM-8x7B",
+      "LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+      "LumiOpen/Poro-34B",
+      "NousResearch/Obsidian-3B-V0.5",
+      "THUDM/chatglm3-6b",
+      "THUDM/glm-4-9b",
+      "THUDM/glm-edge-1.5b-chat",
+      "THUDM/glm-edge-4b-chat",
+      "ai-sage/GigaChat-20B-A3B-instruct",
+      "allenai/OLMoE-1B-7B-0924",
+      "databricks/dbrx-instruct",
+      "hiyouga/baichuan-7b-sft",
+      "inceptionai/jais-13b-chat",
+      "keyfan/grok-1-hf",
+      "mistralai/Mistral-7B-v0.1",
+      "recursal/QRWKV6-32B-Instruct-Preview-v0.1",
+      "smallcloudai/Refact-1_6B-fim",
+      "trillionlabs/Trillion-7B-preview",
+      "vikhyatk/moondream2"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "lmdeploy": {
+    "huggingface": [
+      "internlm/internlm2-20b"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "LTX-2": {
+    "huggingface": [
+      "Lightricks/LTX-2-19b-IC-LoRA-Detailer",
+      "Lightricks/LTX-2-19b-IC-LoRA-Pose-Control",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-In",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Left",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Out",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Right",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Down",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Up",
+      "Lightricks/LTX-2-19b-LoRA-Camera-Control-Static",
+      "Lightricks/LTX-2.3",
+      "Lightricks/LTX-2.3-22b-IC-LoRA-Motion-Track-Control",
+      "Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control",
+      "google/gemma-3-12b-it-qat-q4_0-unquantized"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Detailer/resolve/main/ltx-2-19b-ic-lora-detailer.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Pose-Control/resolve/main/ltx-2-19b-ic-lora-pose-control.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-In/resolve/main/ltx-2-19b-lora-camera-control-dolly-in.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Left/resolve/main/ltx-2-19b-lora-camera-control-dolly-left.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Out/resolve/main/ltx-2-19b-lora-camera-control-dolly-out.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Right/resolve/main/ltx-2-19b-lora-camera-control-dolly-right.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Down/resolve/main/ltx-2-19b-lora-camera-control-jib-down.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Up/resolve/main/ltx-2-19b-lora-camera-control-jib-up.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Static/resolve/main/ltx-2-19b-lora-camera-control-static.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Motion-Track-Control/resolve/main/ltx-2.3-22b-ic-lora-motion-track-control-ref0.5.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control/resolve/main/ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-22b-dev.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-22b-distilled-lora-384.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-22b-distilled.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-spatial-upscaler-x1.5-1.0.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-spatial-upscaler-x2-1.0.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-temporal-upscaler-x2-1.0.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-dev.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-lora-384.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x1.5-1.0.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.0.safetensors",
+      "https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-temporal-upscaler-x2-1.0.safetensors"
+    ]
+  },
+  "LTX-Video": {
+    "huggingface": [
+      "Lightricks/LTX-Video",
+      "Lightricks/LTX-Video-ICLoRA-canny-13b-0.9.7",
+      "Lightricks/LTX-Video-ICLoRA-depth-13b-0.9.7",
+      "Lightricks/LTX-Video-ICLoRA-detailer-13b-0.9.8",
+      "Lightricks/LTX-Video-ICLoRA-pose-13b-0.9.7"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltxv-13b-0.9.7-dev-fp8.safetensors",
+      "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltxv-13b-0.9.7-dev.safetensors",
+      "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltxv-13b-0.9.7-distilled-fp8.safetensors",
+      "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltxv-13b-0.9.7-distilled-lora128.safetensors",
+      "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltxv-13b-0.9.7-distilled.safetensors",
+      "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltxv-2b-0.9.6-dev-04-25.safetensors",
+      "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltxv-2b-0.9.6-distilled-04-25.safetensors",
+      "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltxv-spatial-upscaler-0.9.7.safetensors",
+      "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltxv-temporal-upscaler-0.9.7.safetensors"
+    ]
+  },
+  "MiniCPM": {
+    "huggingface": [
+      "openbmb/BitCPM4-0.5B",
+      "openbmb/BitCPM4-1B",
+      "openbmb/MiniCPM-1B-sft-bf16",
+      "openbmb/MiniCPM-2B-128k",
+      "openbmb/MiniCPM-2B-dpo-bf16",
+      "openbmb/MiniCPM-2B-sft-bf16",
+      "openbmb/MiniCPM-4.1-8B-Marlin",
+      "openbmb/MiniCPM-MoE-8x2B",
+      "openbmb/MiniCPM-S-1B-sft",
+      "openbmb/MiniCPM-SALA",
+      "openbmb/MiniCPM3-4B",
+      "openbmb/MiniCPM4-0.5B",
+      "openbmb/MiniCPM4-0.5B-QAT-Int4-GPTQ-format",
+      "openbmb/MiniCPM4-0.5B-QAT-Int4-unquantized",
+      "openbmb/MiniCPM4-8B",
+      "openbmb/MiniCPM4-8B-Eagle-FRSpec",
+      "openbmb/MiniCPM4-8B-Eagle-FRSpec-QAT",
+      "openbmb/MiniCPM4-8B-Eagle-vLLM",
+      "openbmb/MiniCPM4-8B-marlin-Eagle-vLLM",
+      "openbmb/MiniCPM4-MCP",
+      "openbmb/MiniCPM4-Survey",
+      "openbmb/MiniCPM4.1-8B",
+      "openbmb/MiniCPM4.1-8B-AutoAWQ",
+      "openbmb/MiniCPM4.1-8B-Eagle3",
+      "openbmb/MiniCPM4.1-8B-GGUF",
+      "openbmb/MiniCPM4.1-8B-GPTQ",
+      "openbmb/MiniCPM4.1-8B-MLX"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "MiniCPM-o": {
+    "huggingface": [
+      "FlagRelease/MiniCPM-o-4.5-ascend-FlagOS",
+      "FlagRelease/MiniCPM-o-4.5-hygon-FlagOS",
+      "FlagRelease/MiniCPM-o-4.5-iluvatar-FlagOS",
+      "FlagRelease/MiniCPM-o-4.5-metax-FlagOS",
+      "FlagRelease/MiniCPM-o-4.5-nvidia-FlagOS",
+      "FlagRelease/MiniCPM-o-4.5-zhenwu-FlagOS",
+      "Qwen/Qwen3-8B",
+      "openbmb/MiniCPM-Llama3-V-2_5",
+      "openbmb/MiniCPM-Llama3-V-2_5-gguf",
+      "openbmb/MiniCPM-V-2_6-gguf",
+      "openbmb/MiniCPM-V-4",
+      "openbmb/MiniCPM-V-4-AWQ",
+      "openbmb/MiniCPM-V-4-gguf",
+      "openbmb/MiniCPM-V-4-int4",
+      "openbmb/MiniCPM-V-4_5-AWQ",
+      "openbmb/MiniCPM-o-2_6-int4",
+      "openbmb/MiniCPM-o-4_5",
+      "openbmb/MiniCPM-o-4_5-gguf"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "OmniXtreme": {
+    "huggingface": [],
+    "google_drive": [
+      "drive.google.com/file/d/1-LXEmUfW80BXYQ0tAZx341PzY8u14Z9Q/view?usp=sharing"
+    ],
+    "direct": []
+  },
+  "open-llms": {
+    "huggingface": [
+      "01-ai/Yi-1.5-34B",
+      "01-ai/Yi-1.5-34B-Chat",
+      "01-ai/Yi-1.5-6B",
+      "01-ai/Yi-1.5-6B-Chat",
+      "01-ai/Yi-1.5-9B",
+      "01-ai/Yi-1.5-9B-Chat",
+      "AtlaAI/Selene-1-Mini-Llama-3.1-8B",
+      "BlinkDL/rwkv-5-world",
+      "BlinkDL/rwkv-6-world",
+      "Deci/DeciCoder-1b",
+      "EleutherAI/gpt-neox-20b",
+      "Fugaku-LLM/Fugaku-LLM-13B",
+      "Fugaku-LLM/Fugaku-LLM-13B-instruct",
+      "HuggingFaceH4/starchat-alpha",
+      "HuggingFaceH4/zephyr-7b-gemma-v0.1",
+      "LLM360/Amber",
+      "LLM360/AmberChat",
+      "LLM360/AmberSafe",
+      "LargeWorldModel/LWM-Text-128K",
+      "LargeWorldModel/LWM-Text-1M",
+      "LargeWorldModel/LWM-Text-256K",
+      "LargeWorldModel/LWM-Text-512K",
+      "LargeWorldModel/LWM-Text-Chat-128K",
+      "LargeWorldModel/LWM-Text-Chat-1M",
+      "LargeWorldModel/LWM-Text-Chat-256K",
+      "LargeWorldModel/LWM-Text-Chat-512K",
+      "OpenAssistant/oasst-sft-1-pythia-12b",
+      "OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5",
+      "OpenAssistant/pythia-12b-sft-v8-7k-steps",
+      "Qwen/Qwen1.5-110B",
+      "Qwen/Qwen1.5-110B-Chat",
+      "Qwen/Qwen1.5-14B",
+      "Qwen/Qwen1.5-14B-Chat",
+      "Qwen/Qwen1.5-32B",
+      "Qwen/Qwen1.5-32B-Chat",
+      "Qwen/Qwen1.5-72B",
+      "Qwen/Qwen1.5-72B-Chat",
+      "Qwen/Qwen1.5-7B",
+      "Qwen/Qwen1.5-7B-Chat",
+      "Qwen/Qwen1.5-MoE-A2.7B",
+      "Qwen/Qwen1.5-MoE-A2.7B-Chat",
+      "Salesforce/codegen25-7b-multi",
+      "Salesforce/xgen-7b-4k-base",
+      "Salesforce/xgen-7b-8k-base",
+      "Skywork/Skywork-13B-Base",
+      "Skywork/Skywork-13B-Math",
+      "Skywork/Skywork-13B-base",
+      "Snowflake/snowflake-arctic-base",
+      "Snowflake/snowflake-arctic-instruct",
+      "THUDM/chatglm-6b",
+      "THUDM/chatglm2-6b",
+      "THUDM/chatglm3-6b",
+      "THUDM/chatglm3-6b-128k",
+      "THUDM/chatglm3-6b-32k",
+      "THUDM/chatglm3-6b-base",
+      "TRI-ML/mamba-7b-rw",
+      "ai21labs/Jamba-v0.1",
+      "aisquared/dlite-v2-1_5b",
+      "allenai/OLMo-1B",
+      "allenai/OLMo-7B",
+      "allenai/OLMo-7B-Twin-2T",
+      "apple/OpenELM-1_1B",
+      "apple/OpenELM-1_1B-Instruct",
+      "apple/OpenELM-270M",
+      "apple/OpenELM-270M-Instruct",
+      "apple/OpenELM-3B",
+      "apple/OpenELM-3B-Instruct",
+      "apple/OpenELM-450M",
+      "apple/OpenELM-450M-Instruct",
+      "bigcode/santacoder",
+      "bigcode/starcoder",
+      "bigscience/bloom",
+      "bigscience/bloom-1b1",
+      "cerebras/Cerebras-GPT-13B",
+      "core42/jais-13b",
+      "core42/jais-13b-chat",
+      "core42/jais-30b-chat-v1",
+      "core42/jais-30b-chat-v3",
+      "core42/jais-30b-v1",
+      "core42/jais-30b-v3",
+      "databricks/dolly-v2-12b",
+      "deepseek-ai/DeepSeek-V2",
+      "deepseek-ai/DeepSeek-V2-Chat",
+      "deepseek-ai/DeepSeek-V2-Lite",
+      "deepseek-ai/DeepSeek-V2-Lite-Chat",
+      "deepseek-ai/deepseek-llm-67b-base",
+      "deepseek-ai/deepseek-llm-67b-chat",
+      "deepseek-ai/deepseek-llm-7b-base",
+      "deepseek-ai/deepseek-llm-7b-chat",
+      "google/flan-t5-xxl",
+      "google/flan-ul2",
+      "google/gemma-2b",
+      "google/gemma-2b-it",
+      "google/gemma-7b",
+      "google/gemma-7b-it",
+      "lmsys/fastchat-t5-3b-v1.0",
+      "meta-llama/Meta-Llama-3-70B",
+      "meta-llama/Meta-Llama-3-70B-Instruct",
+      "meta-llama/Meta-Llama-3-8B",
+      "meta-llama/Meta-Llama-3-8B-Instruct",
+      "meta-llama/Meta-Llama-Guard-2-8B",
+      "microsoft/Phi-3-medium-128k-instruct",
+      "microsoft/Phi-3-medium-4k-instruct",
+      "microsoft/Phi-3-mini-128k-instruct",
+      "microsoft/Phi-3-mini-4k-instruct",
+      "microsoft/phi-2",
+      "microsoft/phi-4",
+      "mistral-community/Mistral-7B-v0.2",
+      "mistralai/Mistral-7B-Instruct-v0.1",
+      "mistralai/Mistral-7B-Instruct-v0.2",
+      "mistralai/Mistral-7B-v0.1",
+      "mistralai/Mixtral-8x22B-Instruct-v0.1",
+      "mistralai/Mixtral-8x22B-v0.1",
+      "mistralai/Mixtral-8x7B-Instruct-v0.1",
+      "mistralai/Mixtral-8x7B-v0.1",
+      "mlfoundations/open_lm_1B",
+      "mlfoundations/open_lm_7B_1.25T",
+      "mosaicml/mpt-30b",
+      "mosaicml/mpt-30b-instruct",
+      "mosaicml/mpt-7b",
+      "mosaicml/mpt-7b-instruct",
+      "openlm-research/open_llama_13b",
+      "openlm-research/open_llama_3b",
+      "openlm-research/open_llama_7b",
+      "projecte-aina/FLOR-1.3B",
+      "projecte-aina/FLOR-1.3B-Instructed",
+      "projecte-aina/FLOR-6.3B",
+      "projecte-aina/FLOR-6.3B-Instructed",
+      "projecte-aina/FLOR-760M",
+      "replit/replit-code-v1-3b",
+      "t/does-t5-truncate-input-longer-than-512-internally",
+      "teknium/OpenHermes-13B",
+      "teknium/OpenHermes-7B",
+      "tiiuae/falcon-11B",
+      "tiiuae/falcon-180B",
+      "tiiuae/falcon-40b",
+      "tiiuae/falcon-7b",
+      "togethercomputer/RedPajama-INCITE-Instruct-7B-v0.1",
+      "upstage/SOLAR-10.7B-v1.0",
+      "xai-org/grok-1",
+      "yandex/yalm-100b",
+      "yulan-team/YuLan-Mini"
+    ],
+    "google_drive": [
+      "drive.google.com/file/d/10iR5hKwFqAKhL3umx8muOWSRm7hs5FqX/view",
+      "drive.google.com/file/d/1cN-b9GnWtHzQRoE7M7gAEyivY0kl4BYs/view"
+    ],
+    "direct": []
+  },
+  "prime": {
+    "huggingface": [
+      "meta-llama/Llama-2-7b-hf",
+      "mistralai/Mistral-7B-v0.1"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Qwen-Image": {
+    "huggingface": [
+      "Qwen/Qwen-Image",
+      "Qwen/Qwen-Image-2512",
+      "Qwen/Qwen-Image-Edit-2511",
+      "Qwen/Qwen-Image-Layered",
+      "lightx2v/Qwen-Image-2512-Lightning"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Qwen3-Coder": {
+    "huggingface": [
+      "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8",
+      "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+      "Qwen/Qwen3-Coder-Next",
+      "Qwen/Qwen3-Coder-Next-Base",
+      "Qwen/Qwen3-Coder-Next-FP8",
+      "Qwen/Qwen3-Coder-Next-GGUF"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Qwen3-Coder-Next-Zeta-GGUF": {
+    "huggingface": [
+      "wasfox/Qwen3-Coder-Next-Zeta-GGUF"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Qwen3-VL": {
+    "huggingface": [
+      "Qwen/QVQ-72B-Preview",
+      "Qwen/Qwen2-VL-72B-Instruct",
+      "Qwen/Qwen2-VL-72B-Instruct-AWQ",
+      "Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int4",
+      "Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int8",
+      "Qwen/Qwen2.5-VL-32B-Instruct",
+      "Qwen/Qwen2.5-VL-3B-Instruct-AWQ",
+      "Qwen/Qwen2.5-VL-72B-Instruct-AWQ",
+      "Qwen/Qwen2.5-VL-7B-Instruct-AWQ",
+      "Qwen/Qwen3-VL-235B-A22B-Instruct",
+      "Qwen/Qwen3-VL-235B-A22B-Thinking",
+      "Qwen/Qwen3-VL-2B-Instruct",
+      "Qwen/Qwen3-VL-2B-Thinking",
+      "Qwen/Qwen3-VL-30B-A3B-Instruct",
+      "Qwen/Qwen3-VL-30B-A3B-Thinking",
+      "Qwen/Qwen3-VL-32B-Instruct",
+      "Qwen/Qwen3-VL-32B-Thinking",
+      "Qwen/Qwen3-VL-4B-Instruct",
+      "Qwen/Qwen3-VL-4B-Thinking",
+      "Qwen/Qwen3-VL-8B-Instruct",
+      "Qwen/Qwen3-VL-8B-Thinking"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Spectrum": {
+    "huggingface": [
+      "Wan-AI/Wan2.1-T2V-14B-Diffusers",
+      "black-forest-labs/FLUX.1-dev",
+      "hunyuanvideo-community/HunyuanVideo",
+      "stabilityai/stable-diffusion-3.5-large",
+      "stabilityai/stable-diffusion-xl-base-1.0"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Stable-Video-Infinity": {
+    "huggingface": [
+      "fudan-generative-ai/hallo3",
+      "vita-video-gen/svi-model"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-dance.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-film-opt-10212025.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-film-transitions.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-film.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-shot.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-talk.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-tom.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-2.0/SVI_Wan2.1-I2V-14B_lora_v2.0.safetensors"
+    ]
+  },
+  "Step-3.5-Flash": {
+    "huggingface": [
+      "stepfun-ai/Step-3.5-Flash",
+      "ubergarm/Step-3.5-Flash-GGUF"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "terraform-ggp": {
+    "huggingface": [
+      "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "deepseek-ai/deepseek-llm-67b-chat"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Track4World": {
+    "huggingface": [
+      "TencentARC/Track4World"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt",
+      "https://huggingface.co/TencentARC/Track4World/resolve/main/track4world_da3.pt",
+      "https://huggingface.co/TencentARC/Track4World/resolve/main/track4world_moge.pt",
+      "https://huggingface.co/TencentARC/Track4World/resolve/main/track4world_pi3.pt"
+    ]
+  },
+  "UltraRAG": {
+    "huggingface": [
+      "openbmb/AgentCPM-Report"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Utonia": {
+    "huggingface": [
+      "Pointcept/Utonia"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "VoxCPM": {
+    "huggingface": [
+      "openbmb/MiniCPM4-0.5B",
+      "openbmb/VoxCPM-0.5B",
+      "openbmb/VoxCPM1.5"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Wan2GP": {
+    "huggingface": [
+      "DeepBeepMeep/LTX-2"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://huggingface.co/DeepBeepMeep/LTX-2/resolve/main/ltx-2-19b_vae_old.safetensors"
+    ]
+  },
+  "whisper.cpp": {
+    "huggingface": [
+      "ggerganov/whisper.cpp"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Z-Image": {
+    "huggingface": [
+      "Tongyi-MAI/Z-Image",
+      "Tongyi-MAI/Z-Image-Turbo"
+    ],
+    "google_drive": [],
+    "direct": []
+  }
+}
