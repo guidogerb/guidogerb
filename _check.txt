@@ -1,0 +1,4 @@
+XLabs-AI/flux-RealismLora: False
+Wan-AI/Wan2.2-T2V-A14B: False
+black-forest-labs/FLUX.1-schnell: False
+TOTAL_HF_REPOS: 367

@@ -6,14 +6,6 @@
     "google_drive": [],
     "direct": []
   },
-  "ai-toolkit": {
-    "huggingface": [
-      "black-forest-labs/FLUX.1-dev",
-      "ostris/FLUX.1-schnell-training-adapter"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
   "AlchemistCoder": {
     "huggingface": [
       "internlm/AlchemistCoder-CL-7B",
@@ -27,7 +19,8 @@
     "huggingface": [
       "HKUSTAudio/AudioX",
       "HKUSTAudio/AudioX-MAF",
-      "HKUSTAudio/AudioX-MAF-MMDiT"
+      "HKUSTAudio/AudioX-MAF-MMDiT",
+      "collections/HKUSTAudio"
     ],
     "google_drive": [],
     "direct": [
@@ -43,7 +36,8 @@
       "THUDM/CogVideoX-2b",
       "THUDM/CogVideoX-5b",
       "THUDM/CogVideoX-5b-I2V",
-      "THUDM/cogvlm2-llama3-caption"
+      "THUDM/cogvlm2-llama3-caption",
+      "collections/bertjiazheng"
     ],
     "google_drive": [],
     "direct": []
@@ -108,6 +102,13 @@
     "google_drive": [],
     "direct": []
   },
+  "DreamID-Omni": {
+    "huggingface": [
+      "XuGuo699/DreamID-Omni"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
   "DreamID-V": {
     "huggingface": [
       "Wan-AI/Wan2.1-T2V-1.3B",
@@ -117,13 +118,6 @@
     "direct": [
       "https://huggingface.co/XuGuo699/DreamID-V/blob/main/dreamidv_faster.pt"
     ]
-  },
-  "ggp-studio": {
-    "huggingface": [
-      "Lightricks/LTX-2"
-    ],
-    "google_drive": [],
-    "direct": []
   },
   "GLM-5": {
     "huggingface": [
@@ -141,9 +135,9 @@
     "google_drive": [],
     "direct": []
   },
-  "grok-1": {
+  "HY-WU": {
     "huggingface": [
-      "xai-org/grok-1"
+      "tencent/HY-WU"
     ],
     "google_drive": [],
     "direct": []
@@ -153,7 +147,8 @@
       "BestWishYsh/Helios-Base",
       "BestWishYsh/Helios-Distilled",
       "BestWishYsh/Helios-Mid",
-      "BestWishYsh/HeliosBench-Weights"
+      "BestWishYsh/HeliosBench-Weights",
+      "collections/BestWishYsh"
     ],
     "google_drive": [],
     "direct": []
@@ -172,13 +167,6 @@
       "https://huggingface.co/tencent/HunyuanVideo/blob/main/hunyuan-video-t2v-720p/transformers/mp_rank_00_model_states_fp8_map.pt"
     ]
   },
-  "HY-WU": {
-    "huggingface": [
-      "tencent/HY-WU"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
   "IC-Light": {
     "huggingface": [
       "briaai/RMBG-1.4"
@@ -186,15 +174,9 @@
     "google_drive": [],
     "direct": []
   },
-  "improved-aesthetic-predictor": {
-    "huggingface": [],
-    "google_drive": [
-      "drive.google.com/drive/folders/186XiniJup5Rt9FXsHiAGWhgWz-nmCK_r?usp=sharing"
-    ],
-    "direct": []
-  },
   "Intern-S1": {
     "huggingface": [
+      "collections/internlm",
       "internlm/Intern-S1",
       "internlm/Intern-S1-FP8",
       "internlm/Intern-S1-GGUF",
@@ -220,6 +202,7 @@
   },
   "InternLM-Math": {
     "huggingface": [
+      "collections/internlm",
       "internlm/internlm2-math-20b",
       "internlm/internlm2-math-7b",
       "internlm/internlm2-math-base-20b",
@@ -260,6 +243,7 @@
       "Qwen/Qwen2.5-VL-7B-Instruct",
       "Qwen/Qwen3-14B",
       "Qwen/Qwen3-8B",
+      "collections/internlm",
       "internlm/JanusCoder-14B",
       "internlm/JanusCoder-8B",
       "internlm/JanusCoderV-7B",
@@ -277,6 +261,7 @@
       "Qwen/Qwen-Image-Edit-2511",
       "Qwen/Qwen2.5-VL-3B-Instruct",
       "Wan-AI/Wan2.2-TI2V-5B",
+      "collections/linyq",
       "linyq/kiwi-edit-5b-instruct-only-diffusers",
       "linyq/kiwi-edit-5b-instruct-reference-diffusers",
       "linyq/kiwi-edit-5b-reference-only-diffusers",
@@ -285,39 +270,6 @@
       "linyq/wan2.2_ti2v_5b_qwen25vl_3b_stage2_img_vid_720x1280_81f",
       "linyq/wan2.2_ti2v_5b_qwen25vl_3b_stage3_img_vid_refvid_720x1280_81f",
       "linyq/wan2.2_ti2v_5b_qwen25vl_3b_stage3_refvid_only_720x1280_81f_pad_first"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
-  "llama.cpp": {
-    "huggingface": [
-      "GritLM/GritLM-7B",
-      "GritLM/GritLM-8x7B",
-      "LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
-      "LumiOpen/Poro-34B",
-      "NousResearch/Obsidian-3B-V0.5",
-      "THUDM/chatglm3-6b",
-      "THUDM/glm-4-9b",
-      "THUDM/glm-edge-1.5b-chat",
-      "THUDM/glm-edge-4b-chat",
-      "ai-sage/GigaChat-20B-A3B-instruct",
-      "allenai/OLMoE-1B-7B-0924",
-      "databricks/dbrx-instruct",
-      "hiyouga/baichuan-7b-sft",
-      "inceptionai/jais-13b-chat",
-      "keyfan/grok-1-hf",
-      "mistralai/Mistral-7B-v0.1",
-      "recursal/QRWKV6-32B-Instruct-Preview-v0.1",
-      "smallcloudai/Refact-1_6B-fim",
-      "trillionlabs/Trillion-7B-preview",
-      "vikhyatk/moondream2"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
-  "lmdeploy": {
-    "huggingface": [
-      "internlm/internlm2-20b"
     ],
     "google_drive": [],
     "direct": []
@@ -386,8 +338,24 @@
       "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltxv-temporal-upscaler-0.9.7.safetensors"
     ]
   },
+  "LavaSR": {
+    "huggingface": [
+      "YatharthS/LavaSR"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "LoRWeB": {
+    "huggingface": [
+      "black-forest-labs/FLUX.1-Kontext-dev",
+      "hilamanor/lorweb"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
   "MiniCPM": {
     "huggingface": [
+      "collections/openbmb",
       "openbmb/BitCPM4-0.5B",
       "openbmb/BitCPM4-1B",
       "openbmb/MiniCPM-1B-sft-bf16",
@@ -448,6 +416,261 @@
     "google_drive": [
       "drive.google.com/file/d/1-LXEmUfW80BXYQ0tAZx341PzY8u14Z9Q/view?usp=sharing"
     ],
+    "direct": []
+  },
+  "PhysicEdit": {
+    "huggingface": [
+      "Qwen/Qwen-Image-Edit-2509",
+      "collections/metazlb",
+      "facebook/dinov2-with-registers-base",
+      "metazlb/PhysicEdit"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Qwen-Image": {
+    "huggingface": [
+      "Qwen/Qwen-Image",
+      "Qwen/Qwen-Image-2512",
+      "Qwen/Qwen-Image-Edit-2511",
+      "Qwen/Qwen-Image-Layered",
+      "lightx2v/Qwen-Image-2512-Lightning"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Qwen3-Coder": {
+    "huggingface": [
+      "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8",
+      "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+      "Qwen/Qwen3-Coder-Next",
+      "Qwen/Qwen3-Coder-Next-Base",
+      "Qwen/Qwen3-Coder-Next-FP8",
+      "Qwen/Qwen3-Coder-Next-GGUF",
+      "collections/Qwen"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Qwen3-Coder-Next-Zeta-GGUF": {
+    "huggingface": [
+      "wasfox/Qwen3-Coder-Next-Zeta-GGUF"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Qwen3-Omni": {
+    "huggingface": [
+      "collections/Qwen"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Qwen3-VL": {
+    "huggingface": [
+      "Qwen/QVQ-72B-Preview",
+      "Qwen/Qwen2-VL-72B-Instruct",
+      "Qwen/Qwen2-VL-72B-Instruct-AWQ",
+      "Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int4",
+      "Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int8",
+      "Qwen/Qwen2.5-VL-32B-Instruct",
+      "Qwen/Qwen2.5-VL-3B-Instruct-AWQ",
+      "Qwen/Qwen2.5-VL-72B-Instruct-AWQ",
+      "Qwen/Qwen2.5-VL-7B-Instruct-AWQ",
+      "Qwen/Qwen3-VL-235B-A22B-Instruct",
+      "Qwen/Qwen3-VL-235B-A22B-Thinking",
+      "Qwen/Qwen3-VL-2B-Instruct",
+      "Qwen/Qwen3-VL-2B-Thinking",
+      "Qwen/Qwen3-VL-30B-A3B-Instruct",
+      "Qwen/Qwen3-VL-30B-A3B-Thinking",
+      "Qwen/Qwen3-VL-32B-Instruct",
+      "Qwen/Qwen3-VL-32B-Thinking",
+      "Qwen/Qwen3-VL-4B-Instruct",
+      "Qwen/Qwen3-VL-4B-Thinking",
+      "Qwen/Qwen3-VL-8B-Instruct",
+      "Qwen/Qwen3-VL-8B-Thinking",
+      "collections/Qwen"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Qwen3.5": {
+    "huggingface": [
+      "collections/Qwen"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Spectrum": {
+    "huggingface": [
+      "Wan-AI/Wan2.1-T2V-14B-Diffusers",
+      "black-forest-labs/FLUX.1-dev",
+      "hunyuanvideo-community/HunyuanVideo",
+      "stabilityai/stable-diffusion-3.5-large",
+      "stabilityai/stable-diffusion-xl-base-1.0"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Stable-Video-Infinity": {
+    "huggingface": [
+      "fudan-generative-ai/hallo3",
+      "vita-video-gen/svi-model"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-dance.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-film-opt-10212025.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-film-transitions.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-film.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-shot.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-talk.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-tom.safetensors",
+      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-2.0/SVI_Wan2.1-I2V-14B_lora_v2.0.safetensors"
+    ]
+  },
+  "Step-3.5-Flash": {
+    "huggingface": [
+      "stepfun-ai/Step-3.5-Flash",
+      "ubergarm/Step-3.5-Flash-GGUF"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Track4World": {
+    "huggingface": [
+      "TencentARC/Track4World"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt",
+      "https://huggingface.co/TencentARC/Track4World/resolve/main/track4world_da3.pt",
+      "https://huggingface.co/TencentARC/Track4World/resolve/main/track4world_moge.pt",
+      "https://huggingface.co/TencentARC/Track4World/resolve/main/track4world_pi3.pt"
+    ]
+  },
+  "UltraRAG": {
+    "huggingface": [
+      "openbmb/AgentCPM-Report"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Utonia": {
+    "huggingface": [
+      "Pointcept/Utonia"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "VoxCPM": {
+    "huggingface": [
+      "openbmb/MiniCPM4-0.5B",
+      "openbmb/VoxCPM-0.5B",
+      "openbmb/VoxCPM1.5"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "Wan2GP": {
+    "huggingface": [
+      "DeepBeepMeep/LTX-2"
+    ],
+    "google_drive": [],
+    "direct": [
+      "https://huggingface.co/DeepBeepMeep/LTX-2/resolve/main/ltx-2-19b_vae_old.safetensors"
+    ]
+  },
+  "Z-Image": {
+    "huggingface": [
+      "Tongyi-MAI/Z-Image",
+      "Tongyi-MAI/Z-Image-Turbo"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "ai-toolkit": {
+    "huggingface": [
+      "black-forest-labs/FLUX.1-dev",
+      "ostris/FLUX.1-schnell-training-adapter"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "crewAI": {
+    "huggingface": [],
+    "google_drive": [],
+    "direct": [
+      "https://chatg.pt"
+    ]
+  },
+  "ggp-studio": {
+    "huggingface": [
+      "Lightricks/LTX-2"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "grok-1": {
+    "huggingface": [
+      "xai-org/grok-1"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "improved-aesthetic-predictor": {
+    "huggingface": [],
+    "google_drive": [
+      "drive.google.com/drive/folders/186XiniJup5Rt9FXsHiAGWhgWz-nmCK_r?usp=sharing"
+    ],
+    "direct": []
+  },
+  "llama.cpp": {
+    "huggingface": [
+      "GritLM/GritLM-7B",
+      "GritLM/GritLM-8x7B",
+      "LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+      "LumiOpen/Poro-34B",
+      "NousResearch/Obsidian-3B-V0.5",
+      "THUDM/chatglm3-6b",
+      "THUDM/glm-4-9b",
+      "THUDM/glm-edge-1.5b-chat",
+      "THUDM/glm-edge-4b-chat",
+      "ai-sage/GigaChat-20B-A3B-instruct",
+      "allenai/OLMoE-1B-7B-0924",
+      "collections/HuggingFaceTB",
+      "collections/LiquidAI",
+      "collections/Qwen",
+      "collections/Snowflake",
+      "collections/THUDM",
+      "collections/apple",
+      "collections/ibm-granite",
+      "collections/inclusionAI",
+      "collections/liuhaotian",
+      "collections/shoumenchougou",
+      "collections/speakleash",
+      "collections/tencent",
+      "collections/tiiuae",
+      "databricks/dbrx-instruct",
+      "hiyouga/baichuan-7b-sft",
+      "inceptionai/jais-13b-chat",
+      "keyfan/grok-1-hf",
+      "mistralai/Mistral-7B-v0.1",
+      "recursal/QRWKV6-32B-Instruct-Preview-v0.1",
+      "smallcloudai/Refact-1_6B-fim",
+      "trillionlabs/Trillion-7B-preview",
+      "vikhyatk/moondream2"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
+  "lmdeploy": {
+    "huggingface": [
+      "internlm/internlm2-20b"
+    ],
+    "google_drive": [],
     "direct": []
   },
   "open-llms": {
@@ -601,6 +824,13 @@
     ],
     "direct": []
   },
+  "owl": {
+    "huggingface": [
+      "collections/camel-ai"
+    ],
+    "google_drive": [],
+    "direct": []
+  },
   "prime": {
     "huggingface": [
       "meta-llama/Llama-2-7b-hf",
@@ -609,97 +839,10 @@
     "google_drive": [],
     "direct": []
   },
-  "Qwen-Image": {
+  "solaris": {
     "huggingface": [
-      "Qwen/Qwen-Image",
-      "Qwen/Qwen-Image-2512",
-      "Qwen/Qwen-Image-Edit-2511",
-      "Qwen/Qwen-Image-Layered",
-      "lightx2v/Qwen-Image-2512-Lightning"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
-  "Qwen3-Coder": {
-    "huggingface": [
-      "Qwen/Qwen3-Coder-30B-A3B-Instruct",
-      "Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8",
-      "Qwen/Qwen3-Coder-480B-A35B-Instruct",
-      "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
-      "Qwen/Qwen3-Coder-Next",
-      "Qwen/Qwen3-Coder-Next-Base",
-      "Qwen/Qwen3-Coder-Next-FP8",
-      "Qwen/Qwen3-Coder-Next-GGUF"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
-  "Qwen3-Coder-Next-Zeta-GGUF": {
-    "huggingface": [
-      "wasfox/Qwen3-Coder-Next-Zeta-GGUF"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
-  "Qwen3-VL": {
-    "huggingface": [
-      "Qwen/QVQ-72B-Preview",
-      "Qwen/Qwen2-VL-72B-Instruct",
-      "Qwen/Qwen2-VL-72B-Instruct-AWQ",
-      "Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int4",
-      "Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int8",
-      "Qwen/Qwen2.5-VL-32B-Instruct",
-      "Qwen/Qwen2.5-VL-3B-Instruct-AWQ",
-      "Qwen/Qwen2.5-VL-72B-Instruct-AWQ",
-      "Qwen/Qwen2.5-VL-7B-Instruct-AWQ",
-      "Qwen/Qwen3-VL-235B-A22B-Instruct",
-      "Qwen/Qwen3-VL-235B-A22B-Thinking",
-      "Qwen/Qwen3-VL-2B-Instruct",
-      "Qwen/Qwen3-VL-2B-Thinking",
-      "Qwen/Qwen3-VL-30B-A3B-Instruct",
-      "Qwen/Qwen3-VL-30B-A3B-Thinking",
-      "Qwen/Qwen3-VL-32B-Instruct",
-      "Qwen/Qwen3-VL-32B-Thinking",
-      "Qwen/Qwen3-VL-4B-Instruct",
-      "Qwen/Qwen3-VL-4B-Thinking",
-      "Qwen/Qwen3-VL-8B-Instruct",
-      "Qwen/Qwen3-VL-8B-Thinking"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
-  "Spectrum": {
-    "huggingface": [
-      "Wan-AI/Wan2.1-T2V-14B-Diffusers",
-      "black-forest-labs/FLUX.1-dev",
-      "hunyuanvideo-community/HunyuanVideo",
-      "stabilityai/stable-diffusion-3.5-large",
-      "stabilityai/stable-diffusion-xl-base-1.0"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
-  "Stable-Video-Infinity": {
-    "huggingface": [
-      "fudan-generative-ai/hallo3",
-      "vita-video-gen/svi-model"
-    ],
-    "google_drive": [],
-    "direct": [
-      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-dance.safetensors",
-      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-film-opt-10212025.safetensors",
-      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-film-transitions.safetensors",
-      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-film.safetensors",
-      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-shot.safetensors",
-      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-talk.safetensors",
-      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-1.0/svi-tom.safetensors",
-      "https://huggingface.co/vita-video-gen/svi-model/resolve/main/version-2.0/SVI_Wan2.1-I2V-14B_lora_v2.0.safetensors"
-    ]
-  },
-  "Step-3.5-Flash": {
-    "huggingface": [
-      "stepfun-ai/Step-3.5-Flash",
-      "ubergarm/Step-3.5-Flash-GGUF"
+      "Skywork/Matrix-Game-2.0",
+      "nyu-visionx/solaris"
     ],
     "google_drive": [],
     "direct": []
@@ -713,61 +856,16 @@
     "google_drive": [],
     "direct": []
   },
-  "Track4World": {
+  "tttLRM": {
     "huggingface": [
-      "TencentARC/Track4World"
-    ],
-    "google_drive": [],
-    "direct": [
-      "https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt",
-      "https://huggingface.co/TencentARC/Track4World/resolve/main/track4world_da3.pt",
-      "https://huggingface.co/TencentARC/Track4World/resolve/main/track4world_moge.pt",
-      "https://huggingface.co/TencentARC/Track4World/resolve/main/track4world_pi3.pt"
-    ]
-  },
-  "UltraRAG": {
-    "huggingface": [
-      "openbmb/AgentCPM-Report"
+      "chenwang/tttLRM"
     ],
     "google_drive": [],
     "direct": []
-  },
-  "Utonia": {
-    "huggingface": [
-      "Pointcept/Utonia"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
-  "VoxCPM": {
-    "huggingface": [
-      "openbmb/MiniCPM4-0.5B",
-      "openbmb/VoxCPM-0.5B",
-      "openbmb/VoxCPM1.5"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
-  "Wan2GP": {
-    "huggingface": [
-      "DeepBeepMeep/LTX-2"
-    ],
-    "google_drive": [],
-    "direct": [
-      "https://huggingface.co/DeepBeepMeep/LTX-2/resolve/main/ltx-2-19b_vae_old.safetensors"
-    ]
   },
   "whisper.cpp": {
     "huggingface": [
       "ggerganov/whisper.cpp"
-    ],
-    "google_drive": [],
-    "direct": []
-  },
-  "Z-Image": {
-    "huggingface": [
-      "Tongyi-MAI/Z-Image",
-      "Tongyi-MAI/Z-Image-Turbo"
     ],
     "google_drive": [],
     "direct": []
