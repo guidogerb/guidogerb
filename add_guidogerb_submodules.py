@@ -14,6 +14,7 @@ Copyright 2026 by GuidoGerb Publishing, LLC
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import re
@@ -33,6 +34,32 @@ SUBMODULES_DIR = "submodules"  # all submodules live under this folder
 
 START_MARKER = "<!-- SUBMODULE-LIST-START -->"
 END_MARKER = "<!-- SUBMODULE-LIST-END -->"
+
+# ---------------------------------------------------------------------------
+# Sanitization regexes (compiled once at import)
+# ---------------------------------------------------------------------------
+
+# Multi-line constructs that must be removed from the whole document before we
+# scan line-by-line, otherwise they leak across paragraph boundaries.
+_HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
+_HTML_SCRIPT_STYLE_RE = re.compile(
+    r"<(script|style)\b[^>]*>.*?</\1\s*>", re.DOTALL | re.IGNORECASE
+)
+_FENCED_CODE_RE = re.compile(r"```.*?```", re.DOTALL)
+_TILDE_FENCED_CODE_RE = re.compile(r"~~~.*?~~~", re.DOTALL)
+# Reference link definitions like:  [foo]: https://example.com "title"
+_MD_REF_DEF_RE = re.compile(r"(?m)^[ \t]*\[[^\]]+\]:[ \t]*\S+.*$")
+
+# Per-block sanitization
+_BR_TAG_RE = re.compile(r"<\s*br\s*/?\s*>", re.IGNORECASE)
+_HTML_TAG_RE = re.compile(r"<[^>]+>")
+_MD_IMAGE_RE = re.compile(r"!\[[^\]]*\]\([^)]*\)")
+_MD_REF_IMAGE_RE = re.compile(r"!\[[^\]]*\]\[[^\]]*\]")
+_MD_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+_MD_REF_LINK_RE = re.compile(r"\[([^\]]+)\]\[[^\]]*\]")
+_WHITESPACE_RE = re.compile(r"\s+")
+_SETEXT_UNDERLINE_RE = re.compile(r"^[=\-]{3,}$")
+_BADGE_LINE_RE = re.compile(r"^\s*\[?!\[")  # line that starts with ![ or [![
 
 
 # ---------------------------------------------------------------------------
@@ -296,12 +323,61 @@ def _remove_submodule(repo_dir: Path, sub_path: str) -> bool:
 
 
 # ---------------------------------------------------------------------------
-# README description extraction
+# README description extraction & sanitization
 # ---------------------------------------------------------------------------
 
 
+def _strip_html_and_markdown_decoration(text: str) -> str:
+    """Strip HTML tags, markdown images/links, decode entities, and collapse whitespace.
+
+    The result is plain text suitable for a single table cell. If the input
+    consisted entirely of images/banners/decorations, the returned string is
+    empty.
+    """
+    # Replace <br> with whitespace before stripping other tags so that
+    # `foo<br>bar` doesn't collapse to `foobar`.
+    text = _BR_TAG_RE.sub(" ", text)
+    # Drop all remaining HTML tags (their text content is preserved).
+    text = _HTML_TAG_RE.sub("", text)
+    # Remove markdown images entirely (they don't render usefully in a table).
+    text = _MD_IMAGE_RE.sub("", text)
+    text = _MD_REF_IMAGE_RE.sub("", text)
+    # Convert markdown links to their visible text: [text](url) -> text
+    text = _MD_LINK_RE.sub(r"\1", text)
+    text = _MD_REF_LINK_RE.sub(r"\1", text)
+    # Decode HTML entities (&amp;, &nbsp;, &#39;, etc.)
+    text = html.unescape(text)
+    # Collapse all whitespace runs into a single space.
+    text = _WHITESPACE_RE.sub(" ", text).strip()
+    return text
+
+
+def _escape_markdown_cell(text: str) -> str:
+    """Escape characters that would corrupt a GitHub-flavored markdown table cell."""
+    if not text:
+        return ""
+    # Order matters: escape backslashes before introducing new ones.
+    text = text.replace("\\", "\\\\")
+    text = text.replace("|", "\\|")
+    # A cell cannot contain a literal newline; collapse to a space.
+    text = re.sub(r"[\r\n]+", " ", text)
+    text = _WHITESPACE_RE.sub(" ", text).strip()
+    return text
+
+
 def _extract_readme_description(repo_dir: Path, name: str) -> str:
-    """Extract the first meaningful paragraph from a submodule's README."""
+    """Extract the first meaningful paragraph from a submodule's README.
+
+    Sanitization steps:
+      1. Strip multi-line constructs (HTML comments, <script>/<style>, fenced
+         code blocks, reference link definitions).
+      2. Walk line-by-line, breaking the document into paragraph "blocks" at
+         blank lines, ATX headings (`#`), and Setext underlines (`===`/`---`).
+      3. For each block, strip HTML tags and markdown images/links, decode
+         entities, and collapse whitespace.
+      4. Skip blocks that turn out to be image/banner/badge-only.
+      5. Return the first non-empty result, truncated to 150 chars.
+    """
     sub_dir = repo_dir / SUBMODULES_DIR / name
     readme = None
     for candidate in ("README.md", "readme.md", "README.rst", "README.txt", "README"):
@@ -318,37 +394,57 @@ def _extract_readme_description(repo_dir: Path, name: str) -> str:
     except OSError:
         return ""
 
-    lines: list[str] = []
-    past_title = False
+    # 1. Whole-document pre-processing: kill anything that can span paragraphs.
+    text = _HTML_COMMENT_RE.sub("", text)
+    text = _HTML_SCRIPT_STYLE_RE.sub("", text)
+    text = _FENCED_CODE_RE.sub("", text)
+    text = _TILDE_FENCED_CODE_RE.sub("", text)
+    text = _MD_REF_DEF_RE.sub("", text)
+
+    # 2. Group lines into blocks. A block ends at a blank line, a heading,
+    #    or a Setext underline. Heading/underline lines themselves are dropped.
+    blocks: list[list[str]] = []
+    current: list[str] = []
+
+    def _flush() -> None:
+        if current:
+            blocks.append(list(current))
+            current.clear()
+
     for raw_line in text.splitlines():
         stripped = raw_line.strip()
         if not stripped:
-            if past_title and lines:
-                break  # end of first paragraph
+            _flush()
             continue
-        # Skip markdown headings
         if stripped.startswith("#"):
-            past_title = True
+            _flush()
             continue
-        # Skip badges / images
-        if stripped.startswith("[![") or stripped.startswith("!["):
+        if _SETEXT_UNDERLINE_RE.match(stripped):
+            _flush()
             continue
-        # Skip HTML comments
-        if stripped.startswith("<!--"):
-            continue
-        # Skip underline-style headings (=== or ---)
-        if re.match(r"^[=\-]{3,}$", stripped):
-            past_title = True
-            continue
-        past_title = True
-        lines.append(stripped)
+        current.append(stripped)
+    _flush()
 
-    desc = " ".join(lines)
-    # Collapse any pipe characters that would break the markdown table
-    desc = desc.replace("|", "—")
-    if len(desc) > 150:
-        desc = desc[:147] + "..."
-    return desc
+    # 3 & 4. Find the first block that yields meaningful prose after stripping.
+    for block_lines in blocks:
+        # Heuristic: if every line in the block is a badge/shield line, the
+        # block is purely decorative — skip without even sanitizing.
+        if all(_BADGE_LINE_RE.match(line) for line in block_lines):
+            continue
+
+        joined = " ".join(block_lines)
+        sanitized = _strip_html_and_markdown_decoration(joined)
+        if not sanitized:
+            # Block was image-only / banner-only after stripping.
+            continue
+
+        # 5. Truncate to keep table rows compact. Truncation happens *before*
+        #    cell escaping so escape sequences never inflate beyond the limit.
+        if len(sanitized) > 150:
+            sanitized = sanitized[:147].rstrip() + "..."
+        return sanitized
+
+    return ""
 
 
 # ---------------------------------------------------------------------------
@@ -371,7 +467,12 @@ def _build_markdown_table(
         desc = _extract_readme_description(repo_dir, name)
         if not desc:
             desc = repo.get("description", "") or "No description available"
-        rows.append(f"| [{name}]({url}) | {desc} |")
+
+        # Escape both cells. The URL is left untouched — it lives inside `(...)`
+        # where markdown does not interpret pipes.
+        name_cell = f"[{_escape_markdown_cell(name)}]({url})"
+        desc_cell = _escape_markdown_cell(desc)
+        rows.append(f"| {name_cell} | {desc_cell} |")
 
     return header + "\n" + "\n".join(rows)
 
@@ -589,4 +690,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
