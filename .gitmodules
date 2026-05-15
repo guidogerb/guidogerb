@@ -1,15 +1,3 @@
-[submodule "third-party-repos/spring-ai"]
-	path = third-party-repos/spring-ai
-	url = git@github.com:guidogerb/spring-ai.git
-[submodule "third-party-repos/spring-boot"]
-	path = third-party-repos/spring-boot
-	url = git@github.com:guidogerb/spring-boot.git
-[submodule "third-party-repos/spring-framework"]
-	path = third-party-repos/spring-framework
-	url = git@github.com:guidogerb/spring-framework.git
-[submodule "third-party-repos/spring-data-relational"]
-	path = third-party-repos/spring-data-relational
-	url = git@github.com:guidogerb/spring-data-relational.git
 [submodule "submodules/7digital-api"]
 	path = submodules/7digital-api
 	url = https://github.com/guidogerb/7digital-api.git
