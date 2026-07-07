@@ -14,7 +14,7 @@ Gary Gerber investigates and documents research, experiments, and reference work
 
 - **Music Information Retrieval & DSP** — Audio feature extraction, spectral analysis, and signal processing in service of composition, mixing, jazz guitar pedagogy, and large ensemble writing.
 - **AI & Machine Learning for Music and Art** — Inquiry at the intersection of machine learning, sound design, and visual artistry — always with the human performer and composer at the center.
-- **Pure Web Technology & Rust/WASM Architecture** — A dedicated effort porting all web technologies to pure HTML5 and pure JavaScript as lightweight, zero-dependency wrappers around singular Rust WebAssembly components — deeply committed to eradicating supply chain exploits, maximally hardened security postures, and maximally performant platforms.
+- **Pure Web Technology & C++/WASM Architecture** — A dedicated effort porting all web technologies to pure HTML5 and pure JavaScript as lightweight, zero-dependency wrappers around singular Rust WebAssembly components — deeply committed to eradicating supply chain exploits, maximally hardened security postures, and maximally performant platforms.
 - **Jazz Guitar Pedagogy & Large Ensemble Composition** — Research, notation frameworks, and educational study centered on jazz guitar instruction and orchestral authoring for human performers.
 
 ***
